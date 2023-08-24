@@ -22,72 +22,27 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds-from-desktop">
-        <form action="/datagather/iteration1/tell-us-about-your-children" method="post" novalidate>
         <h1 class="govuk-heading-xl">Check your answers about your income</h1>
-
-        <h2 class="govuk-heading-m"> Your income</h2>
+        <h2 class="govuk-heading-m">Employment details for {{ data['employer-name'] }} </h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Was your annual income correct? 
-            </dt>
-            <dd class="govuk-summary-list__value">
-
-              
-
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> applicants name</span>
-              </a>
-            </dd>
-          </div>
-
-
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Do you want to tell us about an income change? 
-            </dt>
-            <dd class="govuk-summary-list__value">
-
-             
-
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> applicants name</span>
-              </a>
-            </dd>
-          </div>
-
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Income source
             </dt>
             <dd class="govuk-summary-list__value">
-              
+              {{ data['income-source'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> your name</span>
+                Change<span class="govuk-visually-hidden"> reference number</span>
               </a>
             </dd>
+
           </div>
-
-        </dl>
-        </dl>
-
-
-
-        <h2 class="govuk-heading-m">Employment details for {{ data['employer-name'] }} </h2>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-           <div class="govuk-summary-list__row">
+          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Employer name
+              Employer
             </dt>
             <dd class="govuk-summary-list__value">
 
@@ -101,15 +56,13 @@
             </dd>
           </div>
 
-
-
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Job title
             </dt>
             <dd class="govuk-summary-list__value">
 
-              {{ data['job-title'] }} 
+            {{ data['job-title'] }}
 
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -120,43 +73,16 @@
           </div>
 
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Employment start date
-            </dt>
-            <dd class="govuk-summary-list__value">
-              
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> your name</span>
-              </a>
-            </dd>
-          </div>
-          
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Date income changed
-            </dt>
-            <dd class="govuk-summary-list__value">
-             
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> your name</span>
-              </a>
-            </dd>
-          </div>
-          
+
 
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Gross basic income
+              Income amount
             </dt>
             <dd class="govuk-summary-list__value">
-            £27500
+              {{ data['income-amount-fixed'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -165,14 +91,12 @@
             </dd>
           </div>
 
-
-
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Bonus, commission or overtime 
+              Income frequency
             </dt>
             <dd class="govuk-summary-list__value">
-            £1500
+            Monthly
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -185,19 +109,32 @@
         </dl>
 
 
+       <!--  do you need to add another employer ? -->
 
-
-
-
-
-
-
-
-
-
-
-
-
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Do you need to add another employer?
+                </h1>
+              </legend>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-employer" name="add-employer" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="add-employer">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-another-fba-child" name="add-employer" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="add-employer">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
             <button class="govuk-button" data-module="govuk-button">
               Continue
             </button>

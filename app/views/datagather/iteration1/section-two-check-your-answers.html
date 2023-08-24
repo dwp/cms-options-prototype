@@ -1,5 +1,18 @@
-{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
-pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Radio buttons start -->
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -14,10 +27,10 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Court decision
+              Reference number
             </dt>
             <dd class="govuk-summary-list__value">
-              No
+              {{ data['reference-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -31,7 +44,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               Your name
             </dt>
             <dd class="govuk-summary-list__value">
-              Respondent Name
+              {{ data['your-first-name'] }}  {{ data['your-middle-name'] }}  {{ data['your-last-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -45,7 +58,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               Applicant name
             </dt>
             <dd class="govuk-summary-list__value">
-              Applicant Name
+              {{ data['applicant-first-name'] }} {{ data['applicant-middle-name'] }} {{ data['applicant-last-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -59,7 +72,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               National Insurance Number
             </dt>
             <dd class="govuk-summary-list__value">
-              AA112233A
+              {{ data['national-insurance-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -68,17 +81,35 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             </dd>
           </div>
 
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Court order
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> different formats</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Address
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">1 The Towers</p>
-              <p class="govuk-body">Hill Top Road</p>
-              <p class="govuk-body">Newtown</p>
-              <p class="govuk-body">West Yorkshire</p>
-              <p class="govuk-body">NN1 2TP</p>
-              <p class="govuk-body">England</p>
+              <p class="govuk-body">{{ data['address-line-1'] }}</p>
+              <p class="govuk-body">{{ data['address-line-2'] }}</p>
+              <p class="govuk-body">{{ data['address-town'] }}</p>
+              <p class="govuk-body">{{ data['address-county'] }}</p>
+              <p class="govuk-body">{{ data['address-postcode'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -89,71 +120,10 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Can we send letters to this address?
+              Different formats
             </dt>
             <dd class="govuk-summary-list__value">
-              No
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> can we send letters to this address</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Address for letters
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body">47 Appletree Walk</p>
-
-              <p class="govuk-body">Newtown</p>
-              <p class="govuk-body">West Yorkshire</p>
-              <p class="govuk-body">NN1 4BQ</p>
-              <p class="govuk-body">England</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> letters address</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              example.email@email.com
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> email address</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Do you want updates by email?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> if you wnats updates by email</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Do you need different contact formats?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No
+              {{ data['different-contact'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -167,7 +137,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               Contact number
             </dt>
             <dd class="govuk-summary-list__value">
-              07777777777
+              {{ data['contact-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -178,7 +148,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Preferred call time
+            Preferred call time 
             </dt>
             <dd class="govuk-summary-list__value">
               Any time
@@ -190,39 +160,58 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             </dd>
           </div>
 
+
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Can we send text messages?
+            Text messages
             </dt>
             <dd class="govuk-summary-list__value">
-              No
+              Yes
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> whether we can leave text messages</span>
+                Change<span class="govuk-visually-hidden">Text messages</span>
               </a>
             </dd>
           </div>
 
+
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Can we leave voicemails?
+            Emails
             </dt>
             <dd class="govuk-summary-list__value">
-              No
+              {{ data['emails'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> whether we can leave voicemails</span>
+                Change<span class="govuk-visually-hidden">Text messages</span>
               </a>
             </dd>
           </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['email-address'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">Text messages</span>
+              </a>
+            </dd>
+          </div>
+
         </dl>
-
+        </dl>
         <form action="/form-handler" method="post" novalidate>
           <input type="hidden" name="answers-checked" value="true">
-          <a href="/datagather/iteration1/domestic-abuse-help" role="button" draggable="false" class="govuk-button"
-            data-module="govuk-button" formnovalidate>Continue
+          <a href="/datagather/iteration1/will-you-answer-equality-questions" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
           </a>
         </form>
       </div>
@@ -232,3 +221,4 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 
 {% endblock %}
+

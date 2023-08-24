@@ -1,67 +1,75 @@
-{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
-pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Phase banner stop-->
+
+<!-- H1 start -->
 
 <div class="govuk-width-container">
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
 
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Respond to a child maintenance application</h1>
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-xl">Respond to a child maintenance application</h1>
 
-        <!-- H1 stop -->
+<!-- H1 stop -->
 
-        <!-- Supporting content start -->
+<!-- Supporting content start -->
 
-        <p>Use this service if you have been named in an application to the Child Maintenance Service. </p>
+<p>Use this service if you have been named in an application to the Child Maintenance Service. </p>
 
-        <p>You can confirm the information we have been given is correct and tell us about anything else that can affect
-          how much child maintenance you pay. </p>
-
-
-        <div class="govuk-inset-text">
-          This service is also available in <a href="">Welsh (Cymraeg)</a>.
-        </div>
-
-        <h3 class="govuk-heading-m">Before you start</h2>
-
-          <p>You'll need:</p>
-
-          <ul class="govuk-list govuk-list--bullet">
-            <li>your reference number – you can find this on the letter we sent you about this application</li>
-            <li>your National Insurance Number </li>
-            <li>information about your income or benefits </li>
-            <li>details of any children you support who are not part of this arrangement – for example, a child who
-              lives with you or a child you have with a different partner</li>
-            <li>your bank details </li>
-            <li>payslips</li>
-          </ul>
-
-          <p>You need to create an account to use this service.  You must have an email address and you'll need to set
-            up a PIN and memorable password so you can get updates about the application.</p>
-
-          <!-- Supporting content stop -->
-
-          <div class="govuk-!-padding-bottom-5"></div>
-
-          <!-- Start button start -->
-
-          <a href="/datagather/iteration1/do-you-have-a-court-order.html" role="button" draggable="false"
-            class="govuk-button govuk-button--start" data-module="govuk-button">
-            Start now
-            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
-              viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-            </svg></a>
-
-          <!-- Start button stop -->
+<p>You can confirm the information we have been given is correct and tell us about anything else that can affect how much child maintenance you pay. </p>
 
 
-  </main>
+<div class="govuk-inset-text">
+  This service is also available in <a href="">Welsh (Cymraeg)</a>.
+</div>
+
+<h3 class="govuk-heading-m">Before you start</h2>
+
+<p>You'll need:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>your reference number – you can find this on the letter we sent you about this application</li>
+  <li>your National Insurance Number </li>
+  <li>information about your income or benefits </li>
+  <li>details of any children you support who are not part of this arrangement – for example, a child who lives with you or a child you have with a different partner</li>
+  <li>your bank details </li>
+</ul>
+
+<!-- Supporting content stop -->
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<!-- Start button start -->
+
+<a href="/datagather/iteration1/what-is-your-name" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+    Start now
+    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+    </svg></a>
+
+<!-- Start button stop -->
+
+
+</main>
 
 </div>
 
 
 
-
+ 
 
 {% endblock %}

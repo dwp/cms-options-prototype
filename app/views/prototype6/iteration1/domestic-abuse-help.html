@@ -1,4 +1,19 @@
-{% extends "layout-2.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner end-->
+
 
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -8,21 +23,19 @@
                 <form method="post" novalidate>
                     <div class="govuk-form-group">
 
+                        <!--Checkboxes-->
                         <h1 class="govuk-heading-xl">Get help if you or your children have experienced domestic abuse
                         </h1>
-
+                        </legend>
                         <div class="govuk-inset-text">
-                            We're asking you this so we can show you where to get support if you need it. We will not
-                            share your answers with the other parent or anyone else.
+                            We're asking you this so we can show you where to get support if you need it. We will not share your answers with the other parent or anyone else.
                         </div>
                     </div>
-
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="" role="group">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
-                                <h1 class="govuk-fieldset__heading">
-                                    You may have been in an abusive relationship if you or your children have
-                                    experienced any of the following behaviours:
+                                <h1 class="govuk-fieldset__heading" >
+                                  You may have been in an abusive relationship if you or your children have experienced any of the following behaviours:
                                 </h1>
                             </legend>
                             <ul class="govuk-list govuk-list--bullet">
@@ -32,8 +45,7 @@
                                 </li>
                                 <li>Financial or economic abuse
                                 </li>
-                                <li>Coercive control (an act or pattern of acts of assault, threats, humiliation,
-                                    intimidation,
+                                <li>Coercive control (an act or pattern of acts of assault, threats, humiliation, intimidation,
                                     degradation, isolation and control)
                                 </li>
                                 <li>Harassment and stalking
@@ -42,37 +54,30 @@
                                 </li>
                             </ul>
                             <br>
-                            <h1 class="govuk-heading-m">Would you like more information about where you can get support
-                                if you need it?
-                            </h1>
-                            <br /> <br />
+<h1 class="govuk-heading-m">Would you like more information about where you can get support if you need it?<br/> <br/>
                             <div class="govuk-radios--inline" data-module="radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="da-yes" name="da-yes" type="radio"
-                                        value="yes~tell-someone" aria-controls="conditional-other-parent-dob-1"
-                                        aria-expanded="true">
+                                    <input class="govuk-radios__input" id="da-yes" name="da-yes" type="radio" value="yes~tell-someone"
+                                        aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
                                     <label class="govuk-label govuk-radios__label" for="da-yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="da-no" name="da-yes" type="radio"
-                                        value="no~what-do-you-want-to-do">
+                                    <input class="govuk-radios__input" id="da-no" name="da-yes" type="radio" value="no~what-do-you-want-to-do">
                                     <label class="govuk-label govuk-radios__label" for="da-no">
                                         No
                                     </label>
                                 </div>
                             </div>
-                        </fieldset>
                     </div>
-
                     <br>
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
                 </form>
             </div>
-            {% include "exit-button.html" %}
+                                                       
         </div>
     </main>
 </div>
