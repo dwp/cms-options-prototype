@@ -1,0 +1,154 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Checkboxes start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  When can we call you, if we need to?
+                </h1>
+              </legend>
+
+              <div id="dob-hint" class="govuk-hint">
+                We will try to contact you at your preferred time if we have any questions about your application.
+              </div>
+             
+
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="call-times" name="call-times" type="checkbox" value="Between-8am-and-10am">
+                  <label class="govuk-label govuk-checkboxes__label" for="call-times">
+                    Between 8am and 10am
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="call-times" name="call-times" type="checkbox" value="Between-10am-and-midday">
+                    <label class="govuk-label govuk-checkboxes__label" for="call-times">
+                      Between 10am and midday
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="call-times" name="call-times" type="checkbox" value="Between-midday-and-2pm">
+                      <label class="govuk-label govuk-checkboxes__label" for="call-times">
+                        Between midday and 2pm
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="call-times" name="call-times" type="checkbox" value="Between-2pm-and-4pm">
+                        <label class="govuk-label govuk-checkboxes__label" for="call-times">
+                          Between 2pm and 4pm
+                        </label>
+                      </div>
+
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="call-times" name="call-times" type="checkbox" value="Between-4pm-and-6pm">
+                          <label class="govuk-label govuk-checkboxes__label" for="call-times">
+                            Between 4pm and 6pm
+                          </label>
+                        </div>
+
+      
+
+                          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="call-times" name="call-times" type="checkbox" value="Any-time">
+                              <label class="govuk-label govuk-checkboxes__label" for="call-times">
+                                Any time
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__divider">or</div>
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="call-times" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                  None of these times work for me
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="call-times">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="contact-by-email">
+                                    What time would work for you?
+                                  </label>
+                                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="1" aria-describedby="more-detail-hint"></textarea>
+                                </div>
+                                </div>
+                              </div>                    
+                              </div>
+                              </fieldset>
+                              </div>
+         
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Can we leave voicemails if we can not contact you?
+                  </h1>
+                </legend>
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-another-other-child" name="add-another-other-child" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="add-another-other-child">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-another-other-child" name="add-another-other-child" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="add-another-other-child">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+
+
+
+
+
+
+          <a href="/datagather/iteration1/can-we-send-you-text-messages" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+          </a>
+          
+
+
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Checkboxes end  -->
+
+
+{% endblock %}

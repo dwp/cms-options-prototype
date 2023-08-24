@@ -1,0 +1,131 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+          <div class="govuk-width-container">
+
+
+            <main class="govuk-main-wrapper " id="main-content" role="main">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                  <h1 class="govuk-heading-l">Cost of raising your
+                  {% if data['add-child'] === 'yes' %}
+                    children
+                    {% elseif data['add-child'] === 'no' %}
+                    child
+                    {% else %}
+                    child
+                    {% endif %}
+
+
+                  </h1>
+
+                  <h2 class="govuk-heading-m"> Child 1</h2>
+
+                  <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Payments</th>
+      <th scope="col" class="govuk-table__header">Parent 1 name</th>
+      <th scope="col" class="govuk-table__header">Parent 2 name</th>
+      <th scope="col" class="govuk-table__header">Total</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total weekly payments</th>
+      <td class="govuk-table__cell">£109</td>
+        <td class="govuk-table__cell">£109</td>
+          <td class="govuk-table__cell">£109</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total monthly payments</th>
+      <td class="govuk-table__cell">£109</td>
+        <td class="govuk-table__cell">£109</td>
+          <td class="govuk-table__cell">£109</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total one time payments</th>
+      <td class="govuk-table__cell">£200</td>
+        <td class="govuk-table__cell">£109</td>
+          <td class="govuk-table__cell">£109</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<!-- child 2 -->
+{% if data['add-child'] === 'yes' %}
+<h2 class="govuk-heading-m"> Child 2</h2>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th scope="col" class="govuk-table__header">Payments</th>
+ <th scope="col" class="govuk-table__header">Parent 1 name</th>
+  <th scope="col" class="govuk-table__header">Parent 2 name</th>
+<th scope="col" class="govuk-table__header">Total</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header">Total weekly payments</th>
+<td class="govuk-table__cell">£109</td>
+<td class="govuk-table__cell">£109</td>
+<td class="govuk-table__cell">£109</td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header">Total monthly payments</th>
+<td class="govuk-table__cell">£109</td>
+<td class="govuk-table__cell">£109</td>
+<td class="govuk-table__cell">£109</td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header">Total One time payments</th>
+<td class="govuk-table__cell">£200</td>
+<td class="govuk-table__cell">£109</td>
+<td class="govuk-table__cell">£109</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<!--If user asked for email-->
+{% elseif data['add-child'] === 'no' %}
+<p class="govuk-body"></p>
+
+
+{% else %}
+jhkj
+{% endif %}
+
+
+</main>
+
+
+      <!--end-->
+      <a href="/childcost/additional-expenses" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+      Print
+        </a>
+</div>
+</main>
+</div>
+{% endblock %}

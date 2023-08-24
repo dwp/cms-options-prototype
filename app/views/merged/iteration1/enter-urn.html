@@ -1,0 +1,73 @@
+{% extends "layout.html" %} {% block pageTitle %} What is your unique reference number? {% endblock %}   {% set serviceName = "Apply for help arranging child maintenance" %}   {% block content
+    %}
+    <!--Feedback banner start-->
+   
+    <!--Feedback banner stop-->
+    <div class="govuk-width-container">
+        {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <form method="post" novalidate>
+                        <h1 class="govuk-heading-xl">What is your unique reference number?</h1>
+                        <div class="govuk-form-group">
+                            <!--  <label class="govuk-label" for="urn-number" style="visibility:hidden">
+                      Invitation code
+                    </label> -->
+                            <span id="urnNumberInformation" class="govuk-hint">
+                                You may have received an email or text message with your unique reference number. It starts
+                                with 85, 95 or 96.
+                            </span>
+                            <div class="govuk-inset-text">
+                                <p>If you do not have a unique reference number, you can apply for one through <a
+                                        href="https://child-maintenance.service.gov.uk/get-help-arranging-child-maintenance/">Get
+                                        Help Arranging Child Maintenance</a>.</p>
+                            </div>
+                            <input class="govuk-input govuk-input--width-10" id="urn-number" type="text" name="urn-number"
+                                type="text" value="851234567"  aria-describedby="urnNumberInformation" spellcheck="false">
+                        </div>
+                        <!--I do not have an invitation code section-->
+                        <details class="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    I need to pay child maintenance to more than one parent
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <p>You need to make a separate application for each parent. Child Maintenance Options should
+                                    have emailed you different unique
+                                    reference numbers.</p>
+                                <p>If you need a new unique reference number you can <a href="../contact-details-before-urn.html" class="govuk-link" rel="noreferrer noopener" target="_blank"> contact the Child Maintenance Service (opens in new tab)</a>.
+                                </p>
+                                <div class="contact">
+                                </div>
+                        </details>
+                        <details class="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                    I cannot apply digitally right now
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                                <p>If you cannot apply digitally, or need to speak to someone, you can contact Child
+                                    Maintenance Options. They’ll discuss your maintenance arrangements
+                                    with you, give you a unique reference number and explain how to apply.</p>
+                                <div class="contact">
+                                            <p>
+                                                Find out how to
+                                            <a href="../contact-details-before-urn.html" class="govuk-link" rel="noreferrer noopener" target="_blank"> contact the Child Maintenance Service. (opens in new tab)</a>
+                                            </p>
+                                </div>
+                        </details>
+                        <p class="govuk-body">
+                            <button type="submit" class="govuk-button">
+                                Continue
+                            </button>
+                        </p>
+                    </form>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    {% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% set serviceName = "Apply for help arranging child maintenance" %}{% block content %}
+<!--Feedback banner start-->
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+                                    You&rsquo;re eligible to apply
+                                </h1>
+                            </legend>
+                            <!-- <p class="govuk-body">Based on your answers, you&rsquo;re eligible to apply to use the Child Maintenance Service.</p> -->
+                            <h2 class="govuk-heading-m">Before you start, you'll need:</h2>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>your unique reference number - you may have received this in an email or text message</li>
+                    <li>your
+                        <a class="govuk-link" href="https://www.gov.uk/lost-national-insurance-number">National Insurance number</a>
+                    </li>
+                    <li>information about your income or benefits</li>
+                    <li>details of the children you&rsquo;re applying for</li>
+                    <li>the other parent's name and as much other information about them as you can give – for example, where
+                        they live or their phone number</li>
+                    <li>details of any children you support who are not part of this arrangement – for example, a child that lives with you or a child you have with a different partner</li>
+                    </ul>
+                <br>
+                <br>
+                    <h2 class="govuk-heading-m">After you apply:</h2>
+                    <p>We will try to contact the other parent to set up an arrangement. We cannot set up an arrangement if the other parent:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>does not respond to us</li>
+                        <li>chooses not to receive child maintenance payments</li>
+                    </ul>
+                    <p>If the other parent accepts the child maintenance arrangement, we will send you a letter explaining how much you need to pay and when you need to pay it.</p>
+                <br>
+
+            
+                            <!--end-->
+                            <a href="/merged/iteration1/enter-urn" class="govuk-button">Continue</a><br>
+
+
+                </form>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-button--sticky">
+                <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                data-module="govuk-button">
+                Hide this page
+                </a>
+              </div>
+        </div>
+    </main>
+    </div>
+    {% endblock %}
