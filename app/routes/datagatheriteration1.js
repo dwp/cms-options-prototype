@@ -14,7 +14,6 @@ router.use((req, res, next) => {
 
 
 
-
 // do-you-have-a-court-order
 
 router.post('/datagather/iteration1/do-you-have-a-court-order', function(req, res) {
@@ -39,6 +38,23 @@ router.post('/datagather/iteration1/contacting-you-about-your-application', func
     res.redirect('/datagather/iteration1/best-number-to-call-you-on.html');
   }
   });
+
+
+
+
+
+ // do-you-know-your-pin-and-password
+
+ router.post('/datagather/iteration1/do-you-know-your-pin-and-password', function(req, res) {
+  if (req.body['know-pin'] === 'yes') {
+    res.redirect('what-is-your-name');
+  } else if (req.body['know-pin'] === 'no'){
+    res.redirect('/datagather/iteration1/reset-pin-and-password');
+  } else {
+    res.redirect('/datagather/iteration1/do-you-know-your-pin-and-password');
+  }
+   });
+
 
 
 
@@ -121,7 +137,6 @@ router.post('/datagather/iteration1/contacting-you-about-your-application', func
  
 
 
-
  // what-is-your-ethnic-group
 
  router.post('/datagather/iteration1/what-is-your-ethnic-group', function(req, res) {
@@ -177,7 +192,6 @@ router.post('/datagather/iteration1/do-you-have-any-access-needs', function(req,
     }
    return res.redirect(""); next();
    })
- 
  
 
 
@@ -242,15 +256,15 @@ router.post('/datagather/iteration1/do-you-know-your-income', function(req, res)
    });
 
 
-// section-four-employed-check-your-answers
+// you-have-told-us-about-employer
 
-router.post('/datagather/iteration1/section-four-employed-check-your-answers', function(req, res) {
+router.post('/datagather/iteration1/you-have-told-us-about-employer', function(req, res) {
   if (req.body['add-employer'] === 'yes') {
     res.redirect('/datagather/iteration1/income-employed.html');
   } else if (req.body['add-employer'] === 'no'){
-    res.redirect('/datagather/iteration1/do-you-pay-into-a-pension.html');
+    res.redirect('/datagather/iteration1/section-four-employed-check-your-answers.html');
   } else {
-    res.redirect('section-four-employed-check-your-answers');
+    res.redirect('you-have-told-us-about-employer');
   }
    });
 
@@ -258,26 +272,15 @@ router.post('/datagather/iteration1/section-four-employed-check-your-answers', f
 
 // you-have-told-us-self-employment
 
-router.post('/datagather/iteration1/section-four-self-employed-check-your-answers', function(req, res) {
-  if (req.body['add-company'] === 'yes') {
+router.post('/datagather/iteration1/you-have-told-us-self-employment', function(req, res) {
+  if (req.body['add-self-employer'] === 'yes') {
     res.redirect('/datagather/iteration1/income-self-employed.html');
-  } else if (req.body['add-company'] === 'no'){
-    res.redirect('/datagather/iteration1/do-you-pay-into-a-pension.html');
+  } else if (req.body['add-self-employer'] === 'no'){
+    res.redirect('/datagather/iteration1/section-four-self-employed-check-your-answers.html');
   } else {
-    res.redirect('section-four-self-employed-check-your-answers');
+    res.redirect('you-have-told-us-self-employment');
   }
    });
-
-
-
-
-
-
-
-
-
-
-
 
 
 // do-you-pay-into-a-pension
@@ -338,10 +341,6 @@ router.post('/datagather/iteration1/are-you-on-the-birth-certificate', function(
     res.redirect('are-you-on-the-birth-certificate');
   }
    });
-
-
-
-
 
 
 
@@ -437,7 +436,6 @@ router.post('/datagather/iteration1/how-often-would-you-like-to-make-payments', 
    });
 
 
-
    // how-you-make-collect-and-pay-payments
 
 router.post('/datagather/iteration1/how-you-make-collect-and-pay-payments', function(req, res) {
@@ -449,7 +447,6 @@ router.post('/datagather/iteration1/how-you-make-collect-and-pay-payments', func
     res.redirect('how-you-make-collect-and-pay-payments');
   }
    });
-
 
 
 // Routes end
