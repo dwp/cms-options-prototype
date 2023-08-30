@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Phase banner stop-->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!-- H1 start -->
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form method="post" novalidate>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  How you make Collect and Pay payments
+                </h1>
+              </legend>
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<p>If the other parent agrees to use Collect and Pay, there are 2 ways you can make payments. These are:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Direct debit - this is where you send payments to the Child Maintenance Service and we pass them on to the other parent</li>
+  <li>Deduction of earnings - this is where we take your child maintenance payments directly from your wage </li>
+</ul>
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<form method="post" novalidate>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          How would you prefer to make Collect and Pay payments?
+        </h2>
+      </legend>
+      <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="collect-and-pay-type" name="collect-and-pay-type" type="radio" value="direct-debit">
+          <label class="govuk-label govuk-radios__label" for="collect-and-pay-type">
+            Direct debit
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="collect-and-pay-type" name="collect-and-pay-type" type="radio" value="deduction-of-earnings">
+          <label class="govuk-label govuk-radios__label" for="collect-and-pay-type">
+            Deduction of earnings
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  </form>
+</main>
+</div>
+
+
+
+ 
+
+{% endblock %}

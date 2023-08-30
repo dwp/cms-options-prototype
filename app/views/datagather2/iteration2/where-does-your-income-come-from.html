@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-width-container">
+
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+ 
+  
+
+
+<!-- Checkboxes working -->
+
+<form  action="where-does-your-income-come-from.html"  method="post" novalidate>
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+  <fieldset class="govuk-fieldset" aria-describedby="income-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Where does your income come from?
+      </h1>
+    </legend>
+    <div id="income-hint" class="govuk-hint">
+      Select all that apply.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="income-source" name="income-source" type="checkbox" value="benefits">
+        <label class="govuk-label govuk-checkboxes__label" for="income">
+          Benefits or State Pension
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="income-source" name="income-source" type="checkbox" value="employment">
+        <label class="govuk-label govuk-checkboxes__label" for="income">
+          Employment
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="income-source" name="income-source" type="checkbox" value="self-employment">
+        <label class="govuk-label govuk-checkboxes__label" for="income-source">
+          Self-employment
+        </label>
+      </div>
+
+      <div class="govuk-radios__divider">or</div>
+
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="income" name="income-source" type="checkbox" value="none">
+        <label class="govuk-label govuk-checkboxes__label" for="income">
+          None of the above
+        </label>
+      </div>
+  </fieldset>
+
+  <div class="govuk-!-padding-bottom-6"></div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+</div>
+</form>
+
+
+
+
+
+{% endblock %}

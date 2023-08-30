@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1>
+        <p class="govuk-body">
+          You will be able to use the service from 9am on Monday 19 June 2023.
+        </p>
+        <p class="govuk-body">
+          <a class="govuk-link" href="https://cmg-apply.herokuapp.com/apply/february2022PP/contact-details-before-urn">Contact the Child Maintenance Service</a> if you need to speak to someone.
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}
+

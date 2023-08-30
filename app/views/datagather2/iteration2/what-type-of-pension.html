@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<div class="govuk-width-container">
+
+{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+ 
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form  action="what-type-of-pension.html"  method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="benefits-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Which type of pension do you pay into?
+                </h1>
+
+                <div class="govuk-!-padding-bottom-3"></div>
+
+                <div id="benefits-hint" class="govuk-hint">
+                  The amount of child maintenance you pay is based on your income before tax and National Insurance, but after pension contributions.
+                </div>
+
+              </legend>
+              <div id="benefits-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="pension-type" name="pension-type" type="checkbox" value="workplace">
+                  <label class="govuk-label govuk-checkboxes__label" for="pension">
+                    Workplace pension
+                    <div id="nationality-hint" class="govuk-hint">
+                      This is usually paid directly from your wage.
+                    </div>
+                  </label>
+                </div>
+          
+
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="pension-type" name="pension-type" type="checkbox" value="private">
+                  <label class="govuk-label govuk-checkboxes__label" for="pension">
+                    Private pension
+                    <div id="pension-hint" class="govuk-hint">
+                      This is seperate from your employer pension.
+                    </div>
+                  </label>
+                </div>
+     
+              </div>
+            </fieldset>
+          </div>
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          
+          </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}
