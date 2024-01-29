@@ -29,14 +29,6 @@ const g4s2 = require('./routes/g4s2');;
 
 
 
-
-
-
-
-
-
-
-
 //copy the router use and update the sprint version
 router.use(radioButtonRedirect)
 router.use(prototype1iteration1);
