@@ -19,49 +19,24 @@
       <div class="govuk-grid-column-two-thirds">
         <form method="post" novalidate>
           <div class="govuk-form-group">
+            <h1 class="govuk-heading-xl">If you are worried about your safety</h1>
 
-            <!--Paying parent-->
-            {% if data['will-you-be-paying-or-receiving'] === 'paying' %}
-              {% include './includes/types-of-payment-paying.html' %}
-            <!--Receiving parent-->
-            {% elseif data['will-you-be-paying-or-receiving'] === 'receiving' %}
-              {% include './includes/types-of-payment-receiving.html' %}
-            <!--Generic - this should never be seen but exists to gracefully handle potential errors-->
-            {% else %}
-              {% include './includes/types-of-payment-generic.html' %}
-            {% endif %}
+            <p class="govuk-body">You do not need to have any contact with the other parent to use the Child Maintenance Service.</p>
 
+            <h2 class="govuk-heading-m">The Child Maintenance Service will send you text messages</h2>
+
+            <p class="govuk-body">If you do not think it is safe for you to get text messages about child maintenance, you should apply by phone.</p>
+            
+            <p class="govuk-body">
+              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Contact the Child Maintenance Service</a>
+            </p>
+           
+            <h3 class="govuk-heading-m">Sharing your bank or building society details with the other parent</h3>
+
+            <p class="govuk-body">The Child Maintenance Service may share your bank or building society details with the other parent. 
+              if you do not want the other parent to know your location, you can set up a non-geographical bank account. <br><br>You will need to contact your bank or building society to set this up.
+          If you need a non-geographical bank account, you should set it up before you start an application.</p>
           </div>
-
-
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                I do not have a bank account
-              </span>
-            </summary><br><br>
-            <div class="contact">
-              <p>You’ll need to apply by phone.</p>
-              <div class="govuk-inset-text">
-                <p><strong>Child Maintenance Service</strong><br>
-                <br>
-                Telephone: 0800 171 2345<br>
-                Relay UK: 18001 171 2345 <br/>
-                Welsh language: 0800 232 1979 <br/>
-                Monday to Friday, 9:30am to 3:30pm (excluding bank holidays) <br>
-                Calls to the Child Maintenance Service are free from landlines and mobiles.
-                <br>
-                <p><strong>If you use British Sign Language</strong><br>
-                  <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">Check if you can use the video sign language relay service </a> <br/>
-                  <a href="https://dwpcmgoptions.signvideo.net/">Video relay service for British Sign Language (BSL) users </a> <br/>
-                  Monday to Friday, 9:30am to 3:30pm (excluding bank holidays)<br/>
-              </div>
-            </div>
-          </details>
-    
-
-
-
 
           <a href="domestic-abuse-help.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
             Continue
