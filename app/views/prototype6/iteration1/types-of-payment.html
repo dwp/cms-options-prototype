@@ -31,12 +31,14 @@
               <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Contact the Child Maintenance Service</a>
             </p>
            
-            <h3 class="govuk-heading-m">Sharing your bank or building society details with the other parent</h3>
-
-            <p class="govuk-body">The Child Maintenance Service may share your bank or building society details with the other parent. 
-              if you do not want the other parent to know your location, you can set up a non-geographical bank account. <br><br>You will need to contact your bank or building society to set this up.
-          If you need a non-geographical bank account, you should set it up before you start an application.</p>
           </div>
+
+  <!--Paying parent-->
+  {% if data['will-you-be-paying-or-receiving'] === 'receiving' %}
+  {% include './includes/receiving-contact.html' %}
+  {% endif %}
+
+       
 
           <a href="domestic-abuse-help.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
             Continue
