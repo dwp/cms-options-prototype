@@ -28,15 +28,17 @@
             <p class="govuk-body">If you do not think it is safe for you to get text messages about child maintenance, you should apply by phone.</p>
             
             <p class="govuk-body">
-              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Contact the Child Maintenance Service</a>
+              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Contact the Child Maintenance Service (opens in a new tab).</a>
             </p>
            
-          </div>
+          
 
   <!--Paying parent-->
   {% if data['will-you-be-paying-or-receiving'] === 'receiving' %}
   {% include './includes/receiving-contact.html' %}
   {% endif %}
+
+
 
        
 
