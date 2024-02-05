@@ -449,6 +449,23 @@ router.post('/datagather/iteration1/how-you-make-collect-and-pay-payments', func
    });
 
 
+   // service-type-preference
+
+   router.post('/datagather/iteration1/service-type-preference', function(req, res) {
+    if (req.body['service-type'] === 'direct-pay') {
+      res.redirect('/datagather/iteration1/how-often-would-you-like-to-make-payments');
+    } else if (req.body['service-type'] === 'collect-and-pay'){
+      res.redirect('/datagather/iteration1/how-you-make-collect-and-pay-payments');
+    } else {
+      res.redirect('service-type-preference');
+    }
+     });
+  
+
+
+
+
+
 // Routes end
 
 module.exports = router;
