@@ -165,18 +165,6 @@ router.post('/nonuk/iteration1/confirm-mobile-number', function(req, res) {
 
 
 
-
-// // email-sent
-//
-// router.post('/nonuk/iteration1/email-sent', function(req, res) {
-//   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
-//     res.redirect('apply-by-phone');
-//   } else {
-//     res.redirect('start-your-application');
-//   }
-// });
-
-
 // text-message-sent
 
 router.post('/nonuk/iteration1/text-message-sent', function(req, res) {

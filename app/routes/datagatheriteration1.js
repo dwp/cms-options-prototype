@@ -13,7 +13,6 @@ router.use((req, res, next) => {
 // Routes start
 
 
-
 // do-you-have-a-court-order
 
 router.post('/datagather/iteration1/do-you-have-a-court-order', function(req, res) {
@@ -27,8 +26,6 @@ router.post('/datagather/iteration1/do-you-have-a-court-order', function(req, re
    });
   
 
-
-
 // contacting-you-about-your-application
 
 router.post('/datagather/iteration1/contacting-you-about-your-application', function(req, res) {
@@ -38,9 +35,6 @@ router.post('/datagather/iteration1/contacting-you-about-your-application', func
     res.redirect('/datagather/iteration1/best-number-to-call-you-on.html');
   }
   });
-
-
-
 
 
  // do-you-know-your-pin-and-password
@@ -56,9 +50,6 @@ router.post('/datagather/iteration1/contacting-you-about-your-application', func
    });
 
 
-
-
-  
   // where-do-you-live
 
   router.post('/datagather/iteration1/where-can-we-send-letters', function(req, res) {
@@ -71,7 +62,6 @@ router.post('/datagather/iteration1/contacting-you-about-your-application', func
     }
      });
   
-
 
  // can-we-send-you-emails
 
@@ -95,7 +85,6 @@ router.post('/datagather/iteration1/contacting-you-about-your-application', func
     res.redirect('/datagather/iteration1/where-does-your-income-come-from.html');
   }
   });
-
 
 
   // different-contact-formats checkboxes
@@ -169,8 +158,6 @@ router.post('/datagather/iteration1/do-you-have-any-access-needs', function(req,
   });
 
 
-
-
   // where-does-your-income-come-from checkboxes
  
   router.post('/datagather/iteration1/where-does-your-income-come-from.html', function(req, res, next){ 
@@ -193,7 +180,6 @@ router.post('/datagather/iteration1/do-you-have-any-access-needs', function(req,
    return res.redirect(""); next();
    })
  
-
 
   // what-benefits-do-you-get checkboxes
  
@@ -267,7 +253,6 @@ router.post('/datagather/iteration1/you-have-told-us-about-employer', function(r
     res.redirect('you-have-told-us-about-employer');
   }
    });
-
 
 
 // you-have-told-us-self-employment
@@ -357,7 +342,7 @@ router.post('/datagather/iteration1/section-five-check-your-answers-for-named-ch
    });
 
 
-  // section-five-check-your-answers-for-other-child
+// section-five-check-your-answers-for-other-child
 
 router.post('/datagather/iteration1/section-five-check-your-answers-for-other-child', function(req, res) {
   if (req.body['add-another-other-child'] === 'yes') {
@@ -410,7 +395,7 @@ router.post('/datagather/iteration1/do-any-other-children-live-with-you', functi
    });
 
 
-   // payment-types
+// payment-types
 
    router.post('/datagather/iteration1/payment-types', function(req, res) {
     if (req.body['payment-type'] === 'direct-pay') {
@@ -460,11 +445,34 @@ router.post('/datagather/iteration1/how-you-make-collect-and-pay-payments', func
       res.redirect('service-type-preference');
     }
      });
+
+
+   // best-number-to-call-you-on
+
+   router.post('/datagather/iteration1/best-number-to-call-you-on', function(req, res) {
+    if (req.body['your-number'] === 'yes') {
+      res.redirect('/datagather/iteration1/when-can-we-call-you');
+    } else if (req.body['your-number'] === 'no'){
+      res.redirect('/datagather/iteration1/text-confirmation');
+    } else {
+      res.redirect('best-number-to-call-you-on');
+    }
+     });
   
 
+        // text-confirmation
 
-
-
+   router.post('/datagather/iteration1/text-confirmation', function(req, res) {
+    if (req.body['send-texts'] === 'yes') {
+      res.redirect('/datagather/iteration1/when-can-we-call-you');
+    } else if (req.body['send-texts'] === 'no'){
+      res.redirect('/datagather/iteration1/email-updates');
+    } else {
+      res.redirect('text-confirmation');
+    }
+     });
+  
+  
 
 // Routes end
 
