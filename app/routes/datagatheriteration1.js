@@ -167,7 +167,7 @@ router.post('/datagather/iteration1/do-you-have-any-access-needs', function(req,
      switch (req.session.data['income-source'][i]){
  
       case "benefits" :  return res.redirect("/datagather/iteration1/what-benefits-do-you-get.html"); next(); break;
-      case "employment" :  return res.redirect("/datagather/iteration1/income-employed.html"); next(); break;
+      case "employment" :  return res.redirect("/datagather/iteration1/do-you-agree-with-income-amount.html"); next(); break;
       case "self-employment" :  return res.redirect("/datagather/iteration1/income-self-employed.html"); next(); break;
       case "none" :  return res.redirect("/datagather/iteration1/income-none-of-the-above.html"); next(); break;
       default: continue;
@@ -248,7 +248,7 @@ router.post('/datagather/iteration1/you-have-told-us-about-employer', function(r
   if (req.body['add-employer'] === 'yes') {
     res.redirect('/datagather/iteration1/income-employed.html');
   } else if (req.body['add-employer'] === 'no'){
-    res.redirect('/datagather/iteration1/section-four-employed-check-your-answers.html');
+    res.redirect('/datagather/iteration1/do-you-pay-into-a-pension');
   } else {
     res.redirect('you-have-told-us-about-employer');
   }
@@ -272,9 +272,9 @@ router.post('/datagather/iteration1/you-have-told-us-self-employment', function(
 
 router.post('/datagather/iteration1/do-you-pay-into-a-pension', function(req, res) {
   if (req.body['pension'] === 'yes') {
-    res.redirect('/datagather/iteration1/what-type-of-pension.html');
+    res.redirect('/datagather/iteration1/if-you-pay-into-a-private-pension');
   } else if (req.body['pension'] === 'no'){
-    res.redirect('/datagather/iteration1/tell-us-about-your-children.html');
+    res.redirect('/datagather/iteration1/section-four-employed-check-your-answers');
   } else {
     res.redirect('do-you-pay-into-a-pension');
   }
@@ -472,6 +472,38 @@ router.post('/datagather/iteration1/how-you-make-collect-and-pay-payments', func
     }
      });
   
+
+
+// do-you-agree-with-income-amount
+
+router.post('/datagather/iteration1/do-you-agree-with-income-amount', function(req, res) {
+  if (req.body['income-amount-agree'] === 'yes') {
+    res.redirect('/datagather/iteration1/report-change-in-income');
+  } else if (req.body['income-amount-agree'] === 'no'){
+    res.redirect('/datagather/iteration1/income-employed');
+  } else {
+    res.redirect('do-you-agree-with-income-amount');
+  }
+   });
+
+
+
+// report-change-in-income
+
+router.post('/datagather/iteration1/report-change-in-income', function(req, res) {
+  if (req.body['income-change'] === 'yes') {
+    res.redirect('/datagather/iteration1/income-employed');
+  } else if (req.body['income-change'] === 'no'){
+    res.redirect('/datagather/iteration1/do-you-pay-into-a-pension');
+  } else {
+    res.redirect('/report-change-in-income');
+  }
+   });
+
+
+
+
+
   
 
 // Routes end

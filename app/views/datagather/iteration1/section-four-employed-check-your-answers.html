@@ -22,28 +22,46 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds-from-desktop">
-        <form action="/datagather/iteration1/do-you-pay-into-a-pension" method="post" novalidate>
+        <form action="/datagather/iteration1/tell-us-about-your-children" method="post" novalidate>
         <h1 class="govuk-heading-xl">Check your answers about your income</h1>
         <h2 class="govuk-heading-m">Employment details for {{ data['employer-name'] }} </h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Income source
+              Agreed with income in the letter?
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['income-source'] }}
+              {{ data['income-amount-agree'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> reference number</span>
               </a>
             </dd>
+           </div>
 
-          </div>
-          <div class="govuk-summary-list__row">
+
+           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Employer
+              Report income change?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['income-change'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> reference number</span>
+              </a>
+            </dd>
+           </div>
+
+
+
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Employer name
             </dt>
             <dd class="govuk-summary-list__value">
 
@@ -57,13 +75,15 @@
             </dd>
           </div>
 
+
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Job title
             </dt>
             <dd class="govuk-summary-list__value">
 
-            {{ data['job-title'] }}
+              {{ data['job-title'] }} 
 
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -74,16 +94,43 @@
           </div>
 
 
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Employment start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> your name</span>
+              </a>
+            </dd>
+          </div>
+          
 
-
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date income changed
+            </dt>
+            <dd class="govuk-summary-list__value">
+             
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> your name</span>
+              </a>
+            </dd>
+          </div>
+          
 
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Income amount
+              Gross basic income
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['income-amount-fixed'] }}
+            £27500
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -92,12 +139,14 @@
             </dd>
           </div>
 
+
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Income frequency
+              Bonus, commission or overtime 
             </dt>
             <dd class="govuk-summary-list__value">
-            Monthly
+            £1500
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -105,6 +154,27 @@
               </a>
             </dd>
           </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Taxable company benefits in kind
+            </dt>
+            <dd class="govuk-summary-list__value">
+            No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> your name</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+
+
+
 
         </dl>
         </dl>
