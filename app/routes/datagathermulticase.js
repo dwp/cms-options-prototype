@@ -166,7 +166,7 @@ router.post('/datagathermulticase/iteration1/income-not-on-letter', function(req
   if (req.body['income-multi'] === 'yes') {
     res.redirect('/datagathermulticase/iteration1/where-does-your-income-come-from');
   } else if (req.body['income-multi'] === 'no'){
-    res.redirect('/datagathermulticase/iteration1/section-four-employed-check-your-answers');
+    res.redirect('/datagathermulticase/iteration1/do-you-pay-into-a-pension');
   } else {
     res.redirect('do-you-pay-into-a-pension');
   }
