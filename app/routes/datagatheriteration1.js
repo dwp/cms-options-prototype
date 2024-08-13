@@ -82,7 +82,7 @@ router.post('/datagather/iteration1/contacting-you-about-your-application', func
   if (req.body['equality-questions'] === 'yes') {
     res.redirect('/datagather/iteration1/what-is-your-ethnic-group.html');
   } else if (req.body['equality-questions'] === 'no'){
-    res.redirect('/datagather/iteration1/where-does-your-income-come-from.html');
+    res.redirect('/datagather/iteration1/do-you-agree-with-income-amount.html');
   }
   });
 
@@ -167,7 +167,7 @@ router.post('/datagather/iteration1/do-you-have-any-access-needs', function(req,
      switch (req.session.data['income-source'][i]){
  
       case "benefits" :  return res.redirect("/datagather/iteration1/what-benefits-do-you-get.html"); next(); break;
-      case "employment" :  return res.redirect("/datagather/iteration1/do-you-agree-with-income-amount.html"); next(); break;
+      case "employment" :  return res.redirect("/datagather/iteration1/income-employed.html"); next(); break;
       case "self-employment" :  return res.redirect("/datagather/iteration1/income-self-employed.html"); next(); break;
       case "none" :  return res.redirect("/datagather/iteration1/income-none-of-the-above.html"); next(); break;
       default: continue;
@@ -460,7 +460,7 @@ router.post('/datagather/iteration1/how-you-make-collect-and-pay-payments', func
      });
   
 
-        // text-confirmation
+   // text-confirmation
 
    router.post('/datagather/iteration1/text-confirmation', function(req, res) {
     if (req.body['send-texts'] === 'yes') {
@@ -480,7 +480,7 @@ router.post('/datagather/iteration1/do-you-agree-with-income-amount', function(r
   if (req.body['income-amount-agree'] === 'yes') {
     res.redirect('/datagather/iteration1/report-change-in-income');
   } else if (req.body['income-amount-agree'] === 'no'){
-    res.redirect('/datagather/iteration1/income-employed');
+    res.redirect('/datagather/iteration1/where-does-your-income-come-from');
   } else {
     res.redirect('do-you-agree-with-income-amount');
   }
@@ -492,7 +492,7 @@ router.post('/datagather/iteration1/do-you-agree-with-income-amount', function(r
 
 router.post('/datagather/iteration1/report-change-in-income', function(req, res) {
   if (req.body['income-change'] === 'yes') {
-    res.redirect('/datagather/iteration1/income-employed');
+    res.redirect('/datagather/iteration1/where-does-your-income-come-from');
   } else if (req.body['income-change'] === 'no'){
     res.redirect('/datagather/iteration1/do-you-pay-into-a-pension');
   } else {

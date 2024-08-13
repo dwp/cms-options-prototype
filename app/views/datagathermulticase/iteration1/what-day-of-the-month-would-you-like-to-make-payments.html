@@ -12,47 +12,37 @@
   </p>
 </div>
 
-<!-- Radio buttons start -->
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-  
+
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form method="post" novalidate>
+        <form action="/datagather/iteration1/ask-other-parent-for-bank-details" method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you want to tell us about a change in your income?
+                  What day of the month would you like to make payments?
                 </h1>
               </legend>
 
-              <div class="govuk-!-padding-bottom-5"></div>
-              
-              <p class="govuk-body">We can review your child maintenance calculation if your income has increased or decreased by 25% or more.</p>
-
-              <div class="govuk-!-padding-bottom-5"></div>
-              
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-change" name="income-change" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="income-change">
-                    Yes
-                  </label>
-                </div>
-
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-change" name="income-change" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="income-change">
-                    No
-                  </label>
-                </div>
+              <div id="passport-issued-hint" class="govuk-hint">
+                If your payment date falls on a weekend or a bank holiday you’ll pay either on the working
+                day before or the working day after, depending on your bank.
               </div>
 
-
+              <div class="govuk-date-input" id="day-of-month">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="day-of-month">
+                      Enter a day between the 1st and the 28th
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day-of-month" name="day-of-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
 
             </fieldset>
           </div>
@@ -61,11 +51,10 @@
           </button>
         </form>
       </div>
-    </div>
   </main>
 </div>
 
-<!-- Radio buttons end  -->
+
 
 
 {% endblock %}

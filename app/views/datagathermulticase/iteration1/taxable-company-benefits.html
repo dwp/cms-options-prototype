@@ -21,38 +21,43 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form action="/datagather/iteration1/you-have-told-us-about-employer" method="post" novalidate>
-     
       
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                     <h1 class="govuk-fieldset__heading">
-                      Have you earned a bonus, commission or overtime in the last 12 months from {{ data['employer-name'] }}?
+                      Do you receive any taxable company benefits in kind?
                     </h1>
                   </legend>
                  
+                  <div id="signIn-hint" class="govuk-hint">
+                    This includes any taxable benefits you get through your employer. For example, a company car, private health insurance or cycle-to-work scheme
+                  </div>
+
+                  <div class="govuk-!-padding-bottom-5"></div>
+
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="commission" name="commission" type="radio" value="yes" data-aria-controls="conditional-contact">
-                      <label class="govuk-label govuk-radios__label" for="commission">
+                      <input class="govuk-radios__input" id="taxable-benefits" name="taxable-benefits" type="radio" value="yes" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="taxable-benefits">
                         Yes
                       </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                       <div class="govuk-form-group">
                         <label class="govuk-label" for="contact-by-email">
-                          How much bonus, commission or overtime have you earned, in pounds?
+                          What is the cash value of your taxable company benefits, in pounds?
                         </label>
                         <div class="govuk-input__wrapper">
                           <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                          <input class="govuk-input govuk-input--width-5" id="commission" name="commission" type="text" spellcheck="false">
+                          <input class="govuk-input govuk-input--width-5" id="taxable-benefits" name="taxable-benefits" type="text" spellcheck="false">
                         </div>
                       </div>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="commission" name="commission" type="radio" value="no" data-aria-controls="conditional-contact-2">
-                      <label class="govuk-label govuk-radios__label" for="commission">
+                      <input class="govuk-radios__input" id="taxable-benefits" name="taxable-benefits" type="radio" value="no" data-aria-controls="conditional-contact-2">
+                      <label class="govuk-label govuk-radios__label" for="taxable-benefits">
                         No
                       </label>
                   </div>

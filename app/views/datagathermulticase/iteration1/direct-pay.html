@@ -1,0 +1,71 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Phase banner stop-->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!-- H1 start -->
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form  action="/datagather/iteration1/how-often-would-you-like-to-make-payments" method="post" novalidate>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Making payments by Direct Pay 
+                </h1>
+              </legend>
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<p>If you pay by Direct Pay, we will:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>work out how much maintenance must be paid, and tell both parents</li>
+  <li>give both parents a payment schedule </li>
+  <li>review your calculation each year, or if either parent’s circumstances change</li>
+</ul>
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<p class="govuk-body govuk-!-font-weight-bold">If payments are not made </p>
+
+<p>If you stop paying child maintenance using Direct Pay or stop responding to us, we can enforce Collect and Pay and you will
+   need to pay additional fees for this. We can also take action to get any missed payments, such as: </p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>take money directly from your earnings</li>
+  <li>take money from your bank account or building society</li>
+  <li>take action through the courts</li>
+</ul>
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+  </form>
+
+</main>
+
+</div>
+
+
+
+ 
+
+{% endblock %}
