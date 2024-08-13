@@ -16,6 +16,7 @@
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
   
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -25,35 +26,43 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you want to tell us about a change in your income?
+                  Do you have any access needs?
                 </h1>
               </legend>
 
-              <div class="govuk-!-padding-bottom-5"></div>
-              
-              <p class="govuk-body">We can review your child maintenance calculation if your income has increased or decreased by 25% or more.</p>
+              <div class="govuk-inset-text">
+                For example, if you need wheelchair access or support for appointments or services in person.
+              </div>
 
-              <div class="govuk-!-padding-bottom-5"></div>
-              
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-change" name="income-change" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="income-change">
+                  <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="access-needs">
                     Yes
                   </label>
                 </div>
 
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="access-needs">
+                      No
+                    </label>
+                  </div>
 
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-change" name="income-change" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="income-change">
-                    No
-                  </label>
-                </div>
+
+
+                        <div class="govuk-radios__divider">or</div>
+
+                      
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="access-needs">
+                            Prefer not to say
+                          </label>
+                        </div>
               </div>
-
-
-
             </fieldset>
           </div>
           <button class="govuk-button" data-module="govuk-button">

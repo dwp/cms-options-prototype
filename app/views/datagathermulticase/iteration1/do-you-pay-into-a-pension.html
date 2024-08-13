@@ -12,57 +12,54 @@
   </p>
 </div>
 
-<!-- Radio buttons start -->
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-  
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Do you pay into any private pension schemes?
+                </h1>
+              </legend>
 
-        <span class="govuk-heading-xl">
-          Was your annual income £27,541.76 for the tax year 2023-24?</span>
-
-        
-
-        <div class="govuk-hint">
-          This is your annual income before tax and after pension contributions from HM Revenue & Customs (HMRC).
-        </div>
-      
-        <div class="govuk-!-padding-bottom-3"></div>
+            <p>This is a pension that you pay into from your earnings. You can have a private pension as well as or instead of a workplace pension. </p>
 
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-amount-agree" name="income-amount-agree" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="income-amount-agree">
+                  <input class="govuk-radios__input" id="pension" name="pension" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="pension">
                     Yes
                   </label>
                 </div>
-
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-amount-agree" name="income-amount-agree" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="income-amount-agree">
+                  <input class="govuk-radios__input" id="pension" name="pension" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="pension">
                     No
                   </label>
                 </div>
               </div>
-
             </fieldset>
           </div>
+
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
-    </div>
+
+<!-- Hide this page button -->
+
   </main>
 </div>
 
-<!-- Radio buttons end  -->
+
 
 
 {% endblock %}

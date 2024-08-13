@@ -12,47 +12,51 @@
   </p>
 </div>
 
-<!-- Radio buttons start -->
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-  
+
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form method="post" novalidate>
+        <form action="/datagather/iteration1/section-six-check-your-answers-direct-pay" method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you want to tell us about a change in your income?
+                  Would you like us to ask the other parent for their bank or building society details?
                 </h1>
               </legend>
 
-              <div class="govuk-!-padding-bottom-5"></div>
-              
-              <p class="govuk-body">We can review your child maintenance calculation if your income has increased or decreased by 25% or more.</p>
+              <div id="passport-issued-hint" class="govuk-hint">
+                You’ll need the other parent’s bank or building society details so you can make Direct Pay payments into their account.
+              </div>
 
-              <div class="govuk-!-padding-bottom-5"></div>
-              
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-change" name="income-change" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="income-change">
+                  <input class="govuk-radios__input" id="bank-details" name="bank-details" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="bank-details">
                     Yes
                   </label>
                 </div>
 
-
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-change" name="income-change" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="income-change">
+                  <input class="govuk-radios__input" id="bank-details" name="bank-details" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="bank-details">
                     No
                   </label>
                 </div>
+                
+              <div class="govuk-radios__divider">or</div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="bank-details" name="bank-details" type="radio" value="already-have">
+                <label class="govuk-label govuk-radios__label" for="bank-details">
+                  I already have the other parent’s bank or building society details
+                </label>
               </div>
-
-
+           
 
             </fieldset>
           </div>
@@ -61,11 +65,21 @@
           </button>
         </form>
       </div>
-    </div>
+
+
+
+<!-- Hide this page button -->
+
+
+
+
+
+
+  
   </main>
 </div>
 
-<!-- Radio buttons end  -->
+
 
 
 {% endblock %}

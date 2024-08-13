@@ -16,6 +16,7 @@
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
   
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -23,34 +24,35 @@
         <form method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Will you answer the equality questions?
+                </h1>
+              </legend>
 
-        <span class="govuk-heading-xl">
-          Was your annual income £27,541.76 for the tax year 2023-24?</span>
 
-        
+              <div class="govuk-inset-text">
+                These questions are optional and will not affect the outcome of your application.
+              </div>
 
-        <div class="govuk-hint">
-          This is your annual income before tax and after pension contributions from HM Revenue & Customs (HMRC).
-        </div>
-      
-        <div class="govuk-!-padding-bottom-3"></div>
+              <p>If you choose to answer these questions, we will ask you about your ethnicity, religion, sexual orientation
+                 and access needs. We use this information to help provide better, fairer services for everyone.</p>
 
+             
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-amount-agree" name="income-amount-agree" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="income-amount-agree">
+                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="equality-questions">
                     Yes
                   </label>
                 </div>
-
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="income-amount-agree" name="income-amount-agree" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="income-amount-agree">
+                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="equality-questionst">
                     No
                   </label>
                 </div>
               </div>
-
             </fieldset>
           </div>
           <button class="govuk-button" data-module="govuk-button">
