@@ -321,7 +321,7 @@ router.post('/datagather/iteration1/are-you-on-the-birth-certificate', function(
   if (req.body['birth-certificate'] === 'yes') {
     res.redirect('/datagather/iteration1/how-often-does-child-stay-overnight');
   } else if (req.body['birth-certificate'] === 'no'){
-    res.redirect('/datagather/iteration1/income-none-of-the-above');
+    res.redirect('/datagather/iteration1/do-you-know-applicant');
   } else {
     res.redirect('are-you-on-the-birth-certificate');
   }
@@ -502,9 +502,71 @@ router.post('/datagather/iteration1/report-change-in-income', function(req, res)
 
 
 
+// NEW 2024 PARENTAGE DISPUTE SECTION ROUTES
+
+// do-you-know-applicant
+
+router.post('/datagather/iteration1/do-you-know-applicant', function(req, res) {
+  if (req.body['know-applicant'] === 'yes') {
+    res.redirect('/datagather/iteration1/do-you-have-evidence');
+  } else if (req.body['know-applicant'] === 'no'){
+    res.redirect('/datagather/iteration1/caseworker-will-call');
+  } else {
+    res.redirect('/do-you-know-applicant');
+  }
+   });
 
 
-  
+
+
+// do-you-have-evidence
+
+router.post('/datagather/iteration1/do-you-have-evidence', function(req, res) {
+  if (req.body['evidence'] === 'yes') {
+    res.redirect('/datagather/iteration1/caseworker-will-call');
+  } else if (req.body['evidence'] === 'no'){
+    res.redirect('/datagather/iteration1/has-first-child-been-adopted');
+  } else {
+    res.redirect('/do-you-have-evidence');
+  }
+   });
+
+
+
+// has-first-child-been-adopted
+
+router.post('/datagather/iteration1/has-first-child-been-adopted', function(req, res) {
+  if (req.body['legally-adopted'] === 'yes') {
+    res.redirect('/datagather/iteration1/section-five-check-your-answers-for-named-child');
+  } else if (req.body['legally-adopted'] === 'yes-someone'){
+    res.redirect('/datagather/iteration1/caseworker-will-call');
+  } else if (req.body['legally-adopted'] === 'no'){
+    res.redirect('/datagather/iteration1/were-you-married-to-applicant');
+  } else if (req.body['legally-adopted'] === 'do-not-know'){
+    res.redirect('/datagather/iteration1/were-you-married-to-applicant');
+  } else {
+    res.redirect('/has-first-child-been-adopted');
+  }
+   });
+
+
+
+
+
+
+
+
+
+
+
+// Routes end
+
+
+
+
+
+
+
 
 // Routes end
 
