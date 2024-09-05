@@ -306,7 +306,7 @@ router.post('/datagather/iteration1/do-you-pay-into-a-pension', function(req, re
 
 router.post('/datagather/iteration1/accept-parentage', function(req, res) {
   if (req.body['parentage'] === 'yes') {
-    res.redirect('/datagather/iteration1/check-your-answers-for-named-child');
+    res.redirect('/datagather/iteration1/section-five-check-your-answers-for-named-child');
   } else if (req.body['parentage'] === 'no'){
     res.redirect('/datagather/iteration1/are-you-on-the-birth-certificate');
   } else {
