@@ -22,15 +22,23 @@
 
 <!-- Checkboxes working -->
 
-<form  action="where-does-your-income-come-from.html"  method="post" novalidate>
+<form  action="section-four-no-income-check-your-answers"  method="post" novalidate>
 <div class="govuk-form-group">
   <div class="govuk-grid-column-two-thirds">
   <fieldset class="govuk-fieldset" aria-describedby="income-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Where does your income come from?
+        How do you financially support yourself?
       </h1>
     </legend>
+
+
+    <p class="govuk-body">You may need to send evidence to prove 
+      how you support yourself.</p>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+
     <div id="income-hint" class="govuk-hint">
       Select all that apply.
     </div>
@@ -38,21 +46,21 @@
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="income-source" name="income-source" type="checkbox" value="benefits">
         <label class="govuk-label govuk-checkboxes__label" for="income">
-          Benefits or State Pension
+          Personal savings (including redundancy pay)
         </label>
       </div>
 
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="income-source" name="income-source" type="checkbox" value="employment">
         <label class="govuk-label govuk-checkboxes__label" for="income">
-          Employment
+          Support from friends or family
         </label>
       </div>
 
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="income-source" name="income-source" type="checkbox" value="self-employment">
         <label class="govuk-label govuk-checkboxes__label" for="income-source">
-          Self-employment
+          Student maintenance loan
         </label>
       </div>
 
@@ -60,12 +68,22 @@
 
 
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="income" name="income-source" type="checkbox" value="none">
-        <label class="govuk-label govuk-checkboxes__label" for="income">
-          I do not get any income, benefits or State Pension
+        <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+          Other
         </label>
       </div>
-  </fieldset>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+          <label class="govuk-label" for="label-as-page-heading">
+            Explain how you financially support yourself without an income, benefits or State Pension
+          </label>
+          <textarea class="govuk-textarea govuk-js-character-count" id="label-as-page-heading" name="labelAsPageHeading" rows="5" aria-describedby="label-as-page-heading-info"></textarea>
+          <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 200 characters
+          </div>
+        </div>
+      </div>
 
   <div class="govuk-!-padding-bottom-6"></div>
 
