@@ -25,7 +25,7 @@ router.use((req, res, next) => {
       case "benefits" :  return res.redirect("/datagathermulticase/iteration1/what-benefits-do-you-get.html"); next(); break;
       case "employment" :  return res.redirect("/datagathermulticase/iteration1/income-employed.html"); next(); break;
       case "self-employment" :  return res.redirect("/datagathermulticase/iteration1/income-self-employed.html"); next(); break;
-      case "none" :  return res.redirect("/datagathermulticase/iteration1/income-none-of-the-above.html"); next(); break;
+      case "none" :  return res.redirect("/datagathermulticase/iteration1/how-do-you-support-yourself.html"); next(); break;
       default: continue;
       }
       break;
