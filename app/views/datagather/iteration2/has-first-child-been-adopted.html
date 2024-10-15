@@ -1,0 +1,138 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Radio buttons start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Has {{ data['named-child-first-name'] }} been legally adopted?
+                </h1>
+              </legend>
+
+              <div class="govuk-!-padding-bottom-3"></div>
+
+              <p class="govuk-body">
+                This will help us decide if you have <a href="https://
+                www.gov.uk/
+                parental-rights-
+                responsibilities/
+                who-has-parental-
+                responsibility" class="govuk-link">parental rights and responsibilities</a> for {{ data['named-child-first-name'] }}.
+              </p>
+
+              <div class="govuk-!-padding-bottom-3"></div>
+
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="legally-adopted">
+                        Yes, I legally adopted {{ data['named-child-first-name'] }}
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="yes-someone">
+                      <label class="govuk-label govuk-radios__label" for="legally-adopted">
+                        Yes, someone else has legally adopted {{ data['named-child-first-name'] }}
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="legally-adopted">
+                        No
+                      </label>
+                    </div>
+                
+                    <div class="govuk-radios__divider">or</div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="do-not-know">
+                      <label class="govuk-label govuk-radios__label" for="legally-adopted">
+                        I do not know
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+        <div class="govuk-!-padding-bottom-5"></div>
+
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+
