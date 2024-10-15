@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Phase banner start-->
 
 <div class="govuk-phase-banner">
@@ -20,59 +21,61 @@
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <form action="/datagather/iteration1/do-you-pay-into-a-pension" method="post" novalidate>
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration2/do-you-pay-into-a-pension" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  What is your annual income in pounds?
+                </h1>
+
+                <div class="govuk-inset-text">
+                  We will share your income with the other parent.</div>
+
+                <p> This is your income before you pay tax or National Insurance. You can usually find this amount on
+                  your payslip.
+                </p>
+                <br />
+
+                <p class="govuk-body">We only base your child maintenance calculation on this amount if:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>your income is 25% more or less than the amount we get from HMRC</li>
+                  <li>we cannot get your income from HMRC</li>
+                </ul>
+
+
+
 
                 <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                        <h1 class="govuk-fieldset__heading">
-                        What is your annual income in pounds?
-                        </h1>
 
-                      <div class="govuk-inset-text">
-                        We will share your income with the other parent.</div>
+                  <label class="govuk-label" for="annual-income-amount">
 
-                      <p> This is your income before you pay tax or National Insurance. You can usually find this amount on your payslip.
-                        </p>
-                      <br/>
+                  </label>
 
-                      <p class="govuk-body">We only base your child maintenance calculation on this amount if:</p>
-<ul class="govuk-list govuk-list--bullet">
-<li>your income is 25% more or less than the amount we get from HMRC</li>
-<li>we cannot get your income from HMRC</li>
-</ul>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-input--width-5" id="annual-income-amount"
+                      name="annual-income-amount" type="text" spellcheck="false">
+                  </div>
+
+            </fieldset>
+
+          </div>
+          </fieldset>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
 
 
+        </form>
+      </div>
 
-
-                      <div class="govuk-form-group">
-
-      <label class="govuk-label" for="annual-income-amount">
-
-      </label>
-
-      <div class="govuk-input__wrapper">
-         <div class="govuk-input__prefix" aria-hidden="true">£</div>
-         <input class="govuk-input govuk-input--width-5" id="annual-income-amount" name="annual-income-amount" type="text" spellcheck="false">
-       </div>
-
-</fieldset>
-
-                      </div>
-                    </fieldset>
-
-                    <button class="govuk-button" data-module="govuk-button">
-                      Continue
-                    </button>
-                  
-
-                    </form>
-                    </div>
-
-                    </div>
-                    </main>
-                    </div>
+    </div>
+  </main>
+</div>
 
 
 
@@ -86,12 +89,11 @@
 
 
 
-  
-  </main>
+
+</main>
 </div>
 
 
 
 
 {% endblock %}
-
