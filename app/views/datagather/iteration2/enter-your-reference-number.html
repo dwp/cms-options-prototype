@@ -1,0 +1,137 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Phase banner stop-->
+
+<!-- Question start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration1/what-is-your-national-insurance-number" method="post" novalidate>
+          <div class="govuk-form-group">
+
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="reference-number">
+              Application details 
+            </label>
+          </h1>
+
+          <div class="govuk-hint">
+            You can find this information on the letter we sent you about being named on this child maintenance application.
+          </div>
+
+
+          <div class="govuk-!-padding-bottom-5"></div>
+
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="reference-number">
+                What is your reference number?
+              </label>
+            </h2>
+
+            <div class="govuk-hint">
+              It starts with 121. 
+            </div>
+            <input class="govuk-input govuk-input--width-10" id="reference-number" name="reference-number" type="text" autocomplete="">
+          </div>
+
+          <div class="govuk-!-padding-bottom-5"></div>
+
+<!-- 
+       who named you - second questions -->
+
+
+          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="applicant-name">
+            Who named you in this application?
+          </label>
+        </h2>
+        <div class="govuk-hint">
+          You need to enter the name exactly as it appears in the letter.
+        </div>
+       
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="two-thirds">
+            First name
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="applicant-first-name" name="applicant-first-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="two-thirds">
+            Middle names (if they have any)
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="applicant-middle-name" name="applicant-middle-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="two-thirds">
+            Last name
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="applicant-last-name" name="applicant-last-name" type="text">
+        </div>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Question stop -->
+
+
+</main>
+</div>
+
+
+
+{% endblock %}

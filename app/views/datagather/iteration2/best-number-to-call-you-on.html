@@ -1,0 +1,96 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Radio buttons start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="reference">
+                What is the best number to call you on?
+              </label>
+            </h1>
+            <div class="govuk-form-group">
+              <div id="telephone-number-hint" class="govuk-hint">
+                We will send you text message updates. The sender will appear in your phone as ChildMaint. We may need to call you if we have questions about your information.
+              </div>
+              <input class="govuk-input govuk-input--width-20" id="contact-number" name="contact-number" type="tel" aria-describedby="telephone-number-hint" autocomplete="tel">
+            </div>
+            <form action="/form-handler" method="post" novalidate>
+
+              <div class="govuk-!-padding-bottom-5"></div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    Is this your own number?
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="your-number" name="your-number" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="your-number">
+                        Yes
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="your-number" name="your-number" type="radio" value="no" data-aria-controls="conditional-contact">
+                        <label class="govuk-label govuk-radios__label" for="contact">
+                         No
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="whose-number">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="contact-by-email">
+                            Whose number is this?
+                          </label>
+                          <div id="contact-hint" class="govuk-hint">
+                            for example a family member, friend or support worker
+                          </div>
+                          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                        </div>
+                      </div>
+
+
+                </fieldset>
+                <div class="govuk-!-padding-bottom-5"></div>
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+        </form>
+      </div>
+
+
+
+  </main>
+</div>
+
+
+
+
+
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+
