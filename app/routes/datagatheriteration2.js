@@ -14,7 +14,7 @@ router.use((req, res, next) => {
 
 // do-you-have-a-court-order
 
-router.post('/datagather/iteration2/do-you-have-a-court-order', function(req, res) {
+/* router.post('/datagather/iteration2/do-you-have-a-court-order', function(req, res) {
   if (req.body['court-order'] === 'yes') {
     res.redirect('income-none-of-the-above');
   } else if (req.body['court-order'] === 'no'){
@@ -22,7 +22,7 @@ router.post('/datagather/iteration2/do-you-have-a-court-order', function(req, re
   } else {
     res.redirect('do-you-have-a-court-order');
   }
-   });
+   }); */
   
 
 // contacting-you-about-your-application
