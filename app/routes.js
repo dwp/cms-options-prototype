@@ -16,6 +16,7 @@ const prototype6iteration1 = require('./routes/prototype6iteration1');;
 const northernirelanditeration1 = require('./routes/northernirelanditeration1');;
 const mergediteration1 = require('./routes/mergediteration1');;
 const datagatheriteration1 = require('./routes/datagatheriteration1');;
+const datagatheriteration2 = require('./routes/datagatheriteration2');;
 const datagathermulticase = require('./routes/datagathermulticase');;
 const citizensadviceiteration1 = require('./routes/citizensadviceiteration1');;
 const information = require('./routes/information');;
@@ -43,6 +44,7 @@ router.use(prototype6iteration1);
 router.use(northernirelanditeration1);
 router.use(mergediteration1);
 router.use(datagatheriteration1);
+router.use(datagatheriteration2);
 router.use(datagathermulticase)
 router.use(citizensadviceiteration1);
 router.use(information);
