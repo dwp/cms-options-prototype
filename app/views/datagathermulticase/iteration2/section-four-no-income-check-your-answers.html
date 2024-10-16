@@ -1,0 +1,112 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Radio buttons start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+ 
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <form action="/datagather/iteration1/tell-us-about-your-children" method="post" novalidate>
+        <h1 class="govuk-heading-xl">Check your answers about your income</h1>
+
+        <h2 class="govuk-heading-m"> Your income</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Was your annual income £27,541.26 for the tax year 2023-24? 
+            </dt>
+            <dd class="govuk-summary-list__value">
+
+              
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> applicants name</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you want to tell us about an income change? 
+            </dt>
+            <dd class="govuk-summary-list__value">
+
+             
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> applicants name</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Income source
+            </dt>
+            <dd class="govuk-summary-list__value">
+              I do not get any 
+              income, benefits or State 
+              Pension
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> your name</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How do you financially support yourself?
+            </dt>
+            <dd class="govuk-summary-list__value">
+ 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> your name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-!-padding-bottom-5"></div>
+
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+     
+
+
+{% endblock %}
+

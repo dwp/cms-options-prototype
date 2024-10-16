@@ -1,0 +1,107 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="" method="post" novalidate>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                         Your income
+                        </h1>
+                      </legend>
+                     
+                      <div class="govuk-!-padding-bottom-5"></div>
+
+                      <p>We will calculate your payments using the income 
+                        information we already have. This is because you pay 
+                        child maintenance in another case.</p>
+
+                      <br/>
+
+                      <h3 class="govuk-heading-m">If your income has changed</h3>
+
+                      <p class="govuk-body">Tell us if your income has increased or decreased by 25% or more.</p>
+
+                      <p class="govuk-body">
+                      You can find the income information we have on your most recent payment schedule. We send this in the post or you can view it in <a href="#" class="govuk-link">your online child maintenance 
+                        account (opens in new tab)</a>.
+                      </p>
+            
+              <div class="govuk-!-padding-bottom-5"></div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h3 class="govuk-fieldset__heading">
+                      Do you want to tell us about a change in your income?
+                    </h3>
+                  </legend>
+                 
+                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="income-multi" name="income-multi" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="income-multi">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="income-multi" name="income-multi" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="income-multi">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+               <button class="govuk-button" data-module="govuk-button">
+                Continue
+               </button>
+                  
+
+
+                    </form>
+                    </div>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                      <div class="govuk-button--sticky">
+                          <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                              data-module="govuk-button">
+                              Hide this page
+                          </a>
+                      </div>
+                    
+
+                    </main>
+                    </div>
+
+
+
+
+
+
+{% endblock %}
+

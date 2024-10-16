@@ -1,0 +1,224 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Radio buttons start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-xl">Check your answers before moving on to the next section</h1>
+        <h2 class="govuk-heading-m">Your details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Reference number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['reference-number'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> reference number</span>
+              </a>
+            </dd>
+
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['your-first-name'] }}  {{ data['your-middle-name'] }}  {{ data['your-last-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> applicants name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Applicant name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['applicant-first-name'] }} {{ data['applicant-middle-name'] }} {{ data['applicant-last-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> your name</span>
+              </a>
+            </dd>
+
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Insurance Number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['national-insurance-number'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> National Insurance number</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Court order
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> different formats</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['address-line-1'] }}</p>
+              <p class="govuk-body">{{ data['address-line-2'] }}</p>
+              <p class="govuk-body">{{ data['address-town'] }}</p>
+              <p class="govuk-body">{{ data['address-county'] }}</p>
+              <p class="govuk-body">{{ data['address-postcode'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> Address</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Different formats
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['different-contact'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> different formats</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contact number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['contact-number'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> contact number</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Preferred call time 
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Any time
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> Preferred call time</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+          <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Text messages
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">Text messages</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Emails
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['emails'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">Text messages</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['email-address'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">Text messages</span>
+              </a>
+            </dd>
+          </div> -->
+
+        </dl>
+        </dl>
+        <form action="/form-handler" method="post" novalidate>
+          <input type="hidden" name="answers-checked" value="true">
+          <a href="/datagather/iteration1/domestic-abuse-help" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+          </a>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
+

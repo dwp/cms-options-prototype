@@ -1,0 +1,109 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Radio buttons start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Which of the following best describes your sexual orientation?
+                </h1>
+              </legend>
+
+
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="hetrosexual">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    Hetrosexual or Straight
+                  </label>
+                </div>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="gay">
+                    <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                      Gay or Lesbian
+                    </label>
+                  </div>
+
+                  
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="bisexual">
+                      <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                        Bisexual
+                      </label>
+                    </div>
+
+                    
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="sexual-orientation" name="contact" type="radio" value="any-other-sexual-orientation" data-aria-controls="conditional-contact">
+                        <label class="govuk-label govuk-radios__label" for="contact">
+                          Any other sexual orientation
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="contact-by-email">
+                            What is your sexual orientation? (optional)
+                          </label>
+                          <input class="govuk-input govuk-!-width-one-third" id="sexual-orientation" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                        </div>
+                      </div>
+
+
+
+                        <div class="govuk-radios__divider">or</div>
+
+                      
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                            Prefer not to say
+                          </label>
+                        </div>
+        
+                  
+              </div>
+            </fieldset>
+          </div>
+         
+          <a href="/datagather/iteration1/do-you-have-any-access-needs" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+          </a>
+
+
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+

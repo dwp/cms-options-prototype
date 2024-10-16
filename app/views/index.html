@@ -65,7 +65,7 @@ GOV.UK Prototype Kit
                 - Content changed based on feedback from prof of parental law at University of Cambridge <br><br>
                 <strong>UPDATES:</strong><br>(Mar 2022): Routing has been fixed to mirror latest flow diagram <br>
                 <br>Survey UR has been updated to only include 1 question<br> <br>Information page has been updated<br>
-                
+
 
 
               </dt>
@@ -289,7 +289,7 @@ GOV.UK Prototype Kit
   <!-- Data Gather prototypes -->
 
 
-  <div class="govuk-grid-column-full">
+  <!-- <div class="govuk-grid-column-full"> -->
     <h2 class="govuk-heading-l">Respond prototype</h2>
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 
@@ -299,14 +299,14 @@ GOV.UK Prototype Kit
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-              Respond to a child maintenance application
+              Respond to a child maintenance application - iteration 1
             </span>
           </h2>
         </div>
         <div id="accordion-default-content-4" class="govuk-accordion__section-content"
           aria-labelledby="accordion-default-heading-1">
 
-          <span class="govuk-tag govuk-tag--green">Third iteration</span>
+          <!-- <span class="govuk-tag govuk-tag--green">Third iteration</span> -->
 
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
@@ -354,14 +354,12 @@ GOV.UK Prototype Kit
                   - Income questions have been changed for testing on 12/6/2024<br><br>
                   <strong>UPDATES:</strong><br>
                   - (October 2024): adding 'I do not know' Radio option to Parentage questions - <br> 'Are you the
-                biological or legal paretn of..?' & 'Are you on the birth certificate of..?'
+                  biological or legal paretn of..?' & 'Are you on the birth certificate of..?'
                 </dt>
               </dl>
 
             </div>
           </div>
-
-
           <div class="govuk-button-group">
             <a href="/datagather/iteration1/start" class="govuk-button govuk-button--start">Start prototype</a>
 
@@ -370,16 +368,87 @@ GOV.UK Prototype Kit
             <a class="govuk-link" href="/datagathermulticase/iteration1/income-not-on-letter.html">Income section -
               Multicase</a>
           </div>
+        </div> <!-- govuk-accordion__section -->
 
-        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Respond to a child maintenance application - iteration 2
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-1">
+
+            <!-- <span class="govuk-tag govuk-tag--green">Third iteration</span> -->
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <dl>
+                  <dt class="govuk-heading-s">Last updated</dt>
+                  <dt class="govuk-body">October 2024</dt>
+                </dl>
+                <dl>
+                  <dt class="govuk-heading-s">Date created</dt>
+                  <dt class="govuk-body">Ocotber 2024</dt>
+                </dl>
+
+
+                <!-- <dl>
+                  <dt class="govuk-heading-s">What it is</dt>
+                  <dt class="govuk-body">
+                    Includes:<br><br>
+                    - Section one / matching a user to a case and MCMC sign up<br><br>
+                    - Section two / asking a user for personal details<br><br>
+                    - Section three / optional equality questions section<br><br>
+                    - Section four / asking a user employment and income details<br><br>
+                    - Section five / asking a user about their children and arrangements<br><br>
+                    - Section six / payment types available for child maintenance<br><br>
+                  </dt>
+                </dl> -->
+
+                <dl>
+                  <dt class="govuk-heading-s">Changes from user research</dt>
+                  <dt class="govuk-body">
+                    <strong>October 2024:</strong> Adding 'I do not know' Radio option to Parentage questions <br> 
+                    <strong>October 2024:</strong> Content changes to pages:
+                    <ol class="govuk-list govuk-list--number">
+                      <li>Start page.</li>
+                      <li>Annual income page.</li>
+                      <li>Your employers details page.</li>
+                      <li>Your Gross basic income page.</li>
+                      <li>Tell us sbaout children who may affect your calculation page.</li>
+                      <li>Do you know who this person is page.</li>
+                      <li>Do you have evidence to prove you ar enot the biological parent page.</li>
+                      <li>Were yoou married between the conception and birth page.</li>
+                      <li>A caseworker will call you page.</li>
+                    </ol>
+                  </dt>
+                </dl>
+
+              </div>
+            </div>
+
+
+            <div class="govuk-button-group">
+              <a href="/datagather/iteration2/start" class="govuk-button govuk-button--start">Start prototype</a>
+
+
+
+              <a class="govuk-link" href="/datagathermulticase/iteration2/income-not-on-letter.html">Income section -
+                Multicase</a>
+            </div>
+
+          </div>
+        </div> <!-- govuk-accordion__section -->
+
+        <div class="govuk-!-padding-bottom-9"></div>
       </div>
-
-      <div class="govuk-!-padding-bottom-9"></div>
     </div>
-  </div>
-  
-</div> <!-- grid row -->
+
+  </div> <!-- grid row -->
 
 
 
-{% endblock %}
+  {% endblock %}

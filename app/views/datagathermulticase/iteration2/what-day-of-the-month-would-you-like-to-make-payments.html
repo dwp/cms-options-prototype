@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration1/ask-other-parent-for-bank-details" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  What day of the month would you like to make payments?
+                </h1>
+              </legend>
+
+              <div id="passport-issued-hint" class="govuk-hint">
+                If your payment date falls on a weekend or a bank holiday you’ll pay either on the working
+                day before or the working day after, depending on your bank.
+              </div>
+
+              <div class="govuk-date-input" id="day-of-month">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="day-of-month">
+                      Enter a day between the 1st and the 28th
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day-of-month" name="day-of-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}
+
