@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="/datagather/iteration1/where-does-other-child-live" method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+                  <h1 class="govuk-fieldset__heading">
+                    Do you or someone you live with receive Child Benefit for {{ data['fba-first-name'] }}?
+                  </h1>
+                </legend>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="child-benefit-fba" name="child-benefit-fba" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="child-benefit">
+                     Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="child-benefit-fba" name="child-benefit-fba" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="child-benefit">
+                     No
+                    </label>
+                  </div>
+
+                    <div class="govuk-radios__divider">or</div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="child-benefit-fba" name="where-do-you-live" type="radio" value="abroad">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-6">
+          I don't know
+        </label>
+      </div>
+    </div>
+                
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+
+
+{% endblock %}
+

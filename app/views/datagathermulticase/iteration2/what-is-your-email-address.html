@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration1/section-two-check-your-answers" method="post" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="email-address">
+                What is your email address?
+              </label>
+            </h1>
+              <div id="email-hint" class="govuk-hint">
+                We’ll only use this to send you updates about the application.
+              </div>
+              <input class="govuk-input" id="email-address" name="email-address" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}
+

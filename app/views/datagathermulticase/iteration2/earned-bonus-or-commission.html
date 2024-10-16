@@ -1,0 +1,78 @@
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Phase banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!-- Radio buttons start -->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration1/you-have-told-us-about-employer" method="post" novalidate>
+     
+      
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                      Have you earned a bonus, commission or overtime in the last 12 months from {{ data['employer-name'] }}?
+                    </h1>
+                  </legend>
+                 
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="commission" name="commission" type="radio" value="yes" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="commission">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="contact-by-email">
+                          How much bonus, commission or overtime have you earned, in pounds?
+                        </label>
+                        <div class="govuk-input__wrapper">
+                          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                          <input class="govuk-input govuk-input--width-5" id="commission" name="commission" type="text" spellcheck="false">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="commission" name="commission" type="radio" value="no" data-aria-controls="conditional-contact-2">
+                      <label class="govuk-label govuk-radios__label" for="commission">
+                        No
+                      </label>
+                  </div>
+                </fieldset>
+              </div>
+
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+
