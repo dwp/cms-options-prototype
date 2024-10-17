@@ -18,6 +18,7 @@ const mergediteration1 = require('./routes/mergediteration1');;
 const datagatheriteration1 = require('./routes/datagatheriteration1');;
 const datagatheriteration2 = require('./routes/datagatheriteration2');;
 const datagathermulticase = require('./routes/datagathermulticase');;
+const datagathermulticase2 = require('./routes/datagathermulticase2');;
 const citizensadviceiteration1 = require('./routes/citizensadviceiteration1');;
 const information = require('./routes/information');;
 const telephonytool = require('./routes/telephonytool');;
@@ -46,6 +47,7 @@ router.use(mergediteration1);
 router.use(datagatheriteration1);
 router.use(datagatheriteration2);
 router.use(datagathermulticase)
+router.use(datagathermulticase2)
 router.use(citizensadviceiteration1);
 router.use(information);
 router.use(telephonytool);
