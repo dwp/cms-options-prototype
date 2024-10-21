@@ -1,6 +1,7 @@
 
 const express = require('express')
 const router = express.Router()
+const util = require('util');
 
 router.use((req, res, next) => {
   if (req.method === 'POST') {
@@ -520,7 +521,7 @@ router.post('/datagather/iteration2/do-you-know-applicant', function(req, res) {
 
 // do-you-have-evidence
 
-router.post('/datagather/iteration2/do-you-have-evidence', function(req, res) {
+/* router.post('/datagather/iteration2/do-you-have-evidence', function(req, res) {
   if (req.body['evidence'] === 'yes') {
     res.redirect('/datagather/iteration2/caseworker-will-call');
   } else if (req.body['evidence'] === 'no'){
@@ -528,9 +529,40 @@ router.post('/datagather/iteration2/do-you-have-evidence', function(req, res) {
   } else {
     res.redirect('/do-you-have-evidence');
   }
-   });
+   }); */
+
+   /* router.post('/datagather/iteration2/do-you-have-evidence.html', function(req, res, next){ 
+ 
+    if (req.session.data['evidence']){
+     for (i = 0; i<req.session.data['evidence'].length; i++){
+     switch (req.session.data['evidence'][i]){
+ 
+      case "DNA test" :  return res.redirect("/datagather/iteration2/caseworker-will-call.html"); next(); break;
+      case "Court documents" :  return res.redirect("/datagather/iteration2/caseworker-will-call.html"); next(); break;
+      case "Neither" :  return res.redirect("/datagather/iteration2/has-first-child-been-adopted.html"); next(); break;
+      default: continue;
+      }
+      break;
+     }
+    } else {
+ 
+    }
+   return res.redirect(""); next();
+   })    */
 
 
+router.post('/datagather/iteration2/do-you-have-evidence', function(req, res, next) {
+    
+    const evidence = req.session.data['evidence'];   
+
+    if (evidence.includes('DNA test') || evidence.includes('Court documents')){
+        res.redirect("/datagather/iteration2/caseworker-will-call.html")
+    } else {
+        res.redirect("/datagather/iteration2/has-first-child-been-adopted.html")
+    }
+
+    next()
+})
 
 // has-first-child-been-adopted
 
