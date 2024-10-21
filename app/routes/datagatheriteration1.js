@@ -554,15 +554,15 @@ router.post('/datagather/iteration1/has-first-child-been-adopted', function(req,
 
 
 
-// Routes start iteration2
+// Routes start iteration1
 
 // do-you-have-a-court-order
 
-router.post('/datagather/iteration2/do-you-have-a-court-order', function(req, res) {
+router.post('/datagather/iteration1/do-you-have-a-court-order', function(req, res) {
   if (req.body['court-order'] === 'yes') {
     res.redirect('income-none-of-the-above');
   } else if (req.body['court-order'] === 'no'){
-    res.redirect('/datagather/iteration2/where-can-we-send-letters');
+    res.redirect('/datagather/iteration1/where-can-we-send-letters');
   } else {
     res.redirect('do-you-have-a-court-order');
   }
@@ -571,35 +571,35 @@ router.post('/datagather/iteration2/do-you-have-a-court-order', function(req, re
 
 // contacting-you-about-your-application
 
-router.post('/datagather/iteration2/contacting-you-about-your-application', function(req, res) {
+router.post('/datagather/iteration1/contacting-you-about-your-application', function(req, res) {
   if (req.body['different-contact'] === 'Yes') {
     res.redirect('different-contact-formats');
   } else if (req.body['different-contact'] === 'No'){
-    res.redirect('/datagather/iteration2/best-number-to-call-you-on.html');
+    res.redirect('/datagather/iteration1/best-number-to-call-you-on.html');
   }
   });
 
 
  // do-you-know-your-pin-and-password
 
- router.post('/datagather/iteration2/do-you-know-your-pin-and-password', function(req, res) {
+ router.post('/datagather/iteration1/do-you-know-your-pin-and-password', function(req, res) {
   if (req.body['know-pin'] === 'yes') {
     res.redirect('what-is-your-name');
   } else if (req.body['know-pin'] === 'no'){
-    res.redirect('/datagather/iteration2/reset-pin-and-password');
+    res.redirect('/datagather/iteration1/reset-pin-and-password');
   } else {
-    res.redirect('/datagather/iteration2/do-you-know-your-pin-and-password');
+    res.redirect('/datagather/iteration1/do-you-know-your-pin-and-password');
   }
    });
 
 
   // where-do-you-live
 
-  router.post('/datagather/iteration2/where-can-we-send-letters', function(req, res) {
+  router.post('/datagather/iteration1/where-can-we-send-letters', function(req, res) {
     if (req.body['do-you-live-here'] === 'yes') {
-      res.redirect('/datagather/iteration2/contacting-you-about-your-application.html');
+      res.redirect('/datagather/iteration1/contacting-you-about-your-application.html');
     } else if (req.body['do-you-live-here'] === 'no'){
-      res.redirect('/datagather/iteration2/where-do-you-live.html');
+      res.redirect('/datagather/iteration1/where-do-you-live.html');
     } else {
       res.redirect('where-can-we-send-letters');
     }
@@ -608,11 +608,11 @@ router.post('/datagather/iteration2/contacting-you-about-your-application', func
 
  // can-we-send-you-emails
 
- router.post('/datagather/iteration2/can-we-send-you-emails', function(req, res) {
+ router.post('/datagather/iteration1/can-we-send-you-emails', function(req, res) {
   if (req.body['emails'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-your-email-address.html');
+    res.redirect('/datagather/iteration1/what-is-your-email-address.html');
   } else if (req.body['emails'] === 'no'){
-    res.redirect('/datagather/iteration2/section-two-check-your-answers.html');
+    res.redirect('/datagather/iteration1/section-two-check-your-answers.html');
   } else {
     res.redirect('can-we-send-you-emails');
   }
@@ -621,25 +621,25 @@ router.post('/datagather/iteration2/contacting-you-about-your-application', func
 
    // will-you-answer-equality-questions
 
- router.post('/datagather/iteration2/will-you-answer-equality-questions', function(req, res) {
+ router.post('/datagather/iteration1/will-you-answer-equality-questions', function(req, res) {
   if (req.body['equality-questions'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-your-ethnic-group.html');
+    res.redirect('/datagather/iteration1/what-is-your-ethnic-group.html');
   } else if (req.body['equality-questions'] === 'no'){
-    res.redirect('/datagather/iteration2/do-you-agree-with-income-amount.html');
+    res.redirect('/datagather/iteration1/do-you-agree-with-income-amount.html');
   }
   });
 
 
   // different-contact-formats checkboxes
  
-   router.post('/datagather/iteration2/different-contact-formats.html', function(req, res, next){ 
+   router.post('/datagather/iteration1/different-contact-formats.html', function(req, res, next){ 
  
     if (req.session.data['format']){
      for (i = 0; i<req.session.data['format'].length; i++){
      switch (req.session.data['format'][i]){
  
-      case "letters" :  return res.redirect("/datagather/iteration2/different-contact-formats-letters.html"); next(); break;
-      case "phone" :  return res.redirect("/datagather/iteration2/different-contact-formats-phone.html"); next(); break;
+      case "letters" :  return res.redirect("/datagather/iteration1/different-contact-formats-letters.html"); next(); break;
+      case "phone" :  return res.redirect("/datagather/iteration1/different-contact-formats-phone.html"); next(); break;
       default: continue;
       }
       break;
@@ -650,7 +650,7 @@ router.post('/datagather/iteration2/contacting-you-about-your-application', func
    return res.redirect(""); next();
    })
  
-   router.post('/datagather/iteration2/different-contact-formats.html', function(req, res, next){ 
+   router.post('/datagather/iteration1/different-contact-formats.html', function(req, res, next){ 
  
     if (req.session.data['format']){
      for (i = 0; i<req.session.data['format'].length; i++){
@@ -671,48 +671,48 @@ router.post('/datagather/iteration2/contacting-you-about-your-application', func
 
  // what-is-your-ethnic-group
 
- router.post('/datagather/iteration2/what-is-your-ethnic-group', function(req, res) {
+ router.post('/datagather/iteration1/what-is-your-ethnic-group', function(req, res) {
   if (req.body['ethnic-group'] === 'white') {
-    res.redirect('/datagather/iteration2/ethnic-group-white.html');
+    res.redirect('/datagather/iteration1/ethnic-group-white.html');
   } else if (req.body['ethnic-group'] === 'mixed'){
-    res.redirect('/datagather/iteration2/ethnic-group-mixed.html');
+    res.redirect('/datagather/iteration1/ethnic-group-mixed.html');
   } else if (req.body['ethnic-group'] === 'asian'){
-      res.redirect('/datagather/iteration2/ethnic-group-asian.html');
+      res.redirect('/datagather/iteration1/ethnic-group-asian.html');
     }else if (req.body['ethnic-group'] === 'black'){
-      res.redirect('/datagather/iteration2/ethnic-group-black.html');
+      res.redirect('/datagather/iteration1/ethnic-group-black.html');
     }else if (req.body['ethnic-group'] === 'other'){
-      res.redirect('/datagather/iteration2/ethnic-group-other.html');
+      res.redirect('/datagather/iteration1/ethnic-group-other.html');
     } else {
-      res.redirect('/datagather/iteration2/what-is-your-religion.html');
+      res.redirect('/datagather/iteration1/what-is-your-religion.html');
     }
   });
 
 
 // do-you-have-any-access-needs
 
-router.post('/datagather/iteration2/do-you-have-any-access-needs', function(req, res) {
+router.post('/datagather/iteration1/do-you-have-any-access-needs', function(req, res) {
   if (req.body['access-needs'] === 'yes') {
-    res.redirect('/datagather/iteration2/select-access-needs.html');
+    res.redirect('/datagather/iteration1/select-access-needs.html');
   } else if (req.body['access-needs'] === 'no'){
-    res.redirect('/datagather/iteration2/section-three-check-your-answers.html');
+    res.redirect('/datagather/iteration1/section-three-check-your-answers.html');
   } else if (req.body['access-needs'] === 'prefer-not'){
-      res.redirect('/datagather/iteration2/section-three-check-your-answers.html');
+      res.redirect('/datagather/iteration1/section-three-check-your-answers.html');
     }
   });
 
 
   // where-does-your-income-come-from checkboxes
  
-  router.post('/datagather/iteration2/where-does-your-income-come-from.html', function(req, res, next){ 
+  router.post('/datagather/iteration1/where-does-your-income-come-from.html', function(req, res, next){ 
  
     if (req.session.data['income-source']){
      for (i = 0; i<req.session.data['income-source'].length; i++){
      switch (req.session.data['income-source'][i]){
  
-      case "benefits" :  return res.redirect("/datagather/iteration2/what-benefits-do-you-get.html"); next(); break;
-      case "employment" :  return res.redirect("/datagather/iteration2/income-employed.html"); next(); break;
-      case "self-employment" :  return res.redirect("/datagather/iteration2/income-self-employed.html"); next(); break;
-      case "none" :  return res.redirect("/datagather/iteration2/how-do-you-support-yourself.html"); next(); break;
+      case "benefits" :  return res.redirect("/datagather/iteration1/what-benefits-do-you-get.html"); next(); break;
+      case "employment" :  return res.redirect("/datagather/iteration1/income-employed.html"); next(); break;
+      case "self-employment" :  return res.redirect("/datagather/iteration1/income-self-employed.html"); next(); break;
+      case "none" :  return res.redirect("/datagather/iteration1/how-do-you-support-yourself.html"); next(); break;
       default: continue;
       }
       break;
@@ -726,16 +726,16 @@ router.post('/datagather/iteration2/do-you-have-any-access-needs', function(req,
 
   // what-benefits-do-you-get checkboxes
  
-  router.post('/datagather/iteration2/what-benefits-do-you-get.html', function(req, res, next){ 
+  router.post('/datagather/iteration1/what-benefits-do-you-get.html', function(req, res, next){ 
  
     if (req.session.data['benefits']){
      for (i = 0; i<req.session.data['benefits'].length; i++){
      switch (req.session.data['benefits'][i]){
  
-      case "income-support" :  return res.redirect("/datagather/iteration2/what-benefits-do-you-share.html"); next(); break;
-      case "jobseekers-allowance-income" :  return res.redirect("/datagather/iteration2/what-benefits-do-you-share.html"); next(); break;
-      case "income-related-employment" :  return res.redirect("/datagather/iteration2/what-benefits-do-you-share.html"); next(); break;
-      case "pension-credit" :  return res.redirect("/datagather/iteration2/what-benefits-do-you-share.html"); next(); break;
+      case "income-support" :  return res.redirect("/datagather/iteration1/what-benefits-do-you-share.html"); next(); break;
+      case "jobseekers-allowance-income" :  return res.redirect("/datagather/iteration1/what-benefits-do-you-share.html"); next(); break;
+      case "income-related-employment" :  return res.redirect("/datagather/iteration1/what-benefits-do-you-share.html"); next(); break;
+      case "pension-credit" :  return res.redirect("/datagather/iteration1/what-benefits-do-you-share.html"); next(); break;
       default: continue;
       }
       break;
@@ -743,7 +743,7 @@ router.post('/datagather/iteration2/do-you-have-any-access-needs', function(req,
     } else {
  
     }
-   return res.redirect("/datagather/iteration2/section-four-benefits-check-your-answers.html"); next();
+   return res.redirect("/datagather/iteration1/section-four-benefits-check-your-answers.html"); next();
    })
  
 
@@ -751,16 +751,16 @@ router.post('/datagather/iteration2/do-you-have-any-access-needs', function(req,
 
  // what-benefits-do-you-share checkboxes
  
- router.post('/datagather/iteration2/what-benefits-do-you-share.html', function(req, res, next){ 
+ router.post('/datagather/iteration1/what-benefits-do-you-share.html', function(req, res, next){ 
  
   if (req.session.data['benefits-share']){
    for (i = 0; i<req.session.data['benefits-share'].length; i++){
    switch (req.session.data['benefits-share'][i]){
 
-    case "income-support" :  return res.redirect("/datagather/iteration2/who-do-you-share-benefits-with.html"); next(); break;
-    case "jobseekers-allowance-income" :  return res.redirect("/datagather/iteration2/who-do-you-share-benefits-with.html"); next(); break;
-    case "income-related-employment" :  return res.redirect("/datagather/iteration2/who-do-you-share-benefits-with.html"); next(); break;
-    case "pension-credit" :  return res.redirect("/datagather/iteration2/who-do-you-share-benefits-with.html"); next(); break;
+    case "income-support" :  return res.redirect("/datagather/iteration1/who-do-you-share-benefits-with.html"); next(); break;
+    case "jobseekers-allowance-income" :  return res.redirect("/datagather/iteration1/who-do-you-share-benefits-with.html"); next(); break;
+    case "income-related-employment" :  return res.redirect("/datagather/iteration1/who-do-you-share-benefits-with.html"); next(); break;
+    case "pension-credit" :  return res.redirect("/datagather/iteration1/who-do-you-share-benefits-with.html"); next(); break;
     default: continue;
     }
     break;
@@ -768,17 +768,17 @@ router.post('/datagather/iteration2/do-you-have-any-access-needs', function(req,
   } else {
 
   }
- return res.redirect("/datagather/iteration2/section-four-benefits-check-your-answers.html"); next();
+ return res.redirect("/datagather/iteration1/section-four-benefits-check-your-answers.html"); next();
  })
 
 
 // do-you-know-your-income
 
-router.post('/datagather/iteration2/do-you-know-your-income', function(req, res) {
+router.post('/datagather/iteration1/do-you-know-your-income', function(req, res) {
   if (req.body['annual-income'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-your-annual-income');
+    res.redirect('/datagather/iteration1/what-is-your-annual-income');
   } else if (req.body['annual-income'] === 'no'){
-    res.redirect('/datagather/iteration2/what-is-your-annual-income-fixed');
+    res.redirect('/datagather/iteration1/what-is-your-annual-income-fixed');
   } else {
     res.redirect('do-you-know-your-income');
   }
@@ -787,11 +787,11 @@ router.post('/datagather/iteration2/do-you-know-your-income', function(req, res)
 
 // you-have-told-us-about-employer
 
-router.post('/datagather/iteration2/you-have-told-us-about-employer', function(req, res) {
+router.post('/datagather/iteration1/you-have-told-us-about-employer', function(req, res) {
   if (req.body['add-employer'] === 'yes') {
-    res.redirect('/datagather/iteration2/income-employed.html');
+    res.redirect('/datagather/iteration1/income-employed.html');
   } else if (req.body['add-employer'] === 'no'){
-    res.redirect('/datagather/iteration2/do-you-pay-into-a-pension');
+    res.redirect('/datagather/iteration1/do-you-pay-into-a-pension');
   } else {
     res.redirect('you-have-told-us-about-employer');
   }
@@ -800,11 +800,11 @@ router.post('/datagather/iteration2/you-have-told-us-about-employer', function(r
 
 // you-have-told-us-self-employment
 
-router.post('/datagather/iteration2/you-have-told-us-self-employment', function(req, res) {
+router.post('/datagather/iteration1/you-have-told-us-self-employment', function(req, res) {
   if (req.body['add-self-employer'] === 'yes') {
-    res.redirect('/datagather/iteration2/income-self-employed.html');
+    res.redirect('/datagather/iteration1/income-self-employed.html');
   } else if (req.body['add-self-employer'] === 'no'){
-    res.redirect('/datagather/iteration2/section-four-self-employed-check-your-answers.html');
+    res.redirect('/datagather/iteration1/section-four-self-employed-check-your-answers.html');
   } else {
     res.redirect('you-have-told-us-self-employment');
   }
@@ -813,11 +813,11 @@ router.post('/datagather/iteration2/you-have-told-us-self-employment', function(
 
 // do-you-pay-into-a-pension
 
-router.post('/datagather/iteration2/do-you-pay-into-a-pension', function(req, res) {
+router.post('/datagather/iteration1/do-you-pay-into-a-pension', function(req, res) {
   if (req.body['pension'] === 'yes') {
-    res.redirect('/datagather/iteration2/if-you-pay-into-a-private-pension');
+    res.redirect('/datagather/iteration1/if-you-pay-into-a-private-pension');
   } else if (req.body['pension'] === 'no'){
-    res.redirect('/datagather/iteration2/section-four-employed-check-your-answers');
+    res.redirect('/datagather/iteration1/section-four-employed-check-your-answers');
   } else {
     res.redirect('do-you-pay-into-a-pension');
   }
@@ -826,14 +826,14 @@ router.post('/datagather/iteration2/do-you-pay-into-a-pension', function(req, re
 
  // what-type-of-pension checkboxes
  
- router.post('/datagather/iteration2/what-type-of-pension.html', function(req, res, next){ 
+ router.post('/datagather/iteration1/what-type-of-pension.html', function(req, res, next){ 
  
   if (req.session.data['pension-type']){
    for (i = 0; i<req.session.data['pension-type'].length; i++){
    switch (req.session.data['pension-type'][i]){
 
-    case "private" :  return res.redirect("/datagather/iteration2/if-you-pay-into-a-private-pension.html"); next(); break;
-    case "workplace" :  return res.redirect("/datagather/iteration2/tell-us-about-your-children.html"); next(); break;
+    case "private" :  return res.redirect("/datagather/iteration1/if-you-pay-into-a-private-pension.html"); next(); break;
+    case "workplace" :  return res.redirect("/datagather/iteration1/tell-us-about-your-children.html"); next(); break;
     default: continue;
     }
     break;
@@ -841,17 +841,17 @@ router.post('/datagather/iteration2/do-you-pay-into-a-pension', function(req, re
   } else {
 
   }
- return res.redirect("/datagather/iteration2/tell-us-about-your-children.html"); next();
+ return res.redirect("/datagather/iteration1/tell-us-about-your-children.html"); next();
  })
 
 
 // accept-parentage
 
-router.post('/datagather/iteration2/accept-parentage', function(req, res) {
+router.post('/datagather/iteration1/accept-parentage', function(req, res) {
   if (req.body['parentage'] === 'yes') {
-    res.redirect('/datagather/iteration2/section-five-check-your-answers-for-named-child');
+    res.redirect('/datagather/iteration1/section-five-check-your-answers-for-named-child');
   } else if (req.body['parentage'] === 'no'){
-    res.redirect('/datagather/iteration2/are-you-on-the-birth-certificate');
+    res.redirect('/datagather/iteration1/are-you-on-the-birth-certificate');
   } else {
     res.redirect('accept-parentage');
   }
@@ -860,11 +860,11 @@ router.post('/datagather/iteration2/accept-parentage', function(req, res) {
 
 // are-you-on-the-birth-certificate
 
-router.post('/datagather/iteration2/are-you-on-the-birth-certificate', function(req, res) {
+router.post('/datagather/iteration1/are-you-on-the-birth-certificate', function(req, res) {
   if (req.body['birth-certificate'] === 'yes') {
-    res.redirect('/datagather/iteration2/how-often-does-child-stay-overnight');
+    res.redirect('/datagather/iteration1/how-often-does-child-stay-overnight');
   } else if (req.body['birth-certificate'] === 'no'){
-    res.redirect('/datagather/iteration2/do-you-know-applicant');
+    res.redirect('/datagather/iteration1/do-you-know-applicant');
   } else {
     res.redirect('are-you-on-the-birth-certificate');
   }
@@ -874,11 +874,11 @@ router.post('/datagather/iteration2/are-you-on-the-birth-certificate', function(
 
 // section-five-check-your-answers-for-named-child
 
-router.post('/datagather/iteration2/section-five-check-your-answers-for-named-child', function(req, res) {
+router.post('/datagather/iteration1/section-five-check-your-answers-for-named-child', function(req, res) {
   if (req.body['add-another-named-child'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-your-childs-name');
+    res.redirect('/datagather/iteration1/what-is-your-childs-name');
   } else if (req.body['add-another-named-child'] === 'no'){
-    res.redirect('/datagather/iteration2/other-children-private-arrangement');
+    res.redirect('/datagather/iteration1/other-children-private-arrangement');
   } else {
     res.redirect('section-five-check-your-answers-for-named-child');
   }
@@ -887,11 +887,11 @@ router.post('/datagather/iteration2/section-five-check-your-answers-for-named-ch
 
 // section-five-check-your-answers-for-other-child
 
-router.post('/datagather/iteration2/section-five-check-your-answers-for-other-child', function(req, res) {
+router.post('/datagather/iteration1/section-five-check-your-answers-for-other-child', function(req, res) {
   if (req.body['add-another-other-child'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-this-childs-name');
+    res.redirect('/datagather/iteration1/what-is-this-childs-name');
   } else if (req.body['add-another-other-child'] === 'no'){
-    res.redirect('/datagather/iteration2/payment-types');
+    res.redirect('/datagather/iteration1/payment-types');
   } else {
     res.redirect('section-five-check-your-answers-for-other-child');
   }
@@ -900,11 +900,11 @@ router.post('/datagather/iteration2/section-five-check-your-answers-for-other-ch
 
 // section-five-check-your-answers-for-fba-child
 
-router.post('/datagather/iteration2/section-five-check-your-answers-for-fba-child', function(req, res) {
+router.post('/datagather/iteration1/section-five-check-your-answers-for-fba-child', function(req, res) {
   if (req.body['add-another-fba-child'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-this-childs-name-fba');
+    res.redirect('/datagather/iteration1/what-is-this-childs-name-fba');
   } else if (req.body['add-another-fba-child'] === 'no'){
-    res.redirect('/datagather/iteration2/do-any-other-children-live-with-you');
+    res.redirect('/datagather/iteration1/do-any-other-children-live-with-you');
   } else {
     res.redirect('section-five-check-your-answers-for-fba-child');
   }
@@ -914,11 +914,11 @@ router.post('/datagather/iteration2/section-five-check-your-answers-for-fba-chil
 
 // other-children-private-arrangement
 
-router.post('/datagather/iteration2/other-children-private-arrangement', function(req, res) {
+router.post('/datagather/iteration1/other-children-private-arrangement', function(req, res) {
   if (req.body['other-child-private-arrangement'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-this-childs-name-fba');
+    res.redirect('/datagather/iteration1/what-is-this-childs-name-fba');
   } else if (req.body['other-child-private-arrangement'] === 'no'){
-    res.redirect('/datagather/iteration2/do-any-other-children-live-with-you');
+    res.redirect('/datagather/iteration1/do-any-other-children-live-with-you');
   } else {
     res.redirect('section-five-check-your-answers-for-named-child');
   }
@@ -927,11 +927,11 @@ router.post('/datagather/iteration2/other-children-private-arrangement', functio
 
    // do-any-other-children-live-with-you
 
-router.post('/datagather/iteration2/do-any-other-children-live-with-you', function(req, res) {
+router.post('/datagather/iteration1/do-any-other-children-live-with-you', function(req, res) {
   if (req.body['any-other-child'] === 'yes') {
-    res.redirect('/datagather/iteration2/what-is-this-childs-name');
+    res.redirect('/datagather/iteration1/what-is-this-childs-name');
   } else if (req.body['any-other-child'] === 'no'){
-    res.redirect('/datagather/iteration2/payment-types');
+    res.redirect('/datagather/iteration1/payment-types');
   } else {
     res.redirect('do-any-other-children-live-with-you');
   }
@@ -940,11 +940,11 @@ router.post('/datagather/iteration2/do-any-other-children-live-with-you', functi
 
 // payment-types
 
-   router.post('/datagather/iteration2/payment-types', function(req, res) {
+   router.post('/datagather/iteration1/payment-types', function(req, res) {
     if (req.body['payment-type'] === 'direct-pay') {
-      res.redirect('/datagather/iteration2/direct-pay');
+      res.redirect('/datagather/iteration1/direct-pay');
     } else if (req.body['payment-type'] === 'collect-and-pay'){
-      res.redirect('/datagather/iteration2/collect-and-pay');
+      res.redirect('/datagather/iteration1/collect-and-pay');
     } else {
       res.redirect('payment-types');
     }
@@ -953,11 +953,11 @@ router.post('/datagather/iteration2/do-any-other-children-live-with-you', functi
 
 // how-often-would-you-like-to-make-payments
 
-router.post('/datagather/iteration2/how-often-would-you-like-to-make-payments', function(req, res) {
+router.post('/datagather/iteration1/how-often-would-you-like-to-make-payments', function(req, res) {
   if (req.body['payment-frequency'] === 'weekly') {
-    res.redirect('/datagather/iteration2/what-day-of-the-week-would-you-like-to-make-payments');
+    res.redirect('/datagather/iteration1/what-day-of-the-week-would-you-like-to-make-payments');
   } else if (req.body['payment-frequency'] === 'monthly'){
-    res.redirect('/datagather/iteration2/what-day-of-the-month-would-you-like-to-make-payments');
+    res.redirect('/datagather/iteration1/what-day-of-the-month-would-you-like-to-make-payments');
   } else {
     res.redirect('how-often-would-you-like-to-make-payments');
   }
@@ -966,11 +966,11 @@ router.post('/datagather/iteration2/how-often-would-you-like-to-make-payments', 
 
    // how-you-make-collect-and-pay-payments
 
-router.post('/datagather/iteration2/how-you-make-collect-and-pay-payments', function(req, res) {
+router.post('/datagather/iteration1/how-you-make-collect-and-pay-payments', function(req, res) {
   if (req.body['collect-and-pay-type'] === 'direct-debit') {
-    res.redirect('/datagather/iteration2/what-day-of-the-month-would-you-like-to-make-payments-collect-and-pay');
+    res.redirect('/datagather/iteration1/what-day-of-the-month-would-you-like-to-make-payments-collect-and-pay');
   } else if (req.body['collect-and-pay-type'] === 'deduction-of-earnings'){
-    res.redirect('/datagather/iteration2/section-six-check-your-answers-collect-and-pay');
+    res.redirect('/datagather/iteration1/section-six-check-your-answers-collect-and-pay');
   } else {
     res.redirect('how-you-make-collect-and-pay-payments');
   }
@@ -979,11 +979,11 @@ router.post('/datagather/iteration2/how-you-make-collect-and-pay-payments', func
 
    // service-type-preference
 
-   router.post('/datagather/iteration2/service-type-preference', function(req, res) {
+   router.post('/datagather/iteration1/service-type-preference', function(req, res) {
     if (req.body['service-type'] === 'direct-pay') {
-      res.redirect('/datagather/iteration2/how-often-would-you-like-to-make-payments');
+      res.redirect('/datagather/iteration1/how-often-would-you-like-to-make-payments');
     } else if (req.body['service-type'] === 'collect-and-pay'){
-      res.redirect('/datagather/iteration2/how-you-make-collect-and-pay-payments');
+      res.redirect('/datagather/iteration1/how-you-make-collect-and-pay-payments');
     } else {
       res.redirect('service-type-preference');
     }
@@ -992,11 +992,11 @@ router.post('/datagather/iteration2/how-you-make-collect-and-pay-payments', func
 
    // best-number-to-call-you-on
 
-   router.post('/datagather/iteration2/best-number-to-call-you-on', function(req, res) {
+   router.post('/datagather/iteration1/best-number-to-call-you-on', function(req, res) {
     if (req.body['your-number'] === 'yes') {
-      res.redirect('/datagather/iteration2/when-can-we-call-you');
+      res.redirect('/datagather/iteration1/when-can-we-call-you');
     } else if (req.body['your-number'] === 'no'){
-      res.redirect('/datagather/iteration2/text-confirmation');
+      res.redirect('/datagather/iteration1/text-confirmation');
     } else {
       res.redirect('best-number-to-call-you-on');
     }
@@ -1005,11 +1005,11 @@ router.post('/datagather/iteration2/how-you-make-collect-and-pay-payments', func
 
    // text-confirmation
 
-   router.post('/datagather/iteration2/text-confirmation', function(req, res) {
+   router.post('/datagather/iteration1/text-confirmation', function(req, res) {
     if (req.body['send-texts'] === 'yes') {
-      res.redirect('/datagather/iteration2/when-can-we-call-you');
+      res.redirect('/datagather/iteration1/when-can-we-call-you');
     } else if (req.body['send-texts'] === 'no'){
-      res.redirect('/datagather/iteration2/email-updates');
+      res.redirect('/datagather/iteration1/email-updates');
     } else {
       res.redirect('text-confirmation');
     }
@@ -1019,11 +1019,11 @@ router.post('/datagather/iteration2/how-you-make-collect-and-pay-payments', func
 
 // do-you-agree-with-income-amount
 
-router.post('/datagather/iteration2/do-you-agree-with-income-amount', function(req, res) {
+router.post('/datagather/iteration1/do-you-agree-with-income-amount', function(req, res) {
   if (req.body['income-amount-agree'] === 'yes') {
-    res.redirect('/datagather/iteration2/report-change-in-income');
+    res.redirect('/datagather/iteration1/report-change-in-income');
   } else if (req.body['income-amount-agree'] === 'no'){
-    res.redirect('/datagather/iteration2/where-does-your-income-come-from');
+    res.redirect('/datagather/iteration1/where-does-your-income-come-from');
   } else {
     res.redirect('do-you-agree-with-income-amount');
   }
@@ -1033,11 +1033,11 @@ router.post('/datagather/iteration2/do-you-agree-with-income-amount', function(r
 
 // report-change-in-income
 
-router.post('/datagather/iteration2/report-change-in-income', function(req, res) {
+router.post('/datagather/iteration1/report-change-in-income', function(req, res) {
   if (req.body['income-change'] === 'yes') {
-    res.redirect('/datagather/iteration2/where-does-your-income-come-from');
+    res.redirect('/datagather/iteration1/where-does-your-income-come-from');
   } else if (req.body['income-change'] === 'no'){
-    res.redirect('/datagather/iteration2/do-you-pay-into-a-pension');
+    res.redirect('/datagather/iteration1/do-you-pay-into-a-pension');
   } else {
     res.redirect('/report-change-in-income');
   }
@@ -1049,11 +1049,11 @@ router.post('/datagather/iteration2/report-change-in-income', function(req, res)
 
 // do-you-know-applicant
 
-router.post('/datagather/iteration2/do-you-know-applicant', function(req, res) {
+router.post('/datagather/iteration1/do-you-know-applicant', function(req, res) {
   if (req.body['know-applicant'] === 'yes') {
-    res.redirect('/datagather/iteration2/do-you-have-evidence');
+    res.redirect('/datagather/iteration1/do-you-have-evidence');
   } else if (req.body['know-applicant'] === 'no'){
-    res.redirect('/datagather/iteration2/caseworker-will-call');
+    res.redirect('/datagather/iteration1/caseworker-will-call');
   } else {
     res.redirect('/do-you-know-applicant');
   }
@@ -1064,11 +1064,11 @@ router.post('/datagather/iteration2/do-you-know-applicant', function(req, res) {
 
 // do-you-have-evidence
 
-router.post('/datagather/iteration2/do-you-have-evidence', function(req, res) {
+router.post('/datagather/iteration1/do-you-have-evidence', function(req, res) {
   if (req.body['evidence'] === 'yes') {
-    res.redirect('/datagather/iteration2/caseworker-will-call');
+    res.redirect('/datagather/iteration1/caseworker-will-call');
   } else if (req.body['evidence'] === 'no'){
-    res.redirect('/datagather/iteration2/has-first-child-been-adopted');
+    res.redirect('/datagather/iteration1/has-first-child-been-adopted');
   } else {
     res.redirect('/do-you-have-evidence');
   }
@@ -1078,21 +1078,21 @@ router.post('/datagather/iteration2/do-you-have-evidence', function(req, res) {
 
 // has-first-child-been-adopted
 
-router.post('/datagather/iteration2/has-first-child-been-adopted', function(req, res) {
+router.post('/datagather/iteration1/has-first-child-been-adopted', function(req, res) {
   if (req.body['legally-adopted'] === 'yes') {
-    res.redirect('/datagather/iteration2/section-five-check-your-answers-for-named-child');
+    res.redirect('/datagather/iteration1/section-five-check-your-answers-for-named-child');
   } else if (req.body['legally-adopted'] === 'yes-someone'){
-    res.redirect('/datagather/iteration2/caseworker-will-call');
+    res.redirect('/datagather/iteration1/caseworker-will-call');
   } else if (req.body['legally-adopted'] === 'no'){
-    res.redirect('/datagather/iteration2/were-you-married-to-applicant');
+    res.redirect('/datagather/iteration1/were-you-married-to-applicant');
   } else if (req.body['legally-adopted'] === 'do-not-know'){
-    res.redirect('/datagather/iteration2/were-you-married-to-applicant');
+    res.redirect('/datagather/iteration1/were-you-married-to-applicant');
   } else {
     res.redirect('/has-first-child-been-adopted');
   }
    });
 
-// Routes end iteration2
+// Routes end iteration1
 
 
 
