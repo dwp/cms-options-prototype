@@ -22,7 +22,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <!-- Question start -->
-
+        <form method="post" novalidate>
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
@@ -101,14 +101,42 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
           </div>
         </fieldset>
 
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                We will need to send some letters by post, can we send them to this address?
+              </h2>
+            </legend>
+            <div class="govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="do-you-live-here" name="do-you-live-here" type="radio" value="yes~do-you-have-a-court-order.html">
+                <label class="govuk-label govuk-radios__label" for="do-you-live-here">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="do-you-live-here" name="do-you-live-here" type="radio" value="no~letters-address.html">
+                <label class="govuk-label govuk-radios__label" for="different-contact">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
 
         <!-- Radio buttons -->
-        <a href="/datagather/iteration2/do-you-have-a-court-order.html" role="button" draggable="false"
+        <!-- <a href="/datagather/iteration2/do-you-have-a-court-order.html" role="button" draggable="false"
           class="govuk-button" data-module="govuk-button" formnovalidate>Continue
-        </a>
+        </a> -->
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
 
         <!-- Question stop -->
-
+      </form>
 
   </main>
 </div>
