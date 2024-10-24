@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Phase banner start-->
 
 <div class="govuk-phase-banner">
@@ -17,7 +18,7 @@
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
-  
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -26,7 +27,7 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Have you ever met this person?
+                  Were you married to {{ data['applicant-first-name'] }} from the conception to the birth of {{ data['named-child-first-name'] }}?
                 </h1>
               </legend>
 
@@ -38,49 +39,50 @@
                 parental-rights-
                 responsibilities/
                 who-has-parental-
-                responsibility" class="govuk-link">parental rights and responsibilities</a> for {{ data['named-child-first-name'] }}.
+                responsibility" class="govuk-link">parental rights and responsibilities</a> for {{
+                data['named-child-first-name'] }}.
               </p>
 
               <div class="govuk-!-padding-bottom-3"></div>
 
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="married" name="married" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="married">
-                        Yes
-                      </label>
-                    </div>
-                    
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="married" name="married" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="married">
-                        No
-                      </label>
-                    </div>
-                
-                    <div class="govuk-radios__divider">or</div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="married" name="married" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="married">
+                    Yes
+                  </label>
+                </div>
 
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="married" name="married" type="radio" value="do-not-know">
-                      <label class="govuk-label govuk-radios__label" for="married">
-                        I do not know
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="married" name="married" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="married">
+                    No
+                  </label>
+                </div>
+
+                <div class="govuk-radios__divider">or</div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="married" name="married" type="radio" value="do-not-know">
+                  <label class="govuk-label govuk-radios__label" for="married">
+                    I do not know
+                  </label>
+                </div>
               </div>
+            </fieldset>
+          </div>
 
 
-        <div class="govuk-!-padding-bottom-5"></div>
+          <div class="govuk-!-padding-bottom-5"></div>
 
-            <button class="govuk-button" data-module="govuk-button">
-              Continue
-            </button>
-          </form>
-        </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
 
@@ -130,4 +132,3 @@
 
 
 {% endblock %}
-
