@@ -41,7 +41,7 @@ router.post('/datagather/iteration2/contacting-you-about-your-application', func
 
  router.post('/datagather/iteration2/do-you-know-your-pin-and-password', function(req, res) {
   if (req.body['know-pin'] === 'yes') {
-    res.redirect('what-is-your-name');
+    res.redirect('do-you-have-a-court-order.html');
   } else if (req.body['know-pin'] === 'no'){
     res.redirect('/datagather/iteration2/reset-pin-and-password');
   } else {
