@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Phase banner start-->
 
 <div class="govuk-phase-banner">
@@ -16,7 +17,7 @@
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-  
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -25,21 +26,21 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Validate your email.
+                  Verify your email
                 </h1>
               </legend>
-              <div id="dob-hint" class="govuk-hint">
+              <!-- <div id="dob-hint" class="govuk-hint">
                 To get email copies of letters from the Child Maintenance Service you need to validate your email address
-              </div>
+              </div> -->
 
               <h2 class="govuk-caption-xl">
                 You told us this is your email address:
               </h2> <br>
-                <p class="govuk-heading-m">example.email@email.com</p>
+              <p class="govuk-heading-m">example.email@email.com</p>
 
               <div class="govuk-inset-text">
                 We will send a one-time passcode to that email address.<br>
-                The code will expire in 15 minutes. 
+                The code will expire in 15 minutes.
               </div>
 
               <!-- <div class="govuk-body">Is this the email address you want to validate? <br> <strong>example.email@email.com</strong></div> -->
@@ -55,11 +56,15 @@
             </fieldset>
           </div>
 
-          <div class="govuk-body"> <a href="contacting-you-about-your-application.html" class="govuk-link">Skip this and do it later</a></div>
+          <div class="govuk-button-group">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+            <a href="contacting-you-about-your-application.html" class="govuk-link">Skip this and
+              do it later</a>
+          </div>
 
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
+
         </form>
       </div>
     </div>
@@ -70,4 +75,3 @@
 
 
 {% endblock %}
-
