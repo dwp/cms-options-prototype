@@ -39,7 +39,7 @@ router.post('/datagather/iteration2/contacting-you-about-your-application', func
 
  // do-you-know-your-pin-and-password
 
- router.post('/datagather/iteration2/do-you-know-your-pin-and-password', function(req, res) {
+ /* router.post('/datagather/iteration2/do-you-know-your-pin-and-password', function(req, res) {
   if (req.body['know-pin'] === 'yes') {
     res.redirect('do-you-have-a-court-order.html');
   } else if (req.body['know-pin'] === 'no'){
@@ -47,7 +47,7 @@ router.post('/datagather/iteration2/contacting-you-about-your-application', func
   } else {
     res.redirect('/datagather/iteration2/do-you-know-your-pin-and-password');
   }
-   });
+   }); */
 
 
   // where-do-you-live
