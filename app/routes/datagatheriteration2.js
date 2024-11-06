@@ -506,7 +506,7 @@ router.post('/datagather/iteration2/report-change-in-income', function(req, res)
 
 // do-you-know-applicant
 
-router.post('/datagather/iteration2/do-you-know-applicant', function(req, res) {
+/* router.post('/datagather/iteration2/do-you-know-applicant', function(req, res) {
   if (req.body['know-applicant'] === 'yes') {
     res.redirect('/datagather/iteration2/do-you-have-evidence');
   } else if (req.body['know-applicant'] === 'no'){
@@ -514,7 +514,7 @@ router.post('/datagather/iteration2/do-you-know-applicant', function(req, res) {
   } else {
     res.redirect('/do-you-know-applicant');
   }
-   });
+   }); */
 
 
 
