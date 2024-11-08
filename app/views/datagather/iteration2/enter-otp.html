@@ -51,16 +51,23 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                                     The email may take a few minutes to arrive.
                                 </div>
                                 <div class="govuk-details__text">
-                                    Check your spam or junk folder. If it has still not arrived, or it has expired, you can <a href="request-new-otp.html" class="govuk-link">request a new one-time passcode</a>.
+                                    Check your spam or junk folder. If it has still not arrived, or it has expired, you
+                                    can <a href="request-new-otp.html" class="govuk-link">request a new one-time
+                                        passcode</a>.
                                 </div>
                             </details>
 
 
                         </fieldset>
                     </div>
-                    <button class="govuk-button" data-module="govuk-button">
-                        Continue
-                    </button>
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </button>
+                        <a href="email-or-paper-letter.html" class="govuk-link">Skip this and
+                            do it later</a>
+                    </div>
+                    
                 </form>
             </div>
         </div>
