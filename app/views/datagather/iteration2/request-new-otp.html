@@ -30,16 +30,25 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                                 </h1>
                             </legend>
                             <div id="dob-hint" class="govuk-body">
-                                You'll receive a new one-time passcode to the email address: <strong>example.email@email.com</strong>
+                                You'll receive a new one-time passcode to the email address:
+                                <strong>example.email@email.com</strong>
                             </div>
 
-                            <div class="govuk-body">If this email address is wrong you can <a href="validate-email-change-email.html" class="govuk-link">change your email address</a>.
+                            <div class="govuk-body">If this email address is wrong you can <a
+                                    href="validate-email-change-email.html" class="govuk-link">change your email
+                                    address</a>.
 
                         </fieldset>
                     </div>
-                    <button class="govuk-button" data-module="govuk-button">
-                        Continue
-                    </button>
+
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </button>
+                        <a href="email-or-paper-letter.html" class="govuk-link">Skip this and
+                            do it later</a>
+                    </div>
+
                 </form>
             </div>
         </div>
