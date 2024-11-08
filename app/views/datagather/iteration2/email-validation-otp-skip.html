@@ -15,7 +15,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 
 <div class="govuk-width-container">
-
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
@@ -31,12 +31,12 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                         </div>
                         <div class="govuk-notification-banner__content">
                             <p class="govuk-notification-banner__heading">
-                                You will need to verify your email when you acess your Child Maintenance online acocunt.
+                                You can verify your email later in your Child Maintenance Service account.
                             </p>
                         </div>
                     </div>
                     <div class="govuk-heading-s">What happens next?</div>
-                    <div class="govuk-body">Complete your response then access oyur Child Maintenance online account to verify your email.</div>
+                    <div class="govuk-body">We need to collect more information from you to process the application. Please continue with your online response.</div>
 
                     <button class="govuk-button" data-module="govuk-button">
                         Continue
