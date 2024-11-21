@@ -53,11 +53,11 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you know who {{ data['applicant-first-name'] }} {{ data['applicant-last-name'] }} is?
+                  This child maintenance application was made by: {{ data['applicant-first-name'] }} {{ data['applicant-last-name'] }}
                 </h1>
               </legend>
-              <div id="changedName-hint" class="govuk-hint">
-                This person named you in this child maintenance application.
+              <div class="govuk-heading-m govuk-!-padding-top-5" >
+                Do you know who this person is?
               </div>
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
