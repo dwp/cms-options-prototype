@@ -23,19 +23,18 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
       <div class="govuk-grid-column-two-thirds">
         <form method="post" action="/datagather/iteration2/do-you-have-evidence" novalidate>
           <div class="govuk-form-group">
-            <!-- <fieldset class="govuk-fieldset">
+            <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you have evidence to prove you are not the biological or legal parent of {{
-                  data['named-child-first-name'] }}?
+                  Was {{ data['named-child-first-name'] }} conceived using a registered fertility clinic?
                 </h1>
               </legend>
 
               <div class="govuk-!-padding-bottom-5"></div>
 
-              <p class="govuk-body">Evidence can include:</p>
+              <p class="govuk-body">This includes assisted conception, like intrauterine insemination (IUI) or in vitro fertilisation (IVF). This will help us decide if you have <a href="#">parental rights and responsibilities</a> for {{ data['named-child-first-name'] }}</p>
 
-              <ul class="govuk-list govuk-list--bullet">
+              <!-- <ul class="govuk-list govuk-list--bullet">
                 <li>court approved DNA test results from
                   Cellmark (a government approved
                   laboratory)
@@ -44,30 +43,38 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                   the parent
                 </li>
               </ul>
+ -->
 
-
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="evidence" name="evidence" type="radio" value="yes">
+                  <input class="govuk-radios__input" id="evidence" name="evidence" type="radio" value="yes~/datagather/iteration2/caseworker-will-call.html">
                   <label class="govuk-label govuk-radios__label" for="evidence">
                     Yes
                   </label>
                 </div>
 
-
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="evidence" name="evidence" type="radio" value="no">
+                  <input class="govuk-radios__input" id="evidence" name="evidence" type="radio" value="no~/datagather/iteration2/has-first-child-been-adopted.html">
                   <label class="govuk-label govuk-radios__label" for="evidence">
                     No
                   </label>
                 </div>
+
+                <div class="govuk-radios__divider">or</div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="evidence" name="evidence" type="radio" value="I do not know~/datagather/iteration2/has-first-child-been-adopted.html">
+                  <label class="govuk-label govuk-radios__label" for="evidence">
+                    I do not know
+                  </label>
+                </div>
               </div>
 
-            </fieldset> -->
+            </fieldset>
           <!-- </div>  -->
 
           <!-- <div class="govuk-form-group"> -->
-            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <!-- <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
                  Do you have proof that you are not the parent?
@@ -97,7 +104,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                   </label>
                 </div>
               </div>
-            </fieldset>
+            </fieldset> -->
           </div> <!-- govuk-form-group -->
 
           <button class="govuk-button" data-module="govuk-button">
