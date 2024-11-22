@@ -551,7 +551,7 @@ router.post('/datagather/iteration2/report-change-in-income', function(req, res)
    })    */
 
 
-/* router.post('/datagather/iteration2/do-you-have-evidence', function(req, res, next) {
+router.post('/datagather/iteration2/do-you-have-evidence', function(req, res, next) {
     
     const evidence = req.session.data['evidence'];   
 
@@ -562,7 +562,7 @@ router.post('/datagather/iteration2/report-change-in-income', function(req, res)
     }
 
     next()
-}) */
+})
 
 // has-first-child-been-adopted
 
