@@ -1,18 +1,4 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Feedback banner start-->
-
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-<!--Feedback banner stop-->
+{% extends "layout-2.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -25,55 +11,44 @@
                         <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l ">
                                 <h1 class="govuk-caption-xl">
-                                You have told us your email is:<br>  </h1>
-                                  <span class="govuk-heading-xl">
+                                    You have told us your email is:<br> </h1>
+                                <span class="govuk-heading-xl">
                                     {% if data['contact-by-email'] %}
-                                      {{data['contact-by-email']}}
+                                    {{data['contact-by-email']}}
                                     {% else %}
-                                      anthony@email.com
+                                    anthony@email.com
                                     {% endif %}
-                                 </span>
+                                </span>
 
                             </legend>
 
                             <h2 class="govuk-heading-s">Is this the correct email address?</h2>
 
-                            
-
                             <div class="govuk-radios govuk-radios--inline">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="yes" name="confirm-email" type="radio" value="yes">
+                                    <input class="govuk-radios__input" id="yes" name="confirm-email" type="radio"
+                                        value="yes">
                                     <label class="govuk-label govuk-radios__label" for="yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="no" name="confirm-email" type="radio" value="no">
+                                    <input class="govuk-radios__input" id="no" name="confirm-email" type="radio"
+                                        value="no">
                                     <label class="govuk-label govuk-radios__label" for="no">
                                         No
                                     </label>
                                 </div>
                             </div>
-
                         </fieldset>
                     </div>
 
-
-                    <!--end-->
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
                 </form>
             </div>
-            <div class="govuk-grid-column-one-third">
-                <div class="govuk-button--sticky">
-                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
-                        data-module="govuk-button">
-                        Hide this page
-                    </a>
-                </div>
-            </div>
-
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>
