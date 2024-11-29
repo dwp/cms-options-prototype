@@ -1,17 +1,5 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Feedback banner start-->
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
+{% extends "layout-2.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
-<!--Feedback banner stop-->
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -21,43 +9,34 @@
           <div class="govuk-form-group">
             <h1 class="govuk-heading-xl">If you are worried about your safety</h1>
 
-            <p class="govuk-body">You do not need to have any contact with the other parent to use the Child Maintenance Service.</p>
+            <p class="govuk-body">You do not need to have any contact with the other parent to use the Child Maintenance
+              Service.
+            </p>
 
             <h2 class="govuk-heading-m">The Child Maintenance Service will send you text messages</h2>
 
-            <p class="govuk-body">If you do not think it is safe for you to get text messages about child maintenance, you should apply by phone.</p>
-            
-            <p class="govuk-body">
-              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Contact the Child Maintenance Service (opens in a new tab).</a>
+            <p class="govuk-body">If you do not think it is safe for you to get text messages about child maintenance,
+              you should apply by phone.
             </p>
-           
-          
 
-  <!--Paying parent-->
-  {% if data['will-you-be-paying-or-receiving'] === 'receiving' %}
-  {% include './includes/receiving-contact.html' %}
-  {% endif %}
+            <p class="govuk-body">
+              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Contact the Child Maintenance
+                Service (opens in a new tab).</a>
+            </p>
 
+            <!--Paying parent-->
+            {% if data['will-you-be-paying-or-receiving'] === 'receiving' %}
+            {% include './includes/receiving-contact.html' %}
+            {% endif %}
 
-
-       
-
-          <a href="domestic-abuse-help.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-            Continue
-          </a>
+            <a href="domestic-abuse-help.html" role="button" draggable="false" class="govuk-button"
+              data-module="govuk-button">
+              Continue
+            </a>
+          </div>
         </form>
       </div>
-
-    
-
-      <div class="govuk-grid-column-one-third">
-        <div class="govuk-button--sticky">
-          <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
-          data-module="govuk-button">
-          Hide this page
-          </a>
-        </div>
-      </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>
