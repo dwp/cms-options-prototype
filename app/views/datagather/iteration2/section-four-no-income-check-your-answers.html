@@ -57,14 +57,15 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                How do you financially support yourself?
+                Type of financial support
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['income-source'] }} 
+                {{ data['income-source'] }} <br>
+                {{ data['labelAsPageHeading'] }} 
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="how-do-you-support-yourself.html  ">
-                  Change<span class="govuk-visually-hidden"> how you financially support yourself</span>
+                  Change<span class="govuk-visually-hidden"> type of financial support</span>
                 </a>
               </dd>
             </div>
