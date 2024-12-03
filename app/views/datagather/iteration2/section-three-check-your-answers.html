@@ -34,7 +34,7 @@
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> reference number</span>
+                Change<span class="govuk-visually-hidden"> ethnic group</span>
               </a>
             </dd>
 
@@ -48,7 +48,7 @@
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> applicants name</span>
+                Change<span class="govuk-visually-hidden"> ehtnic background</span>
               </a>
             </dd>
           </div>
@@ -62,7 +62,7 @@
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> your name</span>
+                Change<span class="govuk-visually-hidden"> religion</span>
               </a>
             </dd>
 
@@ -76,7 +76,7 @@
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> National Insurance number</span>
+                Change<span class="govuk-visually-hidden"> sexual orientation</span>
               </a>
             </dd>
           </div>
@@ -84,23 +84,32 @@
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Access needs
+              Do you have access needs?
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['access-needs'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> National Insurance number</span>
+                Change<span class="govuk-visually-hidden"> whether you haver access needs</span>
               </a>
             </dd>
           </div>
 
-
-
-
-
-        </dl>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Required support
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Induction loop
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> required support</span>
+              </a>
+            </dd>
+          </div>
+          
         </dl>
       
         <form action="/form-handler" method="post" novalidate>
