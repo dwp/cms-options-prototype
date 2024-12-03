@@ -1,18 +1,5 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Phase banner start-->
-
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-<!-- Radio buttons start -->
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -34,7 +21,7 @@
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> reference number</span>
+                Change<span class="govuk-visually-hidden"> income source</span>
               </a>
             </dd>
           </div>
@@ -42,14 +29,14 @@
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Other benefits or State Pension
+              Benefits you get
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['benefits'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> your name</span>
+                Change<span class="govuk-visually-hidden"> benefits you get</span>
               </a>
             </dd>
           </div>
@@ -57,14 +44,14 @@
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Benefits shared
+              Benefits you share
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['benefits-share'] }} 
+              {{ data['benefits-share'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> National Insurance number</span>
+                Change<span class="govuk-visually-hidden"> benefits you share</span>
               </a>
             </dd>
           </div>
@@ -72,45 +59,38 @@
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Shared with
+              Partner you shared with
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['benefits-first-name'] }} {{ data['benefits-middle-name'] }} {{ data['benefits-last-name'] }} 
+              {{ data['benefits-first-name'] }} {{ data['benefits-middle-name'] }} {{ data['benefits-last-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> National Insurance number</span>
+                Change<span class="govuk-visually-hidden"> partners name</span>
               </a>
             </dd>
           </div>
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              {{ data['benefits-first-name'] }} {{ data['benefits-middle-name'] }} {{ data['benefits-last-name'] }}'s date of birth
+              {{ data['benefits-first-name'] }} {{ data['benefits-middle-name'] }} {{ data['benefits-last-name'] }}'s
+              date of birth
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['benefits-dob'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> National Insurance number</span>
+                Change<span class="govuk-visually-hidden"> partners date of birth</span>
               </a>
             </dd>
           </div>
 
-
-
-
-
-
-
-
-
-        </dl>
         </dl>
         <form action="/form-handler" method="post" novalidate>
           <input type="hidden" name="answers-checked" value="true">
-          <a href="/datagather/iteration2/tell-us-about-your-children" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+          <a href="/datagather/iteration2/tell-us-about-your-children" role="button" draggable="false"
+            class="govuk-button" data-module="govuk-button" formnovalidate>Continue
           </a>
         </form>
       </div>
@@ -120,4 +100,3 @@
 
 
 {% endblock %}
-
