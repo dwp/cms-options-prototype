@@ -33,7 +33,7 @@
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> name</span>
+                  Change<span class="govuk-visually-hidden"> childs name</span>
                 </a>
               </dd>
             </div>
@@ -46,20 +46,7 @@
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> date of birth</span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Are you the biological or legal parent?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{ data['parentage'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> address</span>
+                  Change<span class="govuk-visually-hidden"> childs date of birth</span>
                 </a>
               </dd>
             </div>
@@ -73,27 +60,42 @@
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> overnight stays</span>
                 </a>
               </dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Are you the biological or legal parent? 
+                Additional nights
               </dt>
               <dd class="govuk-summary-list__value">
-                Yes
+                Yes <br>
+                34 <br>
+                They for school holidays
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> additional nights</span>
                 </a>
               </dd>
             </div>
-
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                on the birth certificate?
+                Are you the biological or legal parent of [childs name]?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['parentage'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> whether you are the biological or legal parent of [childs name]</span>
+                </a>
+              </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Are you on the birth certificate for [childs name]?
               </dt>
               <dd class="govuk-summary-list__value">
                 Yes
@@ -114,6 +116,20 @@
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> whetehr you know {{ data['applicant-first-name'] }}</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Proof you are not the parent 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                DNA test from Cellmark (a government approved laboratory)
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
                   Change<span class="govuk-visually-hidden"> contact details</span>
                 </a>
               </dd>
@@ -121,14 +137,14 @@
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Do you have evidence you're not the parent? 
+                Has {{ data['child-first-name'] }} been legally adopted?
               </dt>
               <dd class="govuk-summary-list__value">
                 No
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> whether [childs name] has been legally adopted</span>
                 </a>
               </dd>
             </div>
@@ -142,43 +158,24 @@
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> whether you were married to {{ data['applicant-first-name'] }} between conception and birth</span>
                 </a>
               </dd>
             </div>
 
-
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Has {{ data['child-first-name'] }} been legally adopted?
+                Was {{ data['child-first-name'] }} conceived using a registered fertility clinic?
               </dt>
               <dd class="govuk-summary-list__value">
               
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> whether {{ data['child-first-name'] }} was conceived using a registered fertility clinic</span>
                 </a>
               </dd>
             </div>
-
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Was {{ data['child-first-name'] }} conceived by IVF or another way?
-              </dt>
-              <dd class="govuk-summary-list__value">
-              
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
-                </a>
-              </dd>
-            </div>
-
-
-
 
           </dl>
       
