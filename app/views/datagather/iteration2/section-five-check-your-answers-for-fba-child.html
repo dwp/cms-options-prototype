@@ -1,18 +1,4 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Phase banner start-->
-
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-<!-- Radio buttons start -->
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -24,6 +10,19 @@
           <h1 class="govuk-heading-xl">Check your answers for {{ data['fba-first-name'] }} {{ data['fba-middle-name'] }} {{ data['fba-last-name'] }}</h1>
           <h2 class="govuk-heading-m">{{ data['fba-first-name'] }}'s details</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you have children who you pay for in a private arrangement?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> whether you have children who you pay for in a private arrangement</span>
+                </a>
+              </dd>
+            </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Name
@@ -53,7 +52,7 @@
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Child benefit
+                Does [childname]’s other parent get Child Benefit?
               </dt>
               <dd class="govuk-summary-list__value">
                 Yes
@@ -67,7 +66,7 @@
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                {{ data['fba-first-name'] }}'s address
+                [child name]'s address
               </dt>
               <dd class="govuk-summary-list__value">
                 <p class="govuk-body">{{ data['address-1-fba'] }}</p>
@@ -78,7 +77,7 @@
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> [child names] address</span>
                 </a>
               </dd>
             </div>
@@ -92,7 +91,7 @@
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> child maintenance frequency</span>
                 </a>
               </dd>
             </div>
