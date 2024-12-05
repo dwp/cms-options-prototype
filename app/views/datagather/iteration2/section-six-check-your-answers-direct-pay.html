@@ -1,22 +1,8 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Phase banner start-->
-
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-<!-- Radio buttons start -->
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-
   <div class="govuk-width-container">
     <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
@@ -26,7 +12,7 @@
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Payment type
+                Service type preference	
               </dt>
               <dd class="govuk-summary-list__value">
                 Direct pay
@@ -42,18 +28,31 @@
                 Payment frequency
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['payment-frequency'] }} <br> {{ data['payment-frequency-day'] }}
-                <br> {{ data['day-of-month-collect-and-pay'] }}  
+                {{ data['payment-frequency'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> date of birth</span>
+                  Change<span class="govuk-visually-hidden"> payment frequency</span>
                 </a>
               </dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                ask the other parent for their bank or building society details
+                Day of payment
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['payment-frequency-day'] }}
+                <br> {{ data['day-of-month-collect-and-pay'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> day of payment</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do we need to ask the other parent for their account details?
               </dt>
               <dd class="govuk-summary-list__value">
                 {{ data['bank-details'] }}
@@ -65,10 +64,11 @@
               </dd>
             </div>
           </dl>
-             
-          <a href="/datagather/iteration2/declaration" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+
+          <a href="/datagather/iteration2/declaration" role="button" draggable="false" class="govuk-button"
+            data-module="govuk-button" formnovalidate>Continue
           </a>
-          
+
           </form>
         </div>
       </div>
@@ -77,5 +77,4 @@
 
 
 
-{% endblock %}
-
+  {% endblock %}

@@ -1,18 +1,5 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Phase banner start-->
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-<!-- Radio buttons start -->
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -24,6 +11,19 @@
           <h1 class="govuk-heading-xl">Check your answers for {{ data['other-child-first-name'] }} {{ data['other-child-middle-name'] }} {{ data['other-child-last-name'] }}</h1>
           <h2 class="govuk-heading-m">{{ data['other-child-first-name'] }}'s details</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do other children live with you most of the time?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> whether other children live with you most of the time</span>
+                </a>
+              </dd>
+            </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Name
@@ -52,14 +52,14 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Child benefit
+                Do you or someone you live with get Child Benefit for [otherchildname]?
               </dt>
               <dd class="govuk-summary-list__value">
                 Yes
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> date of birth</span>
+                  Change<span class="govuk-visually-hidden"> whether you or someone you live with get Child Benefit for [otherchildname]</span>
                 </a>
               </dd>
             </div>
