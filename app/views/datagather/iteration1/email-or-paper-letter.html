@@ -1,6 +1,5 @@
 {% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
-
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
   
@@ -12,26 +11,32 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you need us to use any different formats when we contact you by letter or phone?
+                  Do you want updates about your case to be sent by email?
                 </h1>
               </legend>
               <div id="dob-hint" class="govuk-hint">
-                For example, braille, large print or textphone.
+                All of your communcations will be available in your Child Mainten Service account. We will send you an email about new communications.<br> Some must also be sent by post.
               </div>
+             
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="different-contact" name="different-contact" type="radio" value="Yes">
-                  <label class="govuk-label govuk-radios__label" for="different-contact">
+                  <input class="govuk-radios__input" id="email-or-paper" name="email-or-paper" type="radio" value="Yes~/datagather/iteration1/contacting-you-about-your-application">
+                  <label class="govuk-label govuk-radios__label" for="email-or-paper">
                     Yes
                   </label>
                 </div>
+
+
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="different-contact" name="different-contact" type="radio" value="No">
-                  <label class="govuk-label govuk-radios__label" for="different-contact">
+                  <input class="govuk-radios__input" id="email-or-paper-2" name="email-or-paper" type="radio" value="No~/datagather/iteration1/where-can-we-send-letters">
+                  <label class="govuk-label govuk-radios__label" for="email-or-paper-2">
                     No
                   </label>
                 </div>
               </div>
+
+
+
             </fieldset>
           </div>
           <button class="govuk-button" data-module="govuk-button">
