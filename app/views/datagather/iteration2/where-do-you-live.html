@@ -3,12 +3,10 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-
-
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <!-- Question start -->
+
         <form method="post" novalidate>
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -117,19 +115,14 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             </fieldset>
           </div>
 
-
-          <!-- Radio buttons -->
-          <!-- <a href="/datagather/iteration2/do-you-have-a-court-order.html" role="button" draggable="false"
-          class="govuk-button" data-module="govuk-button" formnovalidate>Continue
-        </a> -->
-
           <button type="submit" class="govuk-button" data-module="govuk-button">
             Continue
           </button>
 
-          <!-- Question stop -->
         </form>
-
+      </div>
+      {% include "exit-button.html" %}
+    </div>
   </main>
 </div>
 
