@@ -19,7 +19,7 @@ router.post('/datagather/iteration1/do-you-have-a-court-order', function(req, re
   if (req.body['court-order'] === 'yes') {
     res.redirect('income-none-of-the-above');
   } else if (req.body['court-order'] === 'no'){
-    res.redirect('/datagather/iteration1/where-can-we-send-letters');
+    res.redirect('/datagather/iteration1/using-a-child-maintenance-account');
   } else {
     res.redirect('do-you-have-a-court-order');
   }

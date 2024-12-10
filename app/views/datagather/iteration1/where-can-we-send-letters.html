@@ -1,133 +1,37 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Phase banner start-->
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-<!--Phase banner stop-->
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
-  
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form method="post" novalidate>
-<!-- Question start -->
-
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      Where can we send letters about Child Maintenance?
-    </h1>
-
-    <div class="govuk-inset-text">
-      We ask this to confirm your identity. We will not share your answers with the other parent.
-    </div>
-
-  </legend>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-line-1">
-      Address line 1
-    </label>
-    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-line-2">
-      Address line 2 (optional)
-    </label>
-    <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-town">
-      Town or city
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
-  </div>
-
-
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-county">
-      County (optional)
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Postcode
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
-  </div>
-
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        <h1 class="govuk-label">
-          Country
-        </h1>
-      </legend>
-      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-          <label class="govuk-label govuk-radios__label" for="changed-name">
-            England
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-          <label class="govuk-label govuk-radios__label" for="changed-name-2">
-            Scotland
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-          <label class="govuk-label govuk-radios__label" for="changed-name-2">
-            Wales
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
-          <label class="govuk-label govuk-radios__label" for="changed-name-2">
-            Northern Ireland
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
-</fieldset>
-
-
-<!-- Radio buttons -->
-
-
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
-        <form method="post" novalidate>
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h2 class="govuk-fieldset__heading">
-                  Do you live at this address?
-                </h2>
-              </legend>
-              <div class="govuk-radios--inline" data-module="govuk-radios">
+
+                <h1 class="govuk-heading-xl">Check your address</h1>
+
+                <h2 class="govuk-caption-xl">
+                  You told us you can get letters to this address:
+                </h2> <br>
+                  <p class="govuk-heading-m">1 The Towers <br> Hill Top Road <br> Newtown <br> West Yorkshire <br> NW21 7TG <br> England </b></p>
+
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    Is this correct?
+                  </legend>
+
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="do-you-live-here" name="do-you-live-here" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="do-you-live-here">
+                  <input class="govuk-radios__input" id="letters-address" name="letters-address" type="radio" value="yes~contacting-you-about-your-application.html">
+                  <label class="govuk-label govuk-radios__label" for="letters-address">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="do-you-live-here" name="do-you-live-here" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="different-contact">
+                  <input class="govuk-radios__input" id="letters-address-2" name="letters-address" type="radio" value="no~address-look-up-letters-2.html">
+                  <label class="govuk-label govuk-radios__label" for="letters-address-2">
                     No
                   </label>
                 </div>
@@ -139,7 +43,6 @@
           </button>
         </form>
       </div>
-    </div>
   </main>
 </div>
 

@@ -1,18 +1,5 @@
-{% extends "layout.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Phase banner start-->
-
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-<!-- Radio buttons start -->
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -22,31 +9,33 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form  method="post" novalidate>
+        <form method="post" novalidate>
           <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="reference">
-              Can we send text messages to 07598234771?
+                Can we send text messages to 07598234771?
               </label>
             </h1>
             <div id="dob-hint" class="govuk-hint">
-              You can change your contact number in your online child maintenance account after you submit your information.
+              You can change your contact number in your online child maintenance account after you submit your
+              information.
             </div>
 
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="send-texts" name="send-texts" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="send-texts">
-                        Yes
-                      </label>
-                    </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="send-texts" name="send-texts" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="send-texts">
+                  Yes
+                </label>
+              </div>
 
-                    <div class="govuk-radios" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="send-texts" name="send-texts" type="radio" value="no" data-aria-controls="conditional-contact">
-                        <label class="govuk-label govuk-radios__label" for="send-texts">
-                         No
-                        </label>
-                      </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="send-texts" name="send-texts" type="radio" value="no"
+                    data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="send-texts">
+                    No
+                  </label>
+                </div>
 
 
                 </fieldset>
@@ -71,4 +60,3 @@
 
 
 {% endblock %}
-
