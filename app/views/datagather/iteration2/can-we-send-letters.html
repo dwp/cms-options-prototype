@@ -8,9 +8,8 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form>
-                    <!--start-->
 
+                <form action="" method="get" novalidate>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -20,15 +19,17 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
                             </legend>
                             <div id="lettersAddress-hint" class="govuk-hint">
                                 Some letters must be sent by post.
-                              </div>
-                            <p class="govuk-heading-m govuk-!-padding-top-5">1 The Towers <br> Hill Top Road <br> Newtown <br> West Yorkshire
+                            </div>
+                            <p class="govuk-heading-m govuk-!-padding-top-5">1 The Towers <br> Hill Top Road <br>
+                                Newtown <br> West Yorkshire
                                 <br> NW21 7TG <br> England </b>
                             </p>
 
-                            <div class="govuk-radios govuk-radios--inline govuk-!-padding-top-5" data-module="govuk-radios">
+                            <div class="govuk-radios govuk-radios--inline govuk-!-padding-top-5"
+                                data-module="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="lettersAddress" name="lettersAddress" type="radio"
-                                        value="yes~/datagather/iteration2/what-is-your-email-address.html">
+                                    <input class="govuk-radios__input" id="lettersAddress" name="lettersAddress"
+                                        type="radio" value="yes~/datagather/iteration2/what-is-your-email-address.html">
                                     <label class="govuk-label govuk-radios__label" for="lettersAddress">
                                         Yes
                                     </label>
@@ -51,8 +52,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
                 </form>
 
             </div>
-
-
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>

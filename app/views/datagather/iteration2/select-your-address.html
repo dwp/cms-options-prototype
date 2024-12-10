@@ -8,9 +8,8 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form action="can-we-send-letters.html" method="get" novalidate>
-                    <!--start-->
 
+                <form action="can-we-send-letters.html" method="get" novalidate>
                     <h1 class="govuk-heading-xl">Select your address</h1>
                     <fieldset class="govuk-fieldset">
                         <div class="govuk-radios govuk-!-padding-bottom-9" data-module="govuk-radios">
@@ -23,17 +22,18 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %}
                             </div>
                         </div>
                     </fieldset>
+
                     <button type="submit" class="govuk-button" data-module="govuk-button">
                         Continue
                     </button>
                     <p class="govuk-body govuk-!-margin-bottom-0"><a href="where-do-you-live.html"
                             class="govuk-link">Enter
-                            address manually</a></p>
+                            address manually</a>
+                    </p>
                 </form>
 
             </div>
-
-
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>

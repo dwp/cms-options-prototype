@@ -1,45 +1,48 @@
 {% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
-    pageTitle %} GOV.UK Prototype Kit {% endblock %} 
-    
-    {% block content %}
-   
+pageTitle %} GOV.UK Prototype Kit {% endblock %}
+
+{% block content %}
+
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form action="select-your-address-letters-2.html" method="get" novalidate>
-                    <!--start-->
 
-                        <h1 class="govuk-heading-xl">Where can we send letters?</h1>
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="postcode">
-                                Postcode
-                            </label>
-                            <div id="postcode-hint" class="govuk-hint">
-                                For example, AA3 1AB.
-                            </div><input class="govuk-input govuk-!-width-two-thirds" id="postcode-parent"
-                                name="postcode" type="text" aria-describedby="postcode-hint">
+                <form action="select-your-address-letters-2.html" method="get" novalidate>
+                    <h1 class="govuk-heading-xl">Where can we send letters?</h1>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="postcode">
+                            Postcode
+                        </label>
+                        <div id="postcode-hint" class="govuk-hint">
+                            For example, AA3 1AB.
                         </div>
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="searchString">
-                                Building number or name
-                            </label>
-                            <div id="searchString-hint" class="govuk-hint">
-                                For example, 15 or Prospect Cottage.
-                            </div><input class="govuk-input govuk-!-width-two-thirds" id="searchString-parent"
-                                name="searchString" type="text" aria-describedby="searchString-hint">
-                        </div><button type="submit" class="govuk-button" data-module="govuk-button">
-                            Find address
-                        </button>
-                        <p class="govuk-body govuk-!-margin-bottom-0">
-                            <a href="letters-address-2.html" class="govuk-link">Enter address manually</a>
-                        </p>
-                   </form>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="postcode-parent" name="postcode"
+                            type="text" aria-describedby="postcode-hint">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="searchString">
+                            Building number or name
+                        </label>
+                        <div id="searchString-hint" class="govuk-hint">
+                            For example, 15 or Prospect Cottage.
+                        </div>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="searchString-parent" name="searchString"
+                            type="text" aria-describedby="searchString-hint">
+                    </div>
+
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Find address
+                    </button>
+
+                    <p class="govuk-body govuk-!-margin-bottom-0">
+                        <a href="letters-address-2.html" class="govuk-link">Enter address manually</a>
+                    </p>
+                </form>
 
             </div>
-           
-
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>
