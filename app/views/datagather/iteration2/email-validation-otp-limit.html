@@ -6,7 +6,8 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <form method="get" action="email-or-paper-letter.html">
+                <form method="get" action="contacting-you-about-your-application.html">
+
                     <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                         <div class="govuk-notification-banner__header">
                           <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -28,8 +29,11 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                     <button class="govuk-button" data-module="govuk-button">
                         Continue
                     </button>
+
                 </form>
+
             </div>
+            {% include "exit-button.html" %}
         </div>
     </main>
 </div>

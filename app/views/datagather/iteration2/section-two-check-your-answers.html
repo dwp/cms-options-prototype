@@ -1,5 +1,5 @@
 {% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
-pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+pageTitle %} Check your answers {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -87,11 +87,12 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                 Address
               </dt>
               <dd class="govuk-summary-list__value">
-                <p class="govuk-body">{{ data['address-line-1'] }}</p>
-                <p class="govuk-body">{{ data['address-line-2'] }}</p>
-                <p class="govuk-body">{{ data['address-town'] }}</p>
-                <p class="govuk-body">{{ data['address-county'] }}</p>
-                <p class="govuk-body">{{ data['address-postcode'] }}</p>
+                <p class="govuk-body">1 The Towers</p>
+                <p class="govuk-body">Hill Top Road</p>
+                <p class="govuk-body">Newtown</p>
+                <p class="govuk-body">West Yorkshire</p>
+                <p class="govuk-body">NN1 2TT</p>
+                <p class="govuk-body">England</p>
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="select-your-address.html">
@@ -119,15 +120,29 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                 Address for letters
               </dt>
               <dd class="govuk-summary-list__value">
-                <p class="govuk-body">{{ data['letters-address-line-1'] }}</p>
-                <p class="govuk-body">{{ data['letters-address-line-2'] }}</p>
-                <p class="govuk-body">{{ data['letters-address-town'] }}</p>
-                <p class="govuk-body">{{ data['letters-address-county'] }}</p>
-                <p class="govuk-body">{{ data['letters-address-postcode'] }}</p>
+                <p class="govuk-body">47 Appletree Walk</p>
+                <p class="govuk-body">Newtown</p>
+                <p class="govuk-body">West Yorkshire</p>
+                <p class="govuk-body">NN2 1PP</p>
+                <p class="govuk-body">England</p>
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="letters-address.html">
                   Change<span class="govuk-visually-hidden"> address where we can send letters</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you want all letters by post?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['lettersPreference'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="letters-preference.html">
+                  Change<span class="govuk-visually-hidden"> if you want all letters by post</span>
                 </a>
               </dd>
             </div>
@@ -142,20 +157,6 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="what-is-your-email-address.html">
                   Change<span class="govuk-visually-hidden"> email address</span>
-                </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Do you want updates by email?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{ data['email-or-paper'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="email-or-paper-letter.html">
-                  Change<span class="govuk-visually-hidden"> if you wnats updates by email</span>
                 </a>
               </dd>
             </div>
