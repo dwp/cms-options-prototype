@@ -1,0 +1,119 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form  action="/datagather/iteration2/what-is-your-sexual-orientation"  method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  What is your religion?
+                </h1>
+              </legend>
+
+
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="no-religion">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    No religion
+                  </label>
+                </div>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="christian">
+                    <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                      Christian (including Church of England, Catholic, Protestant and all other Christion denominations)
+                    </label>
+                  </div>
+
+                  
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="buddhist">
+                      <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                        Buddhist
+                      </label>
+                    </div>
+
+                    
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="hindu">
+                        <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          Hindu
+                        </label>
+                      </div>
+
+
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="jewish">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                            Jewish
+                          </label>
+                        </div>
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="muslim">
+                            <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                              Muslim
+                            </label>
+                          </div>
+  
+                          
+                          <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="Sikh">
+                              <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                                Sikh
+                              </label>
+                            </div>
+  
+                            
+                            <div class="govuk-radios" data-module="govuk-radios">
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="any-other-religion">
+                                <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                                  Any other religion
+                                </label>
+                              </div>
+        
+  
+
+                        <div class="govuk-radios__divider">or</div>
+
+                      
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="religion" name="ethnic-group" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                            Prefer not to say
+                          </label>
+                        </div>
+        
+                  
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+

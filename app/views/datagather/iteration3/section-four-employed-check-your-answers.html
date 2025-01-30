@@ -1,0 +1,197 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <form action="/datagather/iteration2/tell-us-about-your-children" method="post" novalidate>
+          <h1 class="govuk-heading-xl">Check your answers about your income</h1>
+
+          <h2 class="govuk-heading-m"> Your income</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Was your income £27,541.76 between 6 April 2023 and 5 April 2024?
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> your income confirmation</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Did you have a change in income?
+              </dt>
+              <dd class="govuk-summary-list__value">
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> whether you had a change in your income</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Income source
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Employment
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> income source</span>
+                </a>
+              </dd>
+            </div>
+
+          </dl>
+
+          <h2 class="govuk-heading-m">Employment details for {{ data['employer-name'] }} </h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Employer name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['employer-name'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> applicants name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Job title
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['job-title'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> applicants name</span>
+                </a>
+              </dd>
+            </div>
+            <!-- 
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Employment start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> your name</span>
+              </a>
+            </dd>
+          </div>
+          
+            -->
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date of payslip showing new rate of pay
+              </dt>
+              <dd class="govuk-summary-list__value">
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> your name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Your gross income
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £27500 annually
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> your name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Extra income
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes £1500
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> your name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you need to add another employer?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> whether you need to add another employer</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+
+          <h2 class="govuk-heading-m">Private pension scheme (?) </h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you pay into any private pension schemes?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> your name</span>
+                </a>
+              </dd>
+            </div>
+
+          </dl>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}

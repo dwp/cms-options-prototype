@@ -1,0 +1,65 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration2/benefits-partner-dob" method="post" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="benefits-partner">
+              Who do you share the benefits with?
+              </label>
+            </h1>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="two-thirds">
+                First name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="benefits-first-name" name="benefits-first-name" type="text">
+            </div>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="two-thirds">
+                Middle names (if they have any)
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="benefits-middle-name" name="benefits-middle-name" type="text">
+            </div>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="two-thirds">
+                Last name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="benefits-last-name" name="benefits-last-name" type="text">
+            </div>
+
+            <div class="govuk-!-padding-bottom-1"></div>
+
+
+          
+
+
+
+
+
+
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+</main>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  You need to send evidence if you pay into a private pension
+                </h1>
+                <div class="govuk-!-padding-bottom-5"></div>
+              </legend>
+
+
+              <p class="govuk-body">Your initial child maintenance calculation will not include your private pension contributions.</p>
+
+              <p class="govuk-body">We will write to you to explain what evidence to send and how to send it.</p>
+
+              <p class="govuk-body">This can reduce the amount of child maintenance you pay.</p>
+
+            <a href="/datagather/iteration2/section-four-employed-check-your-answers" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+            </a>
+
+        </form>
+      </div>
+
+<!-- Hide this page button -->
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}
+

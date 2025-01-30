@@ -1,0 +1,63 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-form-group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Contact the Child Maintenance Service
+            </h1>
+          </legend>
+          <!-- section one contact details  -->
+
+          <div class="govuk-!-padding-bottom-7"></div>
+
+          <h2 class="govuk-heading-m">Call the Child Maintenance Service</h2>
+
+          <p class="govuk-body">Telephone: 0800 171 2345 <BR> Monday to Friday, 8:00am to 3:30pm <BR> (excluding
+            bank holidays)
+          </p>
+
+          <p class="govuk-body">Relay UK: 18001 0800 171 2345 <BR> Monday to Friday, 8:00am to 8:00pm <BR>
+            (excluding bank holidays)
+          </p>
+
+          <p class="govuk-body"> <a href="https://www.gov.uk/call-charges" class="govuk-link">Find out about call
+              charges</a>
+          </p>
+
+          <!-- section two contact details  -->
+
+          <div class="govuk-!-padding-bottom-3"></div>
+
+          <h3 class="govuk-heading-s">If you use British or Irish Sign Language </h3>
+
+          <p class="govuk-body"> <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY" class="govuk-link">Check
+              you can use the video language relay service</a>
+            <br>
+            <a href="https://dwpcmg.signvideo.net" class="govuk-link">Video relay service for British Sign
+              Language (BSL) users</a>
+          </p>
+          <p class="govuk-body">Monday to Friday, 9:30am to 3:30pm (excluding bank holidays)</p>
+
+          <div class="govuk-inset-text">
+
+            <p class="govuk-body"> <a href="https://www.nidirect.gov.uk/contacts/child-maintenance-service"
+                class="govuk-link">There is a different number if you live in Northern Ireland.</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}
