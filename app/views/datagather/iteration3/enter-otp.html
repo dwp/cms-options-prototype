@@ -1,0 +1,72 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form method="get" action="email-validation-confirmation.html">
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+                                    Enter the one-time passcode
+                                </h1>
+                            </legend>
+                            <div id="dob-hint" class="govuk-body">
+                                We've sent a one-time passcode to <strong>example.email@email.com</strong>
+                            </div>
+
+                            <div class="govuk-form-group govuk-!-padding-bottom-6">
+                                <label class="govuk-label" for="event-name">
+                                    One-time passcode
+                                </label>
+                                <input class="govuk-input govuk-input--width-5" id="event-name" name="eventName"
+                                    type="text">
+                            </div>
+
+                            <details class="govuk-details">
+                                <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">
+                                        Not get the code or code expired?
+                                    </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                    The email may take a few minutes to arrive.
+                                </div>
+                                <div class="govuk-details__text">
+                                    Check your spam or junk folder. If it has still not arrived, or it has expired, you
+                                    can <a href="request-new-otp.html" class="govuk-link">request a new one-time
+                                        passcode</a>.
+                                </div>
+                                <div class="govuk-details__text">
+                                    You do not need to verify your email to complete your response.
+                                </div>
+                            </details>
+
+
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </button>
+                        <a href="email-validation-otp-skip.html" class="govuk-link">Do this later in your online account</a>
+                    </div>
+                    
+                </form>
+
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}

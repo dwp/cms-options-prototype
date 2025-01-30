@@ -1,0 +1,117 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form action="/form-handler" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  What format do you need us to use when we send you letters?
+                </h1>
+              </legend>
+              <div id="dob-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox"
+                    value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+                    Audio forms on cassette tape, CD or MP3
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox"
+                    value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+                    Braille
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox"
+                    value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+                    Communications support
+                  </label>
+                  <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                    for example, if you need someone else to help you read your letters
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox"
+                    value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+                    Email
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox"
+                    value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+                    Large print
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox"
+                    value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+                    Letters printed on coloured paper
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="where-do-you-live" name="where-do-you-live" type="checkbox"
+                    value="england">
+                  <label class="govuk-label govuk-checkboxes__label" for="where-do-you-live">
+                    Web accessible PDF
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email"
+                    data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    Something else
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                  id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      How can we help when we send you letters?
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+                      aria-describedby="more-detail-hint"></textarea>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <a href="best-number-to-call-you-on" role="button" draggable="false"
+            class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+          </a>
+
+        </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+<!-- Checkboxes end  -->
+
+
+{% endblock %}

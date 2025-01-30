@@ -1,0 +1,56 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+<!--Phase banner stop-->
+
+<!-- H1 start -->
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form action="/datagather/iteration2/what-is-your-name" method="post" novalidate> 
+            
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper">
+                    <label class="govuk-label govuk-label--xl" for="event-name">
+                      What is your 7-digit personal identification number (PIN)?
+                    </label>
+                    <div id="email-hint" class="govuk-hint">
+                      You’ll need this so you can sign in to your online account.
+                    </div>
+                    <input class="govuk-input govuk-input--width-5" id="width-07" name="width-10" type="text">
+                  </div>
+                  
+<!-- H1 stop -->
+
+
+<!--Detail collection-->
+
+
+
+
+<div class="govuk-!-padding-bottom-3"></div>
+
+
+
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  <a class="govuk-link" href="/datagather/iteration2/reset-pin-and-password.html">Reset my PIN</a>
+</form>
+
+  
+  </form>
+</main>
+</div>
+
+
+
+ 
+
+{% endblock %}
