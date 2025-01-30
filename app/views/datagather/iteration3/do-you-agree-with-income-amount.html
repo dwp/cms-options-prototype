@@ -1,0 +1,53 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+        <span class="govuk-heading-xl">
+          Was your income £27,541.76 between 6 April 2023 and 5 April 2024?</span>
+
+        <div class="govuk-hint">
+          This is your income after pension contributions but beofre tax.
+        </div>
+      
+        <div class="govuk-!-padding-bottom-3"></div>
+
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="income-amount-agree" name="income-amount-agree" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="income-amount-agree">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="income-amount-agree" name="income-amount-agree" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="income-amount-agree">
+                    No
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+

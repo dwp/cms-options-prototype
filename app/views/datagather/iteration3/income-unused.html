@@ -1,0 +1,56 @@
+{% extends "layout-2.html" %}  {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+
+                        <!--Checkboxes-->
+                        <h1 class="govuk-heading-xl">Your income
+                        </h1>
+                        </legend>
+
+                        <p class="govuk-body-l">The Child Maintenance Service sent you a letter with your income and tax year. We will calculate how much child maintenance you need to pay using this amount. 
+                        </p>
+                    </div>
+
+                 
+                    <p class="govuk-body">You can update your income if:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>you do not agree with the income amount shown in the letter for the given tax year</li>
+                      <li>your income has increased or decreased by 25% or more</li>
+                    </ul>
+
+
+<h1 class="govuk-heading-m">Do you want to update your income?<br/> <br/>
+                            <div class="govuk-radios--inline" data-module="radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="da-yes" name="da-yes" type="radio" value="yes~tell-someone"
+                                        aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
+                                    <label class="govuk-label govuk-radios__label" for="da-yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="da-no" name="da-yes" type="radio" value="no~will-you-answer-equality-questions">
+                                    <label class="govuk-label govuk-radios__label" for="da-no">
+                                        No
+                                    </label>
+                                </div>
+                       
+                    </div>
+                    <br>
+
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+                                                       
+        </div>
+    </main>
+</div>
+{% endblock %}

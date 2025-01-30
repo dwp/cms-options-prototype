@@ -1,0 +1,56 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form action="what-is-your-email-address.html" method="get" novalidate>
+          <h1 class="govuk-heading-xl">
+            Letters preference
+          </h1>
+          <p class="govuk-body">
+            You can view all letters from us in your Child Maintenance Service account.  You will be notified when they arrive.
+          </p>
+          <p class="govuk-body">Some letters must be sent by post.</p>
+          <p class="govuk-body">You can choose whether to get printed copies of all your letters. <br> We will send them to the address you have given.</p>
+        
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Do you want us to send all letters by post?
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="lettersPreference" name="lettersPreference" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="lettersPreference">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="lettersPreference-2" name="lettersPreference" type="radio"
+                    value="no">
+                  <label class="govuk-label govuk-radios__label" for="lettersPreference-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+{% endblock %}

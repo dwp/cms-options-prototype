@@ -1,0 +1,58 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+ 
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration2/you-have-told-us-self-employment" method="post" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="your-name">
+              Your company details
+              </label>
+            </h1>
+
+            <div id="sort-code-hint" class="govuk-hint">
+              If you are self-employed and have more than one company, you will be asked about your other companies later in this application.
+            </div>
+
+
+            <label class="govuk-label" for="company">
+              Company name
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="company" name="company" type="text" autocomplete="">
+
+            <div class="govuk-!-padding-bottom-5"></div>
+
+            <label class="govuk-label" for="your-name">
+              Occupation
+            </label>
+            <div id="roll-number-hint" class="govuk-hint">
+              For example, accountant or hairdresser
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="occupation" name="occupation" type="text" autocomplete="">
+          </div>
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

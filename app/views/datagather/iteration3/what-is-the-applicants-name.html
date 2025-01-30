@@ -1,0 +1,66 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration2/what-is-your-national-insurance-number" method="post" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="applicant-name">
+                Who named you in this application?
+              </label>
+            </h1>
+            <div class="govuk-hint">
+              You need to enter their name as it appears on the letter you received about this application.
+            </div>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="two-thirds">
+                First name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="applicant-first-name" name="applicant-first-name"
+                type="text">
+            </div>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="two-thirds">
+                Middle names (if they have any)
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="applicant-middle-name"
+                name="applicant-middle-name" type="text">
+            </div>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="two-thirds">
+                Last name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="applicant-last-name" name="applicant-last-name"
+                type="text">
+            </div>
+
+            <div class="govuk-!-padding-bottom-1"></div>
+
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </form>
+      </div>
+
+
+
+
+      <!-- Question stop -->
+
+  </main>
+</div>
+
+
+
+
+
+{% endblock %}
