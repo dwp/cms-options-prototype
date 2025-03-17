@@ -3,7 +3,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-  <form action="where-does-your-income-come-from.html" method="post" novalidate>
+  <form action="have-you-ever-had-income" method="post" novalidate>
     <div class="govuk-form-group">
       <div class="govuk-grid-column-two-thirds">
         <fieldset class="govuk-fieldset" aria-describedby="income-hint">
@@ -36,7 +36,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               <input class="govuk-checkboxes__input" id="income-source" name="income-source" type="checkbox"
                 value="self-employment">
               <label class="govuk-label govuk-checkboxes__label" for="income-source">
-                Self-employment
+                Private pension
               </label>
             </div>
 
@@ -46,7 +46,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="income" name="income-source" type="checkbox" value="none">
               <label class="govuk-label govuk-checkboxes__label" for="income">
-                I do not get any income, benefits or State Pension
+                I do not get any income, benefits or pensions
               </label>
             </div>
         </fieldset>
