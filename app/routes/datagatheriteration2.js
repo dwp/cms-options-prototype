@@ -564,6 +564,29 @@ router.post('/datagather/iteration2/do-you-have-evidence', function(req, res, ne
     next()
 })
 
+router.post('/datagather/iteration3/where-does-your-income-come-from', function(req, res, next) {
+    
+  const incomeSource = req.session.data['income-source'];   
+
+  if (incomeSource.includes('benefits')){
+      res.redirect("/datagather/iteration3/what-benefits-do-you-get")
+  }
+  else if (incomeSource.includes('employment')){
+    res.redirect("/datagather/iteration3/income-employed.html")
+} 
+else if (incomeSource.includes('pension')){
+  res.redirect("/datagather/iteration3/if-you-pay-into-a-private-pension")
+}
+else if (incomeSource.includes('self')){
+  res.redirect("/datagather/iteration3/income-self-employed")
+}
+  else {
+      res.redirect("/datagather/iteration3/have-you-ever-had-income")
+  }
+
+  next()
+})
+
 // has-first-child-been-adopted
 
 router.post('/datagather/iteration2/has-first-child-been-adopted', function(req, res) {
@@ -576,12 +599,11 @@ router.post('/datagather/iteration2/has-first-child-been-adopted', function(req,
   } else if (req.body['legally-adopted'] === 'do-not-know'){
     res.redirect('/datagather/iteration2/were-you-married-to-applicant');
   } else {
-    res.redirect('/has-first-child-been-adopted');
+    res.redirect('/has-first-child-been-adopted'); 
   }
    });
 
 // Routes end iteration2
-
 
 
 
