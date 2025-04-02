@@ -8,7 +8,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form  action="what-benefits-do-you-get.html"  method="post" novalidate>
+        <form  action="section-four-benefits-check-your-answers"  method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="benefits-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -21,6 +21,15 @@
               </div>
         
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="benefits" name="benefits" type="checkbox" value="universal-credit">
+                  <label class="govuk-label govuk-checkboxes__label" for="benefits">
+                    Universal Credit
+                  </label>
+                </div>
+
+
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="benefits" name="benefits" type="checkbox" value="armed-forces">
                   <label class="govuk-label govuk-checkboxes__label" for="benefits">
@@ -129,14 +138,6 @@
                   <input class="govuk-checkboxes__input" id="benefits" name="benefits" type="checkbox" value="training-allowance">
                   <label class="govuk-label govuk-checkboxes__label" for="benefits">
                     Training Allowance
-                  </label>
-                </div>
-
-
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="benefits" name="benefits" type="checkbox" value="universal-credit">
-                  <label class="govuk-label govuk-checkboxes__label" for="benefits">
-                    Universal Credit
                   </label>
                 </div>
         
