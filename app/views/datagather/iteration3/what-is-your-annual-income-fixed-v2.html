@@ -10,11 +10,11 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
       <div class="govuk-grid-column-two-thirds">
         <form action="earned-bonus-or-commission" method="post" novalidate>
 
-          <!--<div class="govuk-form-group">
+          <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Your gross basic income from {{ data['employer-name'] }}
+                 What is your annual gross basic income?
                 </h1>
               </legend>
 
@@ -31,10 +31,10 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                 <li>pension contributions</li>
               </ul>
 
-              <div class="govuk-!-padding-bottom-5"></div>
+
 
               <div class="govuk-form-group">
-                <h3 class="govuk-heading-m">What is your gross basic income, in pounds?</h3>
+               <!-- <h3 class="govuk-heading-m">What is your gross basic income, in pounds?</h3>-->
                 <label class="govuk-label" for="income-amount">
 
                 </label>
@@ -44,15 +44,17 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                   <input class="govuk-input govuk-input--width-5" id="income-amount-fixed" name="income-amount-fixed"
                     type="text" spellcheck="false">
                 </div>
+                
             </fieldset>
+            
           </div>
-          </fieldset>-->
+          <p class="govuk-body"><a href="how-often-do-you-receive-this-amount-v2">I do not get paid annually</a></p>
+          </fieldset>
 
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-          <h1 class="govuk-fieldset__heading">
-            How often do you get £30,000?
+          <br>
+         <!-- <h1 class="govuk-heading-m">
+            How often do you receive this amount?
           </h1>
-          </legend>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -101,7 +103,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               </div>
 
             </fieldset>
-          </div>
+          </div>-->
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
