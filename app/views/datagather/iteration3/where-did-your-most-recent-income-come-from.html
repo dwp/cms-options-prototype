@@ -1,35 +1,33 @@
-
 {% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-
-  
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+
         <form method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Where did your most recent income come from?
+               Where did your most recent income come from?
                 </h1>
               </legend>
 
              
-              <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
-                  value="yes~when-did-your-income-stop">
-                  <label class="govuk-label govuk-radios__label" for="equality-questions">
+                  <input class="govuk-radios__input" id="recent-income" name="recent-income" type="radio"
+                  value="Employment~when-did-your-income-stop">
+                  <label class="govuk-label govuk-radios__label" for="recent-income">
                     Employment
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
-                  value="no~are-you-still-registered-as-self-employed">
-                  <label class="govuk-label govuk-radios__label" for="equality-questionst">
+                  <input class="govuk-radios__input" id="recent-income" name="recent-income" type="radio"
+                  value="Self-employment~how-do-you-support-yourself">
+                  <label class="govuk-label govuk-radios__label" for="recent-income">
                     Self-employment
                   </label>
                 </div>
@@ -39,8 +37,11 @@
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
+
         </form>
+
       </div>
+       {% include "exit-button.html" %}
     </div>
   </main>
 </div>
@@ -49,3 +50,4 @@
 
 
 {% endblock %}
+

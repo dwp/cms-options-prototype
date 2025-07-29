@@ -17,13 +17,13 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               </legend>
 
               <div id="dob-hint" class="govuk-hint">
-                We will try to contact you at your preferred time if we have any questions.
+                We will try to call you at your preferred time if we have any questions about your case. We may also try at other times.
               </div>
 
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="call-times" name="call-times" type="checkbox"
-                    value="Any-time">
+                    value="Any-time" data-behaviour="exclusive">
                   <label class="govuk-label govuk-checkboxes__label" for="call-times">
                     Any time
                   </label>
@@ -68,7 +68,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                     Between 4pm and 6pm
                   </label>
                 </div>
-
+<!-- 
                 <div class="govuk-checkboxes__divider">or</div>
 
                 <div class="govuk-checkboxes__item">
@@ -87,7 +87,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                     <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="1"
                       aria-describedby="more-detail-hint"></textarea>
                   </div>
-                </div>
+                </div> -->
               </div>
             </fieldset>
           </div>
@@ -96,7 +96,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
-                  Can we leave voicemails if we can not contact you?
+                  Can we leave voicemails at the number you gave us?
                 </h1>
               </legend>
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">

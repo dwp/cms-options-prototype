@@ -5,7 +5,7 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <!--<form method="post" novalidate>
+                <form method="post" novalidate>
 
                     <div class="govuk-form-group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
@@ -17,14 +17,12 @@
                         </p>
 
                         <div class="govuk-checkboxes">
-             
-
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="eight" name="phone-time" type="checkbox"
-                                value="bold~df-font">
-                                <label class="govuk-label govuk-checkboxes__label" for="eight">
-                                    A different font
-                                </label>
+                                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio"
+                    value="font~df-font">
+                  <label class="govuk-label govuk-checkboxes__label" for="changed-name">
+                    Standard letter (12-point Arial text on white paper)
+                  </label>
                             </div>
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="eight" name="phone-time" type="checkbox"
@@ -62,52 +60,7 @@
                             Continue
                         </button>
                     </div>
-                </form>-->
-
-                <form class="form" action="/alt-formats-answer" method="post">
-
-                    {{ govukCheckboxes({
-                      name: "formats",
-                      values: data["formats"],
-                      fieldset: {
-                        legend: {
-                          text: "What changes do you need?",
-                          isPageHeading: true,
-                          classes: "govuk-fieldset__legend--xl"
-                        }
-                      },
-                      hint: {
-                        text: "You can choose more than one option. We will ask for more detail if necessary."
-                      },
-                      items: [
-                        {
-                          value: "font",
-                          text: "A different font"
-                        },
-                        {
-                          value: "bold",
-                          text: "Bold text"
-                        },
-                        {
-                          value: "colour",
-                          text: "Coloured paper"
-                        },
-                        {
-                          value: "spacing",
-                          text: "Double line spacing"
-                        },
-                        {
-                          value: "large",
-                          text: "Large print"
-                        }
-                      ]
-                    }) }}
-                    
-                    {{ govukButton({
-                      text: "Continue"
-                    }) }}
-                    
-                    </form>
+                </form>
 
             </div>
             {% include "exit-button.html" %}

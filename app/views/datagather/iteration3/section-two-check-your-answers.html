@@ -106,7 +106,7 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
                 Can we send letters to this address?
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['lettersAddress'] }}
+                <!-- {{ data['lettersAddress'] }} -->No
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="can-we-send-letters.html">
@@ -135,6 +135,20 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <!-- {{ data['email-address'] }} -->example.email@email.com
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="what-is-your-email-address.html">
+                  Change<span class="govuk-visually-hidden"> email address</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
                 How do you want to get updates about your case?
               </dt>
               <dd class="govuk-summary-list__value">
@@ -149,38 +163,11 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Email address
+                Contact number <br>
+                Is this your own number?
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['email-address'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="what-is-your-email-address.html">
-                  Change<span class="govuk-visually-hidden"> email address</span>
-                </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Do you need different contact formats?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{ data['different-contact'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="contacting-you-about-your-application.html">
-                  Change<span class="govuk-visually-hidden"> different formats</span>
-                </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Contact number
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{ data['contact-number'] }}
+                <!-- {{ data['contact-number'] }} --> 07777777777 <br> Yes
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="best-number-to-call-you-on.html">
@@ -203,7 +190,7 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
               </dd>
             </div>
 
-            <div class="govuk-summary-list__row">
+            <!-- <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Can we send text messages?
               </dt>
@@ -215,14 +202,14 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
                   Change<span class="govuk-visually-hidden"> whether we can leave text messages</span>
                 </a>
               </dd>
-            </div>
+            </div> -->
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Can we leave voicemails?
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['voicemails'] }}
+                <!-- {{ data['voicemails'] }} --> Yes
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="when-can-we-call-you.html">
@@ -230,6 +217,70 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
                 </a>
               </dd>
             </div>
+
+          </dl>
+
+          <h2 class="govuk-heading-m">
+            How we will contact you
+          </h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you need us to use any different formats when we contact you by letter or phone?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body"> Yes </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="rp-nino">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                When we write to you
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Audio
+                  <br>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>MP3 file by email</li>
+                </ul>
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="rp-nino">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                When we speak to you
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">
+                  Standard phone call <br>
+                <!-- <ul class="govuk-list govuk-list--bullet">
+                  <li>0300 4567890</li>
+                </ul> -->
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="rp-nino">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+
 
             <!-- <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -262,8 +313,8 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
 
 
           <input type="hidden" name="answers-checked" value="true">
-          <a href="domestic-abuse-help" role="button" draggable="false" class="govuk-button"
-            data-module="govuk-button" formnovalidate>Continue
+          <a href="domestic-abuse-help" role="button" draggable="false" class="govuk-button" data-module="govuk-button"
+            formnovalidate>Continue
           </a>
 
         </form>

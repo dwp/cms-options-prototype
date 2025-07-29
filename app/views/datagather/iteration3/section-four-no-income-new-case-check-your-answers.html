@@ -14,39 +14,15 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
 
-            <!-- <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-               Was your income £27,547.76 between 6 April 2024 and 5 April 2025?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Yes
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="where-does-your-income-come-from.html">
-                  Change<span class="govuk-visually-hidden"> income source</span>
-                </a>
-              </dd>
-            </div>
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Do you want to tell us about a change in your income?
-              <dd class="govuk-summary-list__value">
-                Yes
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="where-does-your-income-come-from.html">
-                  Change<span class="govuk-visually-hidden"> income source</span>
-                </a>
-              </dd>
-            </div> -->
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Income source
+                Where does your income come from?
               </dt>
               <dd class="govuk-summary-list__value">
-                I do not get any income, benefits or State Pension
+                I do not get any
+                income, benefits or State
+                Pension
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="where-does-your-income-come-from.html">
@@ -60,106 +36,22 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
                 Have you ever had income?
               </dt>
               <dd class="govuk-summary-list__value">
-                Yes
+                {{ data['ever-had-income'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="# ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
+                <a class="govuk-link" href="have-you-ever-had-income.html">
+                  Change<span class="govuk-visually-hidden"> have you ever had income</span>
                 </a>
               </dd>
             </div>
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Most recent income source
+                How do you financially support yourself?
               </dt>
               <dd class="govuk-summary-list__value">
-                Self-employment
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="# ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
-                </a>
-              </dd>
-            </div>
-
-            <!-- <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Date your income stopped
-              </dt>
-              <dd class="govuk-summary-list__value">
-                20 June 2025
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="# ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
-                </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Have you had your last income payment? / Date of last income payment
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Yes </br>
-                31 May 2025
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="# ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
-                </a>
-              </dd>
-            </div> -->
-
-            <!-- <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-               Financial support source
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Support from family or friends
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="how-do-you-support-yourself.html  ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
-                </a>
-              </dd>
-            </div> -->
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Are you still registered self-employed?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Yes
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="# ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
-                </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Last date of self-employment
-              </dt>
-              <dd class="govuk-summary-list__value">
-                31 May 2025
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="# ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
-                </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Financial support source
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Support from family or friends
+                {{ data['income-source'] }} <br>
+                {{ data['labelAsPageHeading'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="how-do-you-support-yourself.html  ">
@@ -168,28 +60,120 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               </dd>
             </div>
 
-            <!-- <div class="govuk-summary-list__row">
+            <!-- 
+
+            <div class="govuk-!-padding-bottom-5"></div>
+
+            <h2 class="govuk-heading-m"> Your income</h2>
+            
+            <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Do you pay into any private pension schemes?
+                Employer name
               </dt>
               <dd class="govuk-summary-list__value">
-                No
+            
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="# ">
-                  Change<span class="govuk-visually-hidden"> type of financial support</span>
+                <a class="govuk-link" href="where-does-your-income-come-from.html">
+                  Change<span class="govuk-visually-hidden"> income source</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Job title
+              </dt>
+              <dd class="govuk-summary-list__value">
+            
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="where-does-your-income-come-from.html">
+                  Change<span class="govuk-visually-hidden"> income source</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date of payslip showing new rate of pay
+              </dt>
+              <dd class="govuk-summary-list__value">
+            
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="where-does-your-income-come-from.html">
+                  Change<span class="govuk-visually-hidden"> income source</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Your gross basic income
+              </dt>
+              <dd class="govuk-summary-list__value">
+            £27500
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="where-does-your-income-come-from.html">
+                  Change<span class="govuk-visually-hidden"> income source</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Have you earned any extra money in the last 12 months?
+              </dt>
+              <dd class="govuk-summary-list__value">
+            Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="where-does-your-income-come-from.html">
+                  Change<span class="govuk-visually-hidden"> income source</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                How much have you earned?
+              </dt>
+              <dd class="govuk-summary-list__value">
+            £1500
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="where-does-your-income-come-from.html">
+                  Change<span class="govuk-visually-hidden"> income source</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row"></div>
+              <dt class="govuk-summary-list__key">
+               Do you pay into any private pension schemes?
+              </dt>
+              <dd class="govuk-summary-list__value">
+            No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="where-does-your-income-come-from.html">
+                  Change<span class="govuk-visually-hidden"> income source</span>
                 </a>
               </dd>
             </div> -->
-
           </dl>
+
 
           <div class="govuk-!-padding-bottom-7"></div>
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
         </form>
+
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>
