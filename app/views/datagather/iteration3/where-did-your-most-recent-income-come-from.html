@@ -1,3 +1,4 @@
+
 {% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-width-container">
@@ -12,24 +13,24 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-               Have you ever had income?
+                  Where did your most recent income come from?
                 </h1>
               </legend>
 
              
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
-                  value="yes~where-did-your-most-recent-income-come-from">
+                  value="yes~when-did-your-income-stop">
                   <label class="govuk-label govuk-radios__label" for="equality-questions">
-                    Yes
+                    Employment
                   </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
-                  value="no~how-do-you-support-yourself">
+                  value="no~are-you-still-registered-as-self-employed">
                   <label class="govuk-label govuk-radios__label" for="equality-questionst">
-                    No
+                    Self-employment
                   </label>
                 </div>
               </div>
@@ -40,7 +41,6 @@
           </button>
         </form>
       </div>
-      {% include "exit-button.html" %}
     </div>
   </main>
 </div>
@@ -49,4 +49,3 @@
 
 
 {% endblock %}
-

@@ -1,0 +1,40 @@
+{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-xl">You need to call the Child Maintenance Service</h1>
+
+          <p>You cannot respond to this application online if you are still registered as self-employed. You need to get in touch with
+            us using the details below.
+          </p>
+
+          <p class="govuk-body">Find out how to <a href="/datagather/iteration2/central-contact-details"
+              class="govuk-link">contact the Child Maintenance Service (opens in new tab)</a>.
+            </p>
+
+        </div>
+        <!-- <div>
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-button--sticky">
+              <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                  data-module="govuk-button">
+                  Hide this page
+              </a>
+          </div>
+      </div>
+      </div> -->
+      {% include "exit-button.html" %}
+      </div>
+    </main>
+  </div>
+
+
+
+
+  {% endblock %}
