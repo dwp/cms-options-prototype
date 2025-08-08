@@ -1,5 +1,5 @@
 {% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
-    pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -13,49 +13,49 @@
                         </legend>
 
                         <p id="contact-time-hint" class="govuk-hint">
-                          You can choose more than one option. We will ask for more detail if necessary.
+                            You can choose more than one option. We will ask for more detail if necessary.
                         </p>
 
                         <div class="govuk-checkboxes">
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio"
-                    value="font~df-font">
-                  <label class="govuk-label govuk-checkboxes__label" for="changed-name">
-                    Standard letter (12-point Arial text on white paper)
-                  </label>
+                                <input class="govuk-radios__input" id="letter-options-1" name="letter-options" type="checkbox"
+                                    value="A different fontt~df-font">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-1">
+                                    A different font
+                                </label>
                             </div>
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="eight" name="phone-time" type="checkbox"
-                                value="bold~df-bold-text">
-                                <label class="govuk-label govuk-checkboxes__label" for="eight">
+                                <input class="govuk-checkboxes__input" id="letter-options-2" name="letter-options" type="checkbox"
+                                    value="Bold text~df-bold-text">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-2">
                                     Bold text
                                 </label>
                             </div>
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="ten" name="phone-time" type="checkbox"
-                                value="colour~df-coloured-paper">
-                                <label class="govuk-label govuk-checkboxes__label" for="ten">
-                                   Coloured paper
+                                <input class="govuk-checkboxes__input" id="letter-options-3" name="letter-options" type="checkbox"
+                                    value="Coloured paper~df-paper-colour">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-3">
+                                    Coloured paper
                                 </label>
                             </div>
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="midday" name="phone-time" type="checkbox"
-                                value="double~df-double-spacing">
-                                <label class="govuk-label govuk-checkboxes__label" for="midday">
+                                <input class="govuk-checkboxes__input" id="letter-options-4" name="letter-options" type="checkbox"
+                                    value="Double line spacing~df-double-spacing">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-4">
                                     Double line spacing
                                 </label>
                             </div>
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="two" name="phone-time" type="checkbox"
-                                value="large~df-large-print">
-                                <label class="govuk-label govuk-checkboxes__label" for="two">
+                                <input class="govuk-checkboxes__input" id="letter-options-5" name="letter-options" type="checkbox"
+                                    value="Large print~df-large-print">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-5">
                                     Large print
                                 </label>
                             </div>
-                
-                        
+
+
                         </div>
-<br><br>
+                        <br><br>
                         <button type="submit" class="govuk-button">
                             Continue
                         </button>
