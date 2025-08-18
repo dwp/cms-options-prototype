@@ -1,0 +1,103 @@
+2025-08-18T13:43:22.296Z
+cwd: ~/Documents/GitLab/cms-options-prototype
+package: govuk-prototype-kit@13.18.0
+argv: ~/.nvm/versions/node/v22.18.0/bin/node ~/.npm/_npx/751a68202a4807b7/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Succeeded [Check migration is being applied to a pre v13 prototype]
+2025-08-18T13:43:41.637Z
+cwd: ~/Documents/GitLab/cms-options-prototype
+package: govuk-prototype-kit@13.18.0
+argv: ~/.nvm/versions/node/v22.18.0/bin/node ~/Documents/GitLab/cms-options-prototype/node_modules/.bin/govuk-prototype-kit migrate -- ~/Documents/GitLab/cms-options-prototype
+Started [Migrate config.js to config.json]
+Started [Update application SCSS file]
+Started [Deleted files that are no longer needed]
+Started [Deleted directories that are no longer needed]
+Started [Delete listen-on-port.js]
+Started [Delete server.js]
+Started [Delete start.js]
+Started [Delete VERSION.txt]
+Started [Delete Procfile]
+Started [Delete app/assets/sass/application-ie8.scss]
+Started [Delete app/assets/sass/unbranded-ie8.scss]
+Started [Remove unused directory docs]
+Started [Remove unused directory lib]
+Started [Remove unused directory public]
+Succeeded [Migrate config.js to config.json]
+Succeeded [Delete listen-on-port.js]
+Succeeded [Delete start.js]
+Succeeded [Delete server.js]
+Succeeded [Delete Procfile]
+Succeeded [Delete app/assets/sass/application-ie8.scss]
+Succeeded [Delete VERSION.txt]
+Succeeded [Delete app/assets/sass/unbranded-ie8.scss]
+Succeeded [Deleted files that are no longer needed]
+Found [// Add your routes here - above the module.exports line] in [app/routes.js], replacing
+Started [Overwrite app/assets/javascripts/application.js]
+Started [Overwrite app/filters.js]
+Started [Overwrite app/views/layout.html]
+Started [Delete app/assets/images/separator.png]
+Found [// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you] in [app/assets/sass/application.scss], replacing
+Started [Delete app/assets/javascripts/auto-store-data.js]
+Started [Delete app/assets/sass/unbranded.scss]
+Started [Delete app/assets/images/unbranded.ico]
+Started [Delete app/assets/images/separator-2x.png]
+Keeping these lines from old file
+Started [Delete app/views/includes/cookie-banner.html]
+Started [Delete app/views/includes/head.html]
+Started [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Started [Delete app/assets/sass/patterns/_related-items.scss]
+Started [Delete app/assets/javascripts/jquery-1.11.3.js]
+Started [Delete app/views/includes/breadcrumb_examples.html]
+Started [Delete app/views/layout_unbranded.html]
+Started [Delete app/assets/sass/patterns/_pagination.scss]
+Started [Delete app/views/includes/scripts.html]
+Started [Delete app/assets/sass/patterns/_task-list.scss]
+Started [Update app/assets/javascripts/application.js]
+Copying from [node_modules/govuk-prototype-kit/prototype-starter/app/filters.js] to [app/filters.js]
+Started [Delete app/assets/sass/patterns/_contents-list.scss]
+Started [Delete app/assets/sass/patterns/_step-by-step-header.scss]
+Copying from [node_modules/govuk-prototype-kit/prototype-starter/app/views/layouts/main.html] to [app/views/layout.html]
+Keeping these lines from old file
+Started [Delete app/assets/sass/patterns/_step-by-step-related.scss]
+Failed [Delete app/views/includes/cookie-banner.html]
+Started [Delete app/assets/sass/patterns/_step-by-step-nav.scss]
+Succeeded [Delete app/assets/images/separator.png]
+Succeeded [Delete app/assets/javascripts/auto-store-data.js]
+Succeeded [Delete app/assets/sass/unbranded.scss]
+Succeeded [Delete app/assets/images/unbranded.ico]
+Succeeded [Delete app/assets/images/separator-2x.png]
+Succeeded [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Succeeded [Delete app/views/includes/head.html]
+Succeeded [Delete app/assets/sass/patterns/_related-items.scss]
+Succeeded [Delete app/assets/sass/patterns/_pagination.scss]
+Succeeded [Delete app/assets/javascripts/jquery-1.11.3.js]
+Succeeded [Delete app/views/layout_unbranded.html]
+Succeeded [Delete app/views/includes/breadcrumb_examples.html]
+Succeeded [Delete app/views/includes/scripts.html]
+Succeeded [Delete app/assets/sass/patterns/_task-list.scss]
+Succeeded [Update application SCSS file]
+Succeeded [Delete app/assets/sass/patterns/_contents-list.scss]
+Succeeded [Delete app/assets/sass/patterns/_step-by-step-header.scss]
+Succeeded [Delete app/assets/sass/patterns/_step-by-step-related.scss]
+Succeeded [Delete app/assets/sass/patterns/_step-by-step-nav.scss]
+Succeeded [Update app/assets/javascripts/application.js]
+Succeeded [Overwrite app/assets/javascripts/application.js]
+//,// For guidance on how to create routes see:,// https://prototype-kit.service.gov.uk/docs/create-routes,//,,const govukPrototypeKit = require('govuk-prototype-kit'),const router = govukPrototypeKit.requests.setupRouter(),,// Add your routes here,,,// copy the const name and the file path to new version,const radioButtonRedirect = require('radio-button-redirect'),const prototype1iteration1 = require('./routes/prototype1iteration1');;,const prototype1iteration2 = require('./routes/prototype1iteration2');;,const prototype2iteration1 = require('./routes/prototype2iteration1');;,const prototype3iteration1 = require('./routes/prototype3iteration1');;,const prototype4iteration1 = require('./routes/prototype4iteration1');;,const prototype4iteration2 = require('./routes/prototype4iteration2');;,const prototype5iteration1 = require('./routes/prototype5iteration1');;,const prototype6iteration1 = require('./routes/prototype6iteration1');;,const northernirelanditeration1 = require('./routes/northernirelanditeration1');;,const mergediteration1 = require('./routes/mergediteration1');;,const datagatheriteration1 = require('./routes/datagatheriteration1');;,const datagatheriteration2 = require('./routes/datagatheriteration2');;,const datagatheriteration3 = require('./routes/datagatheriteration3');;,const datagathermulticase = require('./routes/datagathermulticase');;,const datagathermulticase2 = require('./routes/datagathermulticase2');;,const citizensadviceiteration1 = require('./routes/citizensadviceiteration1');;,const information = require('./routes/information');;,const telephonytool = require('./routes/telephonytool');;,const telephonytool2 = require('./routes/telephonytool2');;,const childcost = require('./routes/childcost');;,const nonuk = require('./routes/nonuk');;,const urnerror = require('./routes/urnerror');;,const g4s1 = require('./routes/g4s1');;,const g4s2 = require('./routes/g4s2');;,,,,,//copy the router use and update the sprint version,router.use(radioButtonRedirect),router.use(prototype1iteration1);,router.use(prototype1iteration2);,router.use(prototype2iteration1);,router.use(prototype3iteration1);,router.use(prototype4iteration1);,router.use(prototype4iteration2);,router.use(prototype5iteration1);,router.use(prototype6iteration1);,router.use(northernirelanditeration1);,router.use(mergediteration1);,router.use(datagatheriteration1);,router.use(datagatheriteration2);,router.use(datagatheriteration3);,router.use(datagathermulticase),router.use(datagathermulticase2),router.use(citizensadviceiteration1);,router.use(information);,router.use(telephonytool);,router.use(telephonytool2);,router.use(childcost);,router.use(nonuk);,router.use(urnerror);,router.use(g4s1);,router.use(g4s2);,,module.exports = router,
+Succeeded [Remove unused directory lib]
+Found [module.exports = router;,module.exports = router] in [app/routes.js], removing
+Succeeded [Remove unused directory public]
+Succeeded [Update routes file]
+Succeeded [Overwrite app/filters.js]
+Succeeded [Overwrite app/views/layout.html]
+Succeeded [Remove unused directory docs]
+Succeeded [Deleted directories that are no longer needed]
+ENOENT: no such file or directory, stat '/Users/ross.brown/Documents/GitLab/cms-options-prototype/app/views/layout_unbranded.html'
+Error: ENOENT: no such file or directory, stat '/Users/ross.brown/Documents/GitLab/cms-options-prototype/app/views/layout_unbranded.html'
+    at async Object.stat (node:internal/fs/promises:1037:18)
+    at async /Users/ross.brown/Documents/GitLab/cms-options-prototype/node_modules/govuk-prototype-kit/lib/utils/index.js:254:22
+    at async asyncSeriesMap (/Users/ross.brown/Documents/GitLab/cms-options-prototype/node_modules/govuk-prototype-kit/lib/utils/asyncSeriesMap.js:5:18)
+    at async searchAndReplaceFiles (/Users/ross.brown/Documents/GitLab/cms-options-prototype/node_modules/govuk-prototype-kit/lib/utils/index.js:252:25)
+    at async updateUnbrandedLayouts (/Users/ross.brown/Documents/GitLab/cms-options-prototype/node_modules/govuk-prototype-kit/migrator/migration-steps.js:256:19)
+    at async Promise.all (index 7)
+    at async Object.migrate (/Users/ross.brown/Documents/GitLab/cms-options-prototype/node_modules/govuk-prototype-kit/migrator/index.js:128:33)
+    at async runMigrate (/Users/ross.brown/Documents/GitLab/cms-options-prototype/node_modules/govuk-prototype-kit/bin/cli:391:5)
