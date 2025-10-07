@@ -1,4 +1,7 @@
-{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%} 
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %} 
+{% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -6,7 +9,7 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <form action="/datagather/iteration2/how-often-does-child-stay-overnight" method="post" novalidate>
+          <form action="how-often-does-child-stay-overnight.html" method="get" novalidate>
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -15,15 +18,14 @@
                   </h1>
                 </legend>
                 <div id="dob-hint" class="govuk-hint">
-                  For example, 31 3 2008
+                  For example, 15 7 2007
                 </div>
 
-                <!-- <div class="govuk-inset-text">
-                  Your children must be under 16 or under 20 if they are in full-time education or training, up to and including A level or equivalent.
-                </div> -->
+                 <div class="govuk-hint">
+                  Your children must be under 16 or under 20 if they are in full-time education or training, up to and including A level or equivalent. See HMRC for the <a href="#" class="govuk-link">list of education and approved training (opens in a new tab)</a>.
+                </div> 
 
-                <div id="dob-hint-2" class="govuk-hint">The date of birth is in the letter we sent you.</div>
-                
+               
                 <div class="govuk-date-input" id="child-dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -57,6 +59,7 @@
             </button>
           </form>
         </div>
+        {% include "exit-button.html" %}
       </div>
     </main>
   </div>

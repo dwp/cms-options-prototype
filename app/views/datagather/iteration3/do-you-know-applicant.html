@@ -1,5 +1,7 @@
-{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
-pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%} 
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %} 
+{% block content %}
 
 <div class="govuk-width-container">
   {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
@@ -48,13 +50,13 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
               </div>
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes~/datagather/iteration2/do-you-have-evidence">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes~/datagather/iteration3/do-you-have-evidence">
                   <label class="govuk-label govuk-radios__label" for="changedName">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no~/datagather/iteration2/caseworker-will-call">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no~/datagather/iteration3/caseworker-will-call">
                   <label class="govuk-label govuk-radios__label" for="changedName-2">
                     No
                   </label>

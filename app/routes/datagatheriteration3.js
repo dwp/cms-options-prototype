@@ -321,7 +321,7 @@ router.post('/datagather/iteration3/accept-parentage', function(req, res) {
 
 router.post('/datagather/iteration3/are-you-on-the-birth-certificate', function(req, res) {
   if (req.body['birth-certificate'] === 'yes') {
-    res.redirect('/datagather/iteration3/how-often-does-child-stay-overnight');
+    res.redirect('/datagather/iteration3/section-five-check-your-answers-for-named-child');
   } else if (req.body['birth-certificate'] === 'no'){
     res.redirect('/datagather/iteration3/do-you-know-applicant');
   } else {

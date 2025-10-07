@@ -1,67 +1,54 @@
-{% extends "layout-2.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
 
-<div class="govuk-width-container">
-  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <form method="post" novalidate>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
-                  Tell us about children who may affect your calculation
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="get" action="what-is-your-childs-name.html" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                  Tell us about your children
                 </h1>
-              </legend>
+                </legend>
 
-              <div class="govuk-inset-text">
-                
-                <p class="govuk-body">
-                Children must be under 16 or under 20 if they are in full-
-                time education or training, up to and including A level or 
-                equivalent. See HMRC for the <a href="https://www.gov.uk/
-                child-maintenance-
-                service/
-                disagreements-
-                about-parentage" class="govuk-link">list of education and approved 
-                training (opens in new tab)</a>.
+                <div class="govuk-inset-text">
+
+                  <p class="govuk-body">
+                The date of birth is in the letter we sent you
                 </p>
 
-              </div>
+                </div>
 
-              <p class="govuk-body">To calculate your child maintenance, we need to ask you:</p>
+                <p class="govuk-body">To work out how much child maintenance you need to pay, we need to ask you:</p>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>about the children named in the application</li>
-                <li>if you pay child maintenance for children in a private arrangement (not using the Child Maintenance Service)</li>
-                <li>if any children live with you (for example, your child or a partner’s child)</li>
-              </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>about the children you want to include in this application</li>
+                  <li>if you pay child maintenance for any other children in a private arrangement (not using the Child Maintenance Service)</li>
+                  <li>if any other children live with you (this can be your child or a partner’s child)</li>
+                </ul>
 
-              <div class="govuk-!-padding-bottom-5"></div>
+                <div class="govuk-!-padding-bottom-5"></div>
 
-              <h3 class="govuk-heading-m">If you do not think you are the parent of a child named in this application</h3>
+                <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
 
-              <p class="govuk-body">
-                We need to collect your information so we can decide if you have legal responsibility for the child. If you think you are not the parent <a href="#"
-                class="govuk-link">we usually need evidence (opens in new tab)</a>.
-                </p>
+                {# <a href="/datagather/iteration3/what-is-your-childs-name" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+            </a> #}
 
-            <div class="govuk-!-padding-bottom-3"></div>
+              </form>
+            </div>
+          </div>
+          {% include "exit-button.html" %}
 
-            <a href="/datagather/iteration2/what-is-your-childs-name" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
-            </a>
+          <!-- Hide this page button -->
 
-        </form>
+        </main>
       </div>
 
-<!-- Hide this page button -->
-
-  </main>
-</div>
-
-
-
-
-{% endblock %}
-
+    {% endblock %}
