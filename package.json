@@ -27,7 +27,7 @@
     "govuk_template_jinja": "^0.26.0",
     "govuk-elements-sass": "^3.1.3",
     "govuk-frontend": "5.11.2",
-    "govuk-prototype-kit": "13.18.0",
+    "govuk-prototype-kit": "13.18.1",
     "gray-matter": "^4.0.3",
     "hmrc-frontend": "6.89.0",
     "inquirer": "^12.9.3",
