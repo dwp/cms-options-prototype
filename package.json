@@ -23,6 +23,7 @@
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "fancy-log": "^2.0.0",
+    "follow-redirects": "^1.15.11",
     "fs-extra": "^11.3.1",
     "govuk_frontend_toolkit": "^9.0.1",
     "govuk_template_jinja": "^0.26.0",
@@ -42,7 +43,9 @@
     "radio-button-redirect": "^1.2.0",
     "require-dir": "^1.2.0",
     "sass": "^1.90.0",
+    "semver": "^7.7.3",
     "sync-request": "^6.1.0",
+    "tmp": "^0.2.5",
     "universal-analytics": "^0.5.3",
     "uuid": "^11.1.0"
   }
