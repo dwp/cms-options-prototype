@@ -1,60 +1,59 @@
 {% extends "layouts/main.html.html" %}
-{% set serviceName %} Respond to a child maintenance application {% endset%} 
-{% block pageTitle %} GOV.UK Prototype Kit {% endblock %} 
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
 {% block content %}
 
-<div class="govuk-width-container">
-  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <form method="post" novalidate>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
                   Are you the biological or legal parent of {{ data['named-child-first-name'] }}?
                 </h1>
-              </legend>
+                </legend>
 
-              <div class="govuk-hint">
+                <div class="govuk-hint">
                 A legal parent can be adoptive or under a parental order. 
               </div>
 
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="parentage" name="parentage" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="parentage">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="parentage" name="parentage" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="parentage">
                     Yes
                   </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="parentage-2" name="parentage" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="parentage-2">
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="parentage-2" name="parentage" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="parentage-2">
                     No
                   </label>
-                </div>
+                  </div>
 
-                <div class="govuk-radios__divider">or</div>
+                  <div class="govuk-radios__divider">or</div>
 
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="parentage-3" name="parentage" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="parentage-3">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="parentage-3" name="parentage" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="parentage-3">
                     I do not know
                   </label>
+                  </div>
                 </div>
-              </div>
-            </fieldset>
-          </div>
-          <button class="govuk-button" data-module="govuk-button">
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </form>
+          </form>
+        </div>
+        {% include "exit-button.html" %}
       </div>
-  </main>
-</div>
-
-
-
+    </main>
+  </div>
 
 {% endblock %}

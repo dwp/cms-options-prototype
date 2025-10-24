@@ -1,53 +1,51 @@
-{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layouts/main.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
 
-<div class="govuk-width-container">
-  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <form method="post" novalidate>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
                   Do you pay into any private pension schemes?
                 </h1>
-              </legend>
+                </legend>
 
-            <p>This is a pension that you pay into from your earnings. You can have a private pension as well as or instead of a workplace pension. </p>
+                <p>This is a pension that you pay into from your earnings. You can have a private pension as well as or instead of a workplace pension. </p>
 
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="pension" name="pension" type="radio" value="yes~if-you-pay-into-a-private-pension">
-                  <label class="govuk-label govuk-radios__label" for="pension">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="pension" name="pension" type="radio" value="yes~if-you-pay-into-a-private-pension">
+                    <label class="govuk-label govuk-radios__label" for="pension">
                     Yes
                   </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="pension" name="pension" type="radio" value="no~section-four-employed-check-your-answers">
-                  <label class="govuk-label govuk-radios__label" for="pension">
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="pension" name="pension" type="radio" value="no~section-four-employed-check-your-answers">
+                    <label class="govuk-label govuk-radios__label" for="pension">
                     No
                   </label>
+                  </div>
                 </div>
-              </div>
-            </fieldset>
-          </div>
+              </fieldset>
+            </div>
 
-          <button class="govuk-button" data-module="govuk-button">
+            <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
 
-        </form>
-      </div>
-
-<!-- Hide this page button -->
-
-  </main>
-</div>
-
-
-
+          </form>
+        </div>
+        {% include "exit-button.html" %}
+       </div>
+    </main>
+  </div>
 
 {% endblock %}
-

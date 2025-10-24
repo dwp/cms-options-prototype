@@ -9,50 +9,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
       <div class="govuk-grid-column-two-thirds">
         <form method="post" action="/datagather/iteration2/do-you-have-evidence" novalidate>
           <div class="govuk-form-group">
-            <!-- <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
-                  Do you have evidence to prove you are not the biological or legal parent of {{
-                  data['named-child-first-name'] }}?
-                </h1>
-              </legend>
-
-              <div class="govuk-!-padding-bottom-5"></div>
-
-              <p class="govuk-body">Evidence can include:</p>
-
-              <ul class="govuk-list govuk-list--bullet">
-                <li>court approved DNA test results from
-                  Cellmark (a government approved
-                  laboratory)
-                </li>
-                <li>court documents that state you are not
-                  the parent
-                </li>
-              </ul>
-
-
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="evidence" name="evidence" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="evidence">
-                    Yes
-                  </label>
-                </div>
-
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="evidence" name="evidence" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="evidence">
-                    No
-                  </label>
-                </div>
-              </div>
-
-            </fieldset> -->
-          <!-- </div>  -->
-
-          <!-- <div class="govuk-form-group"> -->
+       
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
@@ -91,6 +48,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
           </button>
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>
