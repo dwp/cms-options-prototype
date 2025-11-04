@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+                    <div class="govuk-form-group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+                            <h1 class="govuk-fieldset__heading">What changes do you need?</h1>
+                        </legend>
+
+                        <p id="contact-time-hint" class="govuk-hint">
+                            You can choose more than one option. We will ask for more detail if necessary.
+                        </p>
+
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-radios__input" id="letter-options-1" name="letter-options" type="checkbox"
+                                    value="A different fontt~df-font">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-1">
+                                    A different font
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="letter-options-2" name="letter-options" type="checkbox"
+                                    value="Bold text~df-bold-text">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-2">
+                                    Bold text
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="letter-options-3" name="letter-options" type="checkbox"
+                                    value="Coloured paper~df-paper-colour">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-3">
+                                    Coloured paper
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="letter-options-4" name="letter-options" type="checkbox"
+                                    value="Double line spacing~df-double-spacing">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-4">
+                                    Double line spacing
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="letter-options-5" name="letter-options" type="checkbox"
+                                    value="Large print~df-large-print">
+                                <label class="govuk-label govuk-checkboxes__label" for="letter-options-5">
+                                    Large print
+                                </label>
+                            </div>
+
+
+                        </div>
+                        <br><br>
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+            {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+
+
+<!-- In page scripts start-->
+
+<script>
+
+    document.getElementById("text_reveal").style.display = "none";
+    // assign function to onclick property of checkbox
+    document.getElementById('text').onclick = function () {
+        // call toggleSub when checkbox clicked
+        // toggleSub args: checkbox clicked on (this), id of element to show/hide
+        toggleSub(this, 'text_reveal');
+    };
+    // called onclick of checkbox
+    function toggleSub(box, id) {
+        // get reference to related content to display/hide
+        var el = document.getElementById(id);
+
+        if (box.checked) {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    }
+</script>
+
+<!-- In page scripts end -->
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="validate-email.html" method="get" novalidate>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="email-address">
+                What is your email address?
+              </label>
+            </h1>
+            <p class="govuk-body">When you finish your response we will send you a confirmation email.
+              We will also send you an email when a new letter is ready to view in your online account.</p>
+            
+              <input class="govuk-input" id="email-address" name="email-address" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+
+        </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}
+

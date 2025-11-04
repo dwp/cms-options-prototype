@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+  pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form action="df-speak-to-you" method="post" novalidate>
+        
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+              <h1 class="govuk-fieldset__heading">
+               What size print do you need?
+              </h1>
+            </legend>
+    
+
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              </legend>
+            
+              <div class="govuk-radios govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio"
+                    value="standard~df-speak-to-you">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                    16 point
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio"
+                    value="letter~pp-phone">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                   18 point
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio"
+                    value="audio~pp-phone">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    24 point
+                  </label>
+                </div>
+     
+       
+          
+          
+              </div>
+            </fieldset>
+
+            
+          </div>
+          <br>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,329 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} Check your answers {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <form action="/form-handler" method="post" novalidate>
+          <h1 class="govuk-heading-xl">Check your answers before moving on to the next section</h1>
+
+          <h2 class="govuk-heading-m">Your details</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Court decision
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="do-you-have-a-court-order.html">
+                  Change<span class="govuk-visually-hidden"> whether you have a court decision</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Your name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['your-first-name'] }} {{ data['your-middle-name'] }} {{ data['your-last-name'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="what-is-your-name.html">
+                  Change<span class="govuk-visually-hidden"> applicants name</span>
+                </a>
+              </dd>
+            </div>
+
+            <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Reference number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['reference-number'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="enter-your-reference-number.html">
+                Change<span class="govuk-visually-hidden"> reference number</span>
+              </a>
+            </dd>
+          </div> -->
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Applicant name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['applicant-first-name'] }} {{ data['applicant-middle-name'] }} {{ data['applicant-last-name'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="enter-your-reference-number.html">
+                  Change<span class="govuk-visually-hidden"> your name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                National Insurance number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['national-insurance-number'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="what-is-your-national-insurance-number.html">
+                  Change<span class="govuk-visually-hidden"> National Insurance number</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">1 The Towers</p>
+                <p class="govuk-body">Hill Top Road</p>
+                <p class="govuk-body">Newtown</p>
+                <p class="govuk-body">West Yorkshire</p>
+                <p class="govuk-body">NN1 2TT</p>
+                <p class="govuk-body">England</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="select-your-address.html">
+                  Change<span class="govuk-visually-hidden"> address</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Can we send letters to this address?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <!-- {{ data['lettersAddress'] }} -->No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="can-we-send-letters.html">
+                  Change<span class="govuk-visually-hidden"> can we send letters to this address</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Address for letters
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">47 Appletree Walk</p>
+                <p class="govuk-body">Newtown</p>
+                <p class="govuk-body">West Yorkshire</p>
+                <p class="govuk-body">NN2 1PP</p>
+                <p class="govuk-body">England</p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="letters-address.html">
+                  Change<span class="govuk-visually-hidden"> address where we can send letters</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <!-- {{ data['email-address'] }} -->example.email@email.com
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="what-is-your-email-address.html">
+                  Change<span class="govuk-visually-hidden"> email address</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                How do you want to get updates about your case?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <!--{{ data['lettersPreference'] }}--> Online
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="letters-preference.html">
+                  Change<span class="govuk-visually-hidden"> if you want all letters by post</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Contact number <br>
+                Is this your own number?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <!-- {{ data['contact-number'] }} --> 07777777777 <br> Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="best-number-to-call-you-on.html">
+                  Change<span class="govuk-visually-hidden"> contact number</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Preferred call time
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Any time
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="when-can-we-call-you.html">
+                  Change<span class="govuk-visually-hidden"> Preferred call time</span>
+                </a>
+              </dd>
+            </div>
+
+            <!-- <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Can we send text messages?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> whether we can leave text messages</span>
+                </a>
+              </dd>
+            </div> -->
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Can we leave voicemails?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <!-- {{ data['voicemails'] }} --> Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="when-can-we-call-you.html">
+                  Change<span class="govuk-visually-hidden"> whether we can leave voicemails</span>
+                </a>
+              </dd>
+            </div>
+
+          </dl>
+
+          <h2 class="govuk-heading-m">
+            How we will contact you
+          </h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you need us to use any different formats when we contact you by letter or phone?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body"> Yes </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="rp-nino">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                When we write to you
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Audio
+                  <br>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>MP3 file on USB flash drive</li>
+                </ul>
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="rp-nino">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                When we speak to you
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">
+                  Standard phone call <br>
+                <!-- <ul class="govuk-list govuk-list--bullet">
+                  <li>0300 4567890</li>
+                </ul> -->
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="rp-nino">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+
+
+            <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Emails
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['emails'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">Text messages</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['email-address'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">Text messages</span>
+              </a>
+            </dd>
+          </div> -->
+          </dl>
+
+
+          <input type="hidden" name="answers-checked" value="true">
+          <a href="domestic-abuse-help" role="button" draggable="false" class="govuk-button" data-module="govuk-button"
+            formnovalidate>Continue
+          </a>
+
+        </form>
+
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
