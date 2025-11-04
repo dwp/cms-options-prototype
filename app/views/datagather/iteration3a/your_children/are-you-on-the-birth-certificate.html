@@ -1,0 +1,62 @@
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                  Are you on the birth certificate for {{ data['named-child-first-name'] }}
+                    {{
+                  data['named-child-middle-name'] }}
+                    {{ data['named-child-last-name'] }}?
+                </h1>
+                </legend>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="birth-certificate" name="birth-certificate" type="radio"
+                    value="yes">
+                    <label class="govuk-label govuk-radios__label" for="birth-certificate">
+                    Yes
+                  </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="birth-certificate-2" name="birth-certificate" type="radio"
+                    value="no">
+                    <label class="govuk-label govuk-radios__label" for="birth-certificate-2">
+                    No
+                  </label>
+                  </div>
+
+                  <div class="govuk-radios__divider">or</div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="birth-certificate-3" name="birth-certificate" type="radio"
+                    value="no">
+                    <label class="govuk-label govuk-radios__label" for="birth-certificate-3">
+                    I do not know
+                  </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          </form>
+        </div>
+        {% include "exit-button.html" %}
+      </div>
+    </main>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="get" action="what-is-your-childs-name.html" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                  Tell us about your children
+                </h1>
+                </legend>
+
+                <div class="govuk-inset-text">
+
+                  <p class="govuk-body">
+                The date of birth is in the letter we sent you
+                </p>
+
+                </div>
+
+                <p class="govuk-body">To work out how much child maintenance you need to pay, we need to ask you:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>about the children you want to include in this application</li>
+                  <li>if you pay child maintenance for any other children in a private arrangement (not using the Child Maintenance Service)</li>
+                  <li>if any other children live with you (this can be your child or a partner’s child)</li>
+                </ul>
+
+                <div class="govuk-!-padding-bottom-5"></div>
+
+                <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+
+                {# <a href="/datagather/iteration3/what-is-your-childs-name" role="button" draggable="false" class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+            </a> #}
+
+              </form>
+            </div>
+          </div>
+          {% include "exit-button.html" %}
+
+          <!-- Hide this page button -->
+
+        </main>
+      </div>
+
+    {% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%} 
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %} 
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/datagather/iteration3/section-five-check-your-answers-for-named-child" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  A caseworker will call you after you submit your response
+                </h1>
+              </legend>
+
+              <div class="govuk-!-padding-bottom-5"></div>
+
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-visually-hidden">Warning</span>
+                  We will not save your information if you exit the service now.
+                </strong>
+              </div>
+
+              <p class="govuk-body">
+                We need to collect more information from you to process
+                the application and raise your parentage dispute. Please
+                continue with with your online response.
+
+                <br><br>
+
+                A caseworker will contact you within xxxx after you submit
+                your information.
+              </p>
+              <br>
+
+              <p class="govuk-body">
+                We may ask you to do a DNA test to prove you are not the
+                biological parent. This must be a court approved DNA test
+                using Cellmark. <a href="#" class="govuk-link">There are fees if you do a DNA test</a>.
+              </p>
+
+            </fieldset>
+
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+{% endblock %}
