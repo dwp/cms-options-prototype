@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block header %}
-{% include './_header-options.html' %}
+  {% include './_header-options.html' %}
 {% endblock %}
 
 {% block pageTitle %}
@@ -9,22 +9,18 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Archived 'Get Help' and 'Respond' Prototypes</h1>
+    </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">Archived 'Get Help' and 'Respond' Prototypes</h1>
-  </div>
+    <!-- Get help prototypes -->
 
+    <h2 class="govuk-heading-l">Get help prototypes</h2>
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 
-  <!-- Get help prototypes -->
-
-
-  <h2 class="govuk-heading-l">Get help prototypes</h2>
-  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-
-
-
-   {#  <div class="govuk-accordion__section ">
+      {#  <div class="govuk-accordion__section ">
       <div class="govuk-accordion__section-header">
         <h2 class="govuk-accordion__section-heading">
           <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -76,85 +72,81 @@ GOV.UK Prototype Kit
     </div><br>
  #}
 
-
-
-
-    <div class="govuk-accordion__section ">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             Fifth prototype
           </span>
-        </h2>
-      </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content"
         aria-labelledby="accordion-default-heading-1">
 
-        <span class="govuk-tag govuk-tag--red">Third iteration</span>
+          <span class="govuk-tag govuk-tag--red">Third iteration</span>
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <dl>
-              <dt class="govuk-heading-s">Last updated</dt>
-              <dt class="govuk-body">March 2022</dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s">Date created</dt>
-              <dt class="govuk-body">June 2021</dt>
-            </dl>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <dl>
+                <dt class="govuk-heading-s">Last updated</dt>
+                <dt class="govuk-body">March 2022</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">June 2021</dt>
+              </dl>
 
-
-            <dl>
-              <dt class="govuk-heading-s">What it is</dt>
-              <dt class="govuk-body">
+              <dl>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">
                 Includes:<br><br>
                 - the full Options (Get Help) journey<br><br>
                 - journey for PP to get a URN before being asked to call<br><br>
                 - includes 3 research questions and a page asking if the user is happy to take part<br><br>
                 - prototype now linked to Apply via the last page in the journey (requires login to the Apply
                 prototype)<br><br>
-                <strong>UPDATES:</strong><br>(Mar 2022): All H1's were made consistent in being either xl - 48pt or l
+                  <strong>UPDATES:</strong><br>(Mar 2022): All H1's were made consistent in being either xl - 48pt or l
                 -36pt depending on page context.
                 <br><br> (Aug 2021): All telephone numbers, opening hours, and webchat links (where applicable) have
                 been updated or removed.<br><br>
                 (Oct 2021): Additional updates to tel numbers (mainly layout for accessibility purposes). Plus drop-down
                 content added to journey regarding if a parent is the biological or adoptive.<br>
-              </dt>
-            </dl>
+                </dt>
+              </dl>
+            </div>
           </div>
+
+          <a href="prototype5/index" class="govuk-button govuk-button--start">Start prototype</a>
         </div>
+      </div><br>
 
-        <a href="prototype5/index" class="govuk-button govuk-button--start">Start prototype</a>
-      </div>
-    </div><br>
-
-
-
-    <div class="govuk-accordion__section ">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             Fourth prototype
           </span>
-        </h2>
-      </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content"
         aria-labelledby="accordion-default-heading-1">
 
-        <span class="govuk-tag govuk-tag--orange">Second iteration</span>
+          <span class="govuk-tag govuk-tag--orange">Second iteration</span>
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <dl>
-              <dt class="govuk-heading-s">Date created</dt>
-              <dt class="govuk-body">March 2021</dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s">What it is</dt>
-              <dt class="govuk-body">Based on research of versions 1 to 3:<br>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">March 2021</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">
+                  <a href="">Jira or confluence link</a>
+                </dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">Based on research of versions 1 to 3:<br>
                 1. Earlier notification point for users who already have a CM case (start page)<br>
                 2. Moved the eligibility questions before Options<br>
                 3. Add specific drop-out pages for ineligible statuses<br>
@@ -165,135 +157,202 @@ GOV.UK Prototype Kit
                 8. Removing NINO, Bank Details, 9+ children, etc page and gracefully handling at approprate point<br>
                 9. Added info about £20 into service content (previously only in start page)<br>
                 10. Added expanded info about Collect and Pay - when it can be used, and fees<br>
-              </dt>
-            </dl>
+                </dt>
+              </dl>
+            </div>
           </div>
+
+          <a href="prototype4/index" class="govuk-button govuk-button--start">Start prototype</a>
         </div>
-
-        <a href="prototype4/index" class="govuk-button govuk-button--start">Start prototype</a>
       </div>
-    </div>
 
-
-    <div class="govuk-accordion__section ">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             Third prototype
           </span>
-        </h2>
-      </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content"
         aria-labelledby="accordion-default-heading-1">
 
-        <span class="govuk-tag govuk-tag--red">First iteration</span>
+          <span class="govuk-tag govuk-tag--red">First iteration</span>
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <dl>
-              <dt class="govuk-heading-s">Date created</dt>
-              <dt class="govuk-body">March 2021</dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s">What it is</dt>
-              <dt class="govuk-body">This prototype puts FBA and CMS information on a single page and prompts an
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">March 2021</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">
+                  <a href="">Jira or confluence link</a>
+                </dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">This prototype puts FBA and CMS information on a single page and prompts an
                 action.<br>
                 Also includes the ability to receive Application Reference by email or text.
               </dt>
-            </dl>
+              </dl>
+            </div>
           </div>
+
+          <a href="prototype3/index" class="govuk-button govuk-button--start">Start prototype</a>
         </div>
-
-        <a href="prototype3/index" class="govuk-button govuk-button--start">Start prototype</a>
       </div>
-    </div>
 
-
-    <div class="govuk-accordion__section ">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             Second prototype
           </span>
-        </h2>
-      </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content"
         aria-labelledby="accordion-default-heading-1">
 
-        <span class="govuk-tag govuk-tag--red">First iteration</span>
+          <span class="govuk-tag govuk-tag--red">First iteration</span>
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <dl>
-              <dt class="govuk-heading-s">Date created</dt>
-              <dt class="govuk-body">March 2021</dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s">What it is</dt>
-              <dt class="govuk-body">This prototype asks common eligibility questions up front to screen out users who
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">March 2021</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">
+                  <a href="">Jira or confluence link</a>
+                </dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">This prototype asks common eligibility questions up front to screen out users who
                 need to call.<br>
                 It also personalises the journey to RP or PP applications.
               </dt>
-            </dl>
+              </dl>
+            </div>
           </div>
-        </div>
 
-        <a href="/prototype2/iteration1/personalised/welcome" class="govuk-button govuk-button--start">Start
+          <a href="/prototype2/iteration1/personalised/welcome" class="govuk-button govuk-button--start">Start
           prototype</a>
+        </div>
       </div>
-    </div>
 
-
-    <div class="govuk-accordion__section ">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             First prototype
           </span>
-        </h2>
-      </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content"
         aria-labelledby="accordion-default-heading-1">
 
-        <span class="govuk-tag govuk-tag--red">Second iteration</span>
+          <span class="govuk-tag govuk-tag--red">Second iteration</span>
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <dl>
-              <dt class="govuk-heading-s">Date created</dt>
-              <dt class="govuk-body">January 2021</dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s">What it is</dt>
-              <dt class="govuk-body">First version prototype for online Options journey based on 'simplest thing'
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">January 2021</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">
+                  <a href="">Jira or confluence link</a>
+                </dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">First version prototype for online Options journey based on 'simplest thing'
                 principles.</dt>
-            </dl>
+              </dl>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="govuk-!-padding-bottom-9"></div>
+    <div class="govuk-!-padding-bottom-9"></div>
 
-  <!-- Data Gather prototypes -->
+    <!-- Data Gather prototypes -->
 
+    <!-- <div class="govuk-grid-column-full"> -->
+    <h2 class="govuk-heading-l">Respond prototype</h2>
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 
-  <!-- <div class="govuk-grid-column-full"> -->
-  <h2 class="govuk-heading-l">Respond prototype</h2>
-  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <!-- MVP Prototype -->
 
-    <!-- MVP Prototype -->
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Respond to a child maintenance application - iteration 3
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1">
 
-     <div class="govuk-accordion__section ">
+          <!-- <span class="govuk-tag govuk-tag--green">Third iteration</span> -->
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <dl>
+                <dt class="govuk-heading-s">Last updated</dt>
+                <dt class="govuk-body">March 2025</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">November 2024</dt>
+              </dl>
+
+              <!-- <dl>
+                  <dt class="govuk-heading-s">What it is</dt>
+                  <dt class="govuk-body">
+                    Includes:<br><br>
+                    - Section one / matching a user to a case and MCMC sign up<br><br>
+                    - Section two / asking a user for personal details<br><br>
+                    - Section three / optional equality questions section<br><br>
+                    - Section four / asking a user employment and income details<br><br>
+                    - Section five / asking a user about their children and arrangements<br><br>
+                    - Section six / payment types available for child maintenance<br><br>
+                  </dt>
+                </dl> -->
+
+              <dl>
+                <dt class="govuk-heading-s">Changes from user research</dt>
+                <dt class="govuk-body">
+
+                  <p>
+                    <strong>March 2025</strong> Splitting basic income page - <a
+                        href="/datagather/iteration3/what-is-your-annual-income-fixed.html">View pages</a>
+                  </p>
+                  <p>
+                    <strong>April 2025</strong> Adding Alternative Formats - <a
+                        href="/datagather/iteration3/contacting-you-about-your-application.html">View pages</a>
+                  </p>
+                </dt>
+              </dl>
+
+            </div>
+          </div>
+
+          <div class="govuk-button-group">
+            <a href="/datagather/iteration3/start" class="govuk-button govuk-button--start">Start prototype</a>
+
+            <a class="govuk-link" href="/datagathermulticase/iteration3/income-not-on-letter.html">Income section -
+              Multicase</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section ">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -317,7 +376,6 @@ GOV.UK Prototype Kit
                 <dt class="govuk-body">Ocotber 2024</dt>
               </dl>
 
-
               <!-- <dl>
                   <dt class="govuk-heading-s">What it is</dt>
                   <dt class="govuk-body">
@@ -334,35 +392,47 @@ GOV.UK Prototype Kit
               <dl>
                 <dt class="govuk-heading-s">Changes from user research</dt>
                 <dt class="govuk-body">
-                  <strong>October 2024:</strong> Adding 'I do not know' Radio option to Parentage questions pages <a href="datagather/iteration2/accept-parentage">View pages</a><br> <br>
+                  <strong>October 2024:</strong> Adding 'I do not know' Radio option to Parentage questions pages <a href="datagather/iteration2/accept-parentage">View pages</a><br>
+                  <br>
                   <strong>October 2024:</strong> Content changes to pages:
                   <ol class="govuk-list govuk-list--number">
-                    <li>Start page - <a href="datagather/iteration2/start">View page</a></li>
-                    <li>Annual income page - <a href="datagather/iteration2/do-you-agree-with-income-amount">View page</a></li>
-                    <li>Your employers details page - <a href="datagather/iteration2/income-employed">View page</a></li>
-                    <li>Your Gross basic income page - <a href="datagather/iteration2/what-is-your-annual-income-fixed">View page</a></li>
-                    <li>Have you earned extra money? - <a href="datagather/iteration2/earned-bonus-or-commission">View page</a></li>
-                    <li>Tell us about children who may affect your calculation - <a href="datagather/iteration2/tell-us-about-your-children">View page</a></li>
-                    <li>Do you know who this person is page - <a href="datagather/iteration2/do-you-know-applicant">View page</a></li>
-                    <li>Do you have evidence to prove you are not the biological parent page - <a href="datagather/iteration2/do-you-have-evidence">View page</a></li>
-                    <li>Were you married between the conception and birth page - <a href="datagather/iteration2/were-you-married-to-applicant">View page</a></li>
-                    <li>A caseworker will call you page - <a href="datagather/iteration2/caseworker-will-call">View page</a></li>
+                    <li>Start page - <a href="datagather/iteration2/start">View page</a>
+                    </li>
+                    <li>Annual income page - <a href="datagather/iteration2/do-you-agree-with-income-amount">View page</a>
+                    </li>
+                    <li>Your employers details page - <a href="datagather/iteration2/income-employed">View page</a>
+                    </li>
+                    <li>Your Gross basic income page - <a href="datagather/iteration2/what-is-your-annual-income-fixed">View page</a>
+                    </li>
+                    <li>Have you earned extra money? - <a href="datagather/iteration2/earned-bonus-or-commission">View page</a>
+                    </li>
+                    <li>Tell us about children who may affect your calculation - <a href="datagather/iteration2/tell-us-about-your-children">View page</a>
+                    </li>
+                    <li>Do you know who this person is page - <a href="datagather/iteration2/do-you-know-applicant">View page</a>
+                    </li>
+                    <li>Do you have evidence to prove you are not the biological parent page - <a href="datagather/iteration2/do-you-have-evidence">View page</a>
+                    </li>
+                    <li>Were you married between the conception and birth page - <a href="datagather/iteration2/were-you-married-to-applicant">View page</a>
+                    </li>
+                    <li>A caseworker will call you page - <a href="datagather/iteration2/caseworker-will-call">View page</a>
+                    </li>
                   </ol>
-                  <p><strong>Ocotber 2024</strong> Adding communication preference and email validation pages - <a
-                      href="datagather/iteration2/using-a-child-maintenance-account.html">View pages</a></p>
-                      <p><strong>March 2025</strong> Splitting basic income page - <a
-                        href="/datagather/iteration3/what-is-your-annual-income-fixed.html">View pages</a></p>
+                  <p>
+                    <strong>Ocotber 2024</strong> Adding communication preference and email validation pages - <a
+                      href="datagather/iteration2/using-a-child-maintenance-account.html">View pages</a>
+                  </p>
+                  <p>
+                    <strong>March 2025</strong> Splitting basic income page - <a
+                        href="/datagather/iteration3/what-is-your-annual-income-fixed.html">View pages</a>
+                  </p>
                 </dt>
               </dl>
 
             </div>
           </div>
 
-
           <div class="govuk-button-group">
             <a href="/datagather/iteration2/start" class="govuk-button govuk-button--start">Start prototype</a>
-
-
 
             <a class="govuk-link" href="/datagathermulticase/iteration2/income-not-on-letter.html">Income section -
               Multicase</a>
@@ -371,34 +441,33 @@ GOV.UK Prototype Kit
         </div>
       </div>
 
-    <div class="govuk-accordion__section ">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             Respond to a child maintenance application - iteration 1
           </span>
-        </h2>
-      </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content"
         aria-labelledby="accordion-default-heading-1">
 
-        <!-- <span class="govuk-tag govuk-tag--green">Third iteration</span> -->
+          <!-- <span class="govuk-tag govuk-tag--green">Third iteration</span> -->
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <dl>
-              <dt class="govuk-heading-s">Last updated</dt>
-              <dt class="govuk-body">October 2024</dt>
-            </dl>
-            <dl>
-              <dt class="govuk-heading-s">Date created</dt>
-              <dt class="govuk-body">Jan 2023</dt>
-            </dl>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <dl>
+                <dt class="govuk-heading-s">Last updated</dt>
+                <dt class="govuk-body">October 2024</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">Jan 2023</dt>
+              </dl>
 
-
-            <dl>
-              <dt class="govuk-heading-s">What it is</dt>
-              <dt class="govuk-body">
+              <dl>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">
                 Includes:<br><br>
                 - Section one / matching a user to a case and MCMC sign up<br><br>
                 - Section two / asking a user for personal details<br><br>
@@ -406,12 +475,12 @@ GOV.UK Prototype Kit
                 - Section four / asking a user employment and income details<br><br>
                 - Section five / asking a user about their children and arrangements<br><br>
                 - Section six / payment types available for child maintenance<br><br>
-              </dt>
-            </dl>
+                </dt>
+              </dl>
 
-            <dl>
-              <dt class="govuk-heading-s">Changes from user research</dt>
-              <dt class="govuk-body">
+              <dl>
+                <dt class="govuk-heading-s">Changes from user research</dt>
+                <dt class="govuk-body">
                 whats new:<br><br>
                 - Included new contact preferences work
                 - Service name has been changed from "Complete a Child Maintenance Application" to "Respond to a Child
@@ -428,27 +497,26 @@ GOV.UK Prototype Kit
                 - Calculator link has been added to the end of the service based on user feedback<br><br>
                 - DP onboarding and bank details have been aligned with Apply<br><br>
                 - Income questions have been changed for testing on 12/6/2024<br><br>
-                <strong>UPDATES:</strong><br>
+                  <strong>UPDATES:</strong><br>
                 - (October 2024): adding 'I do not know' Radio option to Parentage questions - <br> 'Are you the
                 biological or legal paretn of..?' & 'Are you on the birth certificate of..?'
               </dt>
-            </dl>
+              </dl>
 
+            </div>
+          </div>
+          <div class="govuk-button-group">
+            <a href="/datagather/iteration1/start" class="govuk-button govuk-button--start">Start prototype</a>
+
+            <a class="govuk-link" href="/datagathermulticase/iteration1/income-not-on-letter.html">Income section -
+            Multicase</a>
           </div>
         </div>
-        <div class="govuk-button-group">
-          <a href="/datagather/iteration1/start" class="govuk-button govuk-button--start">Start prototype</a>
+        <!-- govuk-accordion__section -->
 
+        <!-- govuk-accordion__section -->
 
-
-          <a class="govuk-link" href="/datagathermulticase/iteration1/income-not-on-letter.html">Income section -
-            Multicase</a>
-        </div>
-      </div> <!-- govuk-accordion__section -->
-
-      <!-- govuk-accordion__section -->
-
-      {# <div class="govuk-accordion__section ">
+        {# <div class="govuk-accordion__section ">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -510,14 +578,14 @@ GOV.UK Prototype Kit
           </div>
 
         </div>
-      </div> #} <!-- govuk-accordion__section -->
+      </div> #}
+        <!-- govuk-accordion__section -->
 
-      <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-9"></div>
+      </div>
     </div>
+
   </div>
-
-</div> <!-- grid row -->
-
-
+  <!-- grid row -->
 
 {% endblock %}
