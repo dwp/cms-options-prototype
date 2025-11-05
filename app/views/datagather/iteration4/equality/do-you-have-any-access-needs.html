@@ -23,7 +23,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio" value="yes~/datagather/iteration2/select-access-needs.html">
+                  <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio" value="yes~select-access-needs.html">
                   <label class="govuk-label govuk-radios__label" for="access-needs">
                     Yes
                   </label>
@@ -31,8 +31,8 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio" value="no~section-three-check-your-answers">
-                    <label class="govuk-label govuk-radios__label" for="access-needs">
+                    <input class="govuk-radios__input" id="access-needs-2" name="access-needs" type="radio" value="no~section-three-check-your-answers">
+                    <label class="govuk-label govuk-radios__label" for="access-needs-2">
                       No
                     </label>
                   </div>
@@ -44,9 +44,9 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio"
+                      <input class="govuk-radios__input" id="access-needs-3" name="access-needs" type="radio"
                         value="prefer~section-three-check-your-answers">
-                      <label class="govuk-label govuk-radios__label" for="access-needs">
+                      <label class="govuk-label govuk-radios__label" for="access-needs-3">
                         Prefer not to say
                       </label>
                     </div>
@@ -58,6 +58,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
           </button>
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>

@@ -7,7 +7,7 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/datagather/iteration3/what-is-your-religion" method="post" novalidate>
+        <form action="what-is-your-religion" method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -19,16 +19,16 @@
 
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="white-black-caribbean">
-                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                  <input class="govuk-radios__input" id="ethnic-group-mixed" name="ethnic-group-mixed" type="radio" value="white-black-caribbean">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group-mixed">
                     White and Black Caribbean
                   </label>
                 </div>
 
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="white-black-african">
-                    <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    <input class="govuk-radios__input" id="ethnic-group-mixed-2" name="ethnic-group-mixed" type="radio" value="white-black-african">
+                    <label class="govuk-label govuk-radios__label" for="ethnic-group-mixed-2">
                       White and Black African
                     </label>
                   </div>
@@ -36,8 +36,8 @@
                   
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="white-asian">
-                      <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                      <input class="govuk-radios__input" id="ethnic-group-mixed-3" name="ethnic-group-mixed" type="radio" value="white-asian">
+                      <label class="govuk-label govuk-radios__label" for="ethnic-group-mixed-3">
                         White and Asian
                       </label>
                     </div>
@@ -45,8 +45,8 @@
                     
                     <div class="govuk-radios" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="any-mixed">
-                        <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                        <input class="govuk-radios__input" id="ethnic-group-mixed-4" name="ethnic-group-mixed" type="radio" value="any-mixed">
+                        <label class="govuk-label govuk-radios__label" for="ethnic-group-mixed-4">
                           Any other Mixed or Multiple ethnic background
                         </label>
                       </div>
@@ -55,8 +55,8 @@
                       
                       <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="prefer-not-to-say">
-                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          <input class="govuk-radios__input" id="ethnic-group-mixed-5" name="ethnic-group-mixed" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group-mixed-5">
                             Prefer not to say
                           </label>
                         </div>
@@ -70,6 +70,7 @@
           </button>
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>

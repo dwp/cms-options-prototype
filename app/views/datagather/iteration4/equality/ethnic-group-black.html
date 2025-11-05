@@ -7,7 +7,7 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/datagather/iteration3/what-is-your-religion" method="post" novalidate>
+        <form action="what-is-your-religion" method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -19,16 +19,16 @@
 
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="african">
-                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                  <input class="govuk-radios__input" id="ethnic-group-black" name="ethnic-group-black" type="radio" value="african">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group-black">
                     African
                   </label>
                 </div>
 
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="caribbean">
-                    <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    <input class="govuk-radios__input" id="ethnic-group-black-2" name="ethnic-group-black" type="radio" value="caribbean">
+                    <label class="govuk-label govuk-radios__label" for="ethnic-group-black-2">
                       Caribbean
                     </label>
                   </div>
@@ -36,8 +36,8 @@
                   
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="any-black">
-                      <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                      <input class="govuk-radios__input" id="ethnic-group-black-3" name="ethnic-group-black" type="radio" value="any-black">
+                      <label class="govuk-label govuk-radios__label" for="ethnic-group-black-3">
                         Any other Black, African or Caribbean background
                       </label>
                     </div>
@@ -46,8 +46,8 @@
                       
                       <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="prefer-not-to-say">
-                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          <input class="govuk-radios__input" id="ethnic-group-black-4" name="ethnic-group-black" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group-black-4">
                             Prefer not to say
                           </label>
                         </div>
@@ -61,6 +61,7 @@
           </button>
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>

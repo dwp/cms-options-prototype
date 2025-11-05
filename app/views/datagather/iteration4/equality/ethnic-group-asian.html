@@ -7,7 +7,7 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/datagather/iteration3/what-is-your-religion" method="post" novalidate>
+        <form action="what-is-your-religion" method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -19,16 +19,16 @@
 
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="indian">
-                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                  <input class="govuk-radios__input" id="ethnic-group-asian" name="ethnic-group-asian" type="radio" value="indian">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group-asian">
                     Indian
                   </label>
                 </div>
 
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="pakistani">
-                    <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    <input class="govuk-radios__input" id="ethnic-group-asian-2" name="ethnic-group-asian" type="radio" value="pakistani">
+                    <label class="govuk-label govuk-radios__label" for="ethnic-group-asian-2">
                       Pakistani
                     </label>
                   </div>
@@ -36,8 +36,8 @@
                   
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="bangladeshi">
-                      <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                      <input class="govuk-radios__input" id="ethnic-group-asian-3" name="ethnic-group-asian" type="radio" value="bangladeshi">
+                      <label class="govuk-label govuk-radios__label" for="ethnic-group-asian-3">
                         Bangladeshi
                       </label>
                     </div>
@@ -45,16 +45,16 @@
                     
                     <div class="govuk-radios" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="chinese">
-                        <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                        <input class="govuk-radios__input" id="ethnic-group-asian-4" name="ethnic-group-asian" type="radio" value="chinese">
+                        <label class="govuk-label govuk-radios__label" for="ethnic-group-asian-4">
                           Chinese
                         </label>
                       </div>
 
                       <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="any-asian">
-                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          <input class="govuk-radios__input" id="ethnic-group-asian-5" name="ethnic-group-asian" type="radio" value="any-asian">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group-asian-5">
                             Any other Asian background
                           </label>
                         </div>
@@ -63,8 +63,8 @@
                       
                       <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="prefer-not-to-say">
-                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          <input class="govuk-radios__input" id="ethnic-group-asian-6" name="ethnic-group-asian" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group-asian-6">
                             Prefer not to say
                           </label>
                         </div>
@@ -78,6 +78,7 @@
           </button>
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>

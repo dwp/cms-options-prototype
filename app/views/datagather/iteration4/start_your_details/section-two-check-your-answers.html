@@ -7,7 +7,7 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds-from-desktop">
 
-        <form action="/form-handler" method="post" novalidate>
+        <form action="/datagather/iteration4/equality/domestic-abuse-help.html" method="get" novalidate>
           <h1 class="govuk-heading-xl">Check your answers before moving on to the next section</h1>
 
           <h2 class="govuk-heading-m">Your details</h2>
@@ -312,10 +312,14 @@ pageTitle %} Check your answers {% endblock %} {% block content %}
           </dl>
 
 
-          <input type="hidden" name="answers-checked" value="true">
+          {# <input type="hidden" name="answers-checked" value="true">
           <a href="domestic-abuse-help" role="button" draggable="false" class="govuk-button" data-module="govuk-button"
             formnovalidate>Continue
-          </a>
+          </a> #}
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
 
         </form>
 

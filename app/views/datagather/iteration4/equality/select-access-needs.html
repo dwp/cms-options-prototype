@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="section-three-check-your-answers" method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                  What support do you need to access appointments or services in person?
+                </h1>
+                </legend>
+                <div id="dob-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="access-needs-detail" name="access-needs-detail" type="checkbox" value="england">
+                    <label class="govuk-label govuk-checkboxes__label" for="access-needs-detail">
+                        Help using door entry or intercom system
+                      </label>
+                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                        For example, minicom
+                      </div>
+                  </div>
+
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="access-needs-detail-2" name="access-needs-detail" type="checkbox" value="england">
+                      <label class="govuk-label govuk-checkboxes__label" for="waccess-needs-detail-2">
+                                Induction Loop
+                              </label>
+                    </div>
+
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="access-needs-detail-3" name="access-needs-detail" type="checkbox" value="england">
+                        <label class="govuk-label govuk-checkboxes__label" for="access-needs-detail-3">
+                                  Lift
+                                </label>
+                      </div>
+
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="access-needs-detail-4" name="access-needs-detail" type="checkbox" value="england">
+                          <label class="govuk-label govuk-checkboxes__label" for="access-needs-detail-4">
+                                    Ramp
+                                  </label>
+                        </div>
+
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="access-needs-detail-5" name="access-needs-detail" type="checkbox" value="england">
+                            <label class="govuk-label govuk-checkboxes__label" for="access-needs-detail-5">
+                                      Wide doorway
+                                    </label>
+                          </div>
+
+                          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="access-needs-detail-6" name="access-needs-detail" type="checkbox" value="email" data-aria-controls="conditional-access-needs-detail">
+                              <label class="govuk-label govuk-checkboxes__label" for="access-needs-detail-6">
+                                  Other
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-access-needs-detail">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label" for="access-needs-detail-info">
+                                    How can we help you access face to face services?
+                                  </label>
+                                <textarea class="govuk-textarea" id="access-needs-detail-info" name="access-needs-detail-info" rows="5" aria-describedby="more-detail-hint"></textarea>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </fieldset>
+                    </div>
+                    <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+                  </form>
+                </div>
+                {% include "exit-button.html" %}
+              </div>
+            </main>
+          </div>
+
+          <!-- Checkboxes end  -->
+
+        {% endblock %}

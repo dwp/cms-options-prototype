@@ -19,16 +19,16 @@
 
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="hetrosexual">
-                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                  <input class="govuk-radios__input" id="sexual-orientation" name="sexual-orientation" type="radio" value="hetrosexual">
+                  <label class="govuk-label govuk-radios__label" for="sexual-orientation">
                     Hetrosexual or Straight
                   </label>
                 </div>
 
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="gay">
-                    <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    <input class="govuk-radios__input" id="sexual-orientation-2" name="sexual-orientation" type="radio" value="gay">
+                    <label class="govuk-label govuk-radios__label" for="sexual-orientation-2">
                       Gay or Lesbian
                     </label>
                   </div>
@@ -36,8 +36,8 @@
                   
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="bisexual">
-                      <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                      <input class="govuk-radios__input" id="sexual-orientation-3" name="sexual-orientation" type="radio" value="bisexual">
+                      <label class="govuk-label govuk-radios__label" for="sexual-orientation-3">
                         Bisexual
                       </label>
                     </div>
@@ -45,17 +45,17 @@
                     
                     <div class="govuk-radios" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="sexual-orientation" name="contact" type="radio" value="any-other-sexual-orientation" data-aria-controls="conditional-contact">
-                        <label class="govuk-label govuk-radios__label" for="contact">
+                        <input class="govuk-radios__input" id="sexual-orientation-4" name="sexual-orientation" type="radio" value="any-other-sexual-orientation" data-aria-controls="conditional-sexual-orientation">
+                        <label class="govuk-label govuk-radios__label" for="sexual-orientation-4">
                           Any other sexual orientation
                         </label>
                       </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sexual-orientation">
                         <div class="govuk-form-group">
-                          <label class="govuk-label" for="contact-by-email">
+                          <label class="govuk-label" for="sexual-orientation-other">
                             What is your sexual orientation? (optional)
                           </label>
-                          <input class="govuk-input govuk-!-width-one-third" id="sexual-orientation" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                          <input class="govuk-input govuk-!-width-one-third" id="sexual-orientation-other" name="sexual-orientation-other" type="email" spellcheck="false" autocomplete="email">
                         </div>
                       </div>
 
@@ -66,8 +66,8 @@
                       
                       <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="sexual-orientation" name="ethnic-group" type="radio" value="prefer-not-to-say">
-                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          <input class="govuk-radios__input" id="sexual-orientation-5" name="sexual-orientation" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="sexual-orientation-5">
                             Prefer not to say
                           </label>
                         </div>
@@ -84,6 +84,7 @@
 
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>

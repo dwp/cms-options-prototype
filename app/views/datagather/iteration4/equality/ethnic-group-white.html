@@ -7,7 +7,7 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/datagather/iteration3/what-is-your-religion" method="post" novalidate>
+        <form action="what-is-your-religion" method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -19,16 +19,16 @@
 
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="english-welsh-scottish-ni-british">
-                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                  <input class="govuk-radios__input" id="ethnic-group-white" name="ethnic-group-white" type="radio" value="english-welsh-scottish-ni-british">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group-white">
                     English, Welsh, Scottish, Northern Irish or British
                   </label>
                 </div>
 
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="irish">
-                    <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                    <input class="govuk-radios__input" id="ethnic-group-white-2" name="ethnic-group-white" type="radio" value="irish">
+                    <label class="govuk-label govuk-radios__label" for="ethnic-group-white-2">
                       Irish
                     </label>
                   </div>
@@ -36,8 +36,8 @@
                   
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="gypsy-or-irish-traveller">
-                      <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                      <input class="govuk-radios__input" id="ethnic-group-white-3" name="ethnic-group-white" type="radio" value="gypsy-or-irish-traveller">
+                      <label class="govuk-label govuk-radios__label" for="ethnic-group-white-3">
                         Gypsy or Irish Traveller
                       </label>
                     </div>
@@ -45,8 +45,8 @@
                     
                     <div class="govuk-radios" data-module="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="any-white">
-                        <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                        <input class="govuk-radios__input" id="ethnic-group-white-4" name="ethnic-group-white" type="radio" value="any-white">
+                        <label class="govuk-label govuk-radios__label" for="ethnic-group-white-4">
                           Any other White background
                         </label>
                       </div>
@@ -57,8 +57,8 @@
                       
                       <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="prefer-not-to-say">
-                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          <input class="govuk-radios__input" id="ethnic-group-white-5" name="ethnic-group-white" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group-white-5">
                             Prefer not to say
                           </label>
                         </div>
@@ -72,6 +72,7 @@
           </button>
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>

@@ -7,7 +7,7 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/datagather/iteration3/what-is-your-religion" method="post" novalidate>
+        <form action="what-is-your-religion" method="post" novalidate>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -19,25 +19,25 @@
 
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="arab">
-                  <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                  <input class="govuk-radios__input" id="ethnic-group-other" name="ethnic-group-other" type="radio" value="arab">
+                  <label class="govuk-label govuk-radios__label" for="ethnic-group-other">
                     Arab
                   </label>
                 </div>
 
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="ethnic-background" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
+                    <input class="govuk-radios__input" id="ethnic-group-other-2" name="ethnic-group-other" type="radio" value="email" data-aria-controls="conditional-ethnic-group-other">
+                    <label class="govuk-label govuk-radios__label" for="ethnic-group-other-2">
                       Any other ethnic group
                     </label>
                   </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="ethnic-background">
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ethnic-group-other">
                     <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-email">
+                      <label class="govuk-label" for="ethnic-background">
                         Your ethnic background (optional)
                       </label>
-                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                      <input class="govuk-input govuk-!-width-one-third" id="ethnic-background" name="ethnic-background" type="text" spellcheck="false" autocomplete="no">
                     </div>
                   </div>
 
@@ -45,8 +45,8 @@
                       
                       <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="ethnic-background" name="ethnic-group" type="radio" value="prefer-not-to-say">
-                          <label class="govuk-label govuk-radios__label" for="ethnic-group">
+                          <input class="govuk-radios__input" id="ethnic-group-other-3" name="ethnic-group-other" type="radio" value="prefer-not-to-say">
+                          <label class="govuk-label govuk-radios__label" for="ethnic-group-other-3">
                             Prefer not to say
                           </label>
                         </div>
@@ -60,6 +60,7 @@
           </button>
         </form>
       </div>
+      {% include "exit-button.html" %}
     </div>
   </main>
 </div>
