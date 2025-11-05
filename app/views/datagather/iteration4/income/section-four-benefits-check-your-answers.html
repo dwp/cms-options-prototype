@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-xl">Check your answers</h1>
+        <h2 class="govuk-heading-m">Benefit details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Income source
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Benefits or State Pension
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> income source</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Benefits you get
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['benefits'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> benefits you get</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Benefits you share
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['benefits-share'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> benefits you share</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Partner you shared with
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['benefits-first-name'] }} {{ data['benefits-middle-name'] }} {{ data['benefits-last-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> partners name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              {{ data['benefits-first-name'] }} {{ data['benefits-middle-name'] }} {{ data['benefits-last-name'] }}'s
+              date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['benefits-dob'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> partners date of birth</span>
+              </a>
+            </dd>
+          </div>
+
+        </dl>
+        <form action="/form-handler" method="post" novalidate>
+          <input type="hidden" name="answers-checked" value="true">
+          <a href="/datagather/iteration3/tell-us-about-your-children" role="button" draggable="false"
+            class="govuk-button" data-module="govuk-button" formnovalidate>Continue
+          </a>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

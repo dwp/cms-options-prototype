@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Was your income £27,547.76 between 6 April 2024 and 5 April 2025?
+                </h1>
+              </legend>
+
+
+              <div class="govuk-inset-text">
+                This means your gross basic income after pension contributions but before tax.
+              </div>
+
+             
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
+                  value="yes~do-you-want-to-tell-us-about-a-change-in-income">
+                  <label class="govuk-label govuk-radios__label" for="equality-questions">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
+                  value="no~where-does-your-income-come-from">
+                  <label class="govuk-label govuk-radios__label" for="equality-questionst">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+

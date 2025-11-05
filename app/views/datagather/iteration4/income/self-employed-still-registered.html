@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+               Are you still registered as self-employed?
+                </h1>
+              </legend>
+
+             
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="self-employed-registered" name="self-employed-registered" type="radio"
+                  value="Yes~you-need-to-call-self-employed.html">
+                  <label class="govuk-label govuk-radios__label" for="self-employed-registered">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="self-employed-registered-2" name="self-employed-registered" type="radio"
+                  value="No~self-employed-last-day.html">
+                  <label class="govuk-label govuk-radios__label" for="self-employed-registered-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+       {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+

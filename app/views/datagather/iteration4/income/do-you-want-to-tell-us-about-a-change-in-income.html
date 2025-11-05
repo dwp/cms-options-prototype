@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Do you want to tell us about a change in income?
+                </h1>
+              </legend>
+
+
+              <p class="govuk-body">
+                We can review your child maintenance calculation if your gross basic income has increased or decreased by 25% or more.
+              </p>
+
+             
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
+                  value="yes~where-does-your-income-come-from">
+                  <label class="govuk-label govuk-radios__label" for="equality-questions">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="equality-questions" name="equality-questions" type="radio"
+                  value="no~do-you-pay-into-a-pension">
+                  <label class="govuk-label govuk-radios__label" for="equality-questionst">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}
+
