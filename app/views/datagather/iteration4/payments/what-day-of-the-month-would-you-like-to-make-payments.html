@@ -9,7 +9,7 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <form action="/datagather/iteration3/ask-other-parent-for-bank-details" method="post" novalidate>
+          <form action="ask-other-parent-for-bank-details" method="post" novalidate>
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -21,7 +21,7 @@
                 <div id="passport-issued-hint" class="govuk-hint">
                 If your payment date falls on a weekend or a bank holiday you’ll pay either on the working
                 day before or the working day after, depending on your bank.
-              </div>
+                </div>
 
                 <div class="govuk-date-input" id="day-of-month">
                   <div class="govuk-date-input__item">
@@ -32,17 +32,17 @@
                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day-of-month" name="day-of-month" type="text" inputmode="numeric">
                     </div>
                   </div>
+                </div>
+              </fieldset>
+            </div>
+            
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-                </fieldset>
-              </div>
-              <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-            </form>
-          </div>
-          {% include "exit-button.html" %}
+          </form>
         </div>
-      </main>
-    </div>
+        {% include "exit-button.html" %}
+      </div>
+    </main>
+  </div>
 
-  {% endblock %}
+{% endblock %}

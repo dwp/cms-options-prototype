@@ -7,16 +7,16 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
     <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-          <form action="/datagather/iteration4/submission/declaration" method="post" novalidate>
+          <form  action="/datagather/iteration4/submission/declaration" method="post" novalidate>
           <h1 class="govuk-heading-xl">Check your answers</h1>
           <h2 class="govuk-heading-m"> Child Maintenance payment details</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Service type preference	
+                Payment type
               </dt>
               <dd class="govuk-summary-list__value">
-                Direct pay
+                Collect and pay
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -26,41 +26,14 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Payment frequency
+                Payment preference
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['payment-frequency'] }}
+                {{ data['collect-and-pay-type'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> payment frequency</span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Day of payment
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{ data['payment-frequency-day'] }}
-                <br> {{ data['day-of-month-collect-and-pay'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> day of payment</span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Do we need to ask the other parent for their account details?
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{ data['bank-details'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> contact details</span>
+                  Change<span class="govuk-visually-hidden"> payment preference</span>
                 </a>
               </dd>
             </div>

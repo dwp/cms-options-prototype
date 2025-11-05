@@ -7,7 +7,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
     <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-
+          <form  action="/datagather/iteration4/submission/declaration" method="post" novalidate>
           <h1 class="govuk-heading-xl">Check your answers</h1>
           <h2 class="govuk-heading-m"> Child Maintenance payment details</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -117,9 +117,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             </div>
           </dl>
 
-          <a href="/datagather/iteration3/declaration" role="button" draggable="false" class="govuk-button"
-            data-module="govuk-button" formnovalidate>Continue
-          </a>
+          <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
 
           </form>
         </div>

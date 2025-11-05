@@ -412,7 +412,7 @@ router.post('/datagather/iteration4/your_children/do-any-other-children-live-wit
 
 // how-often-would-you-like-to-make-payments
 
-router.post('/datagather/iteration4/payments/how-often-would-you-like-to-make-payments', function(req, res) {
+/* router.post('/datagather/iteration4/payments/how-often-would-you-like-to-make-payments', function(req, res) {
   if (req.body['payment-frequency'] === 'weekly') {
     res.redirect('/datagather/iteration4/payments/what-day-of-the-week-would-you-like-to-make-payments');
   } else if (req.body['payment-frequency'] === 'monthly'){
@@ -421,11 +421,11 @@ router.post('/datagather/iteration4/payments/how-often-would-you-like-to-make-pa
     res.redirect('how-often-would-you-like-to-make-payments');
   }
    });
-
+ */
 
    // how-you-make-collect-and-pay-payments
 
-router.post('/datagather/iteration4/payments/how-you-make-collect-and-pay-payments', function(req, res) {
+/* router.post('/datagather/iteration4/payments/how-you-make-collect-and-pay-payments', function(req, res) {
   if (req.body['collect-and-pay-type'] === 'direct-debit') {
     res.redirect('/datagather/iteration4/payments/what-day-of-the-month-would-you-like-to-make-payments-collect-and-pay');
   } else if (req.body['collect-and-pay-type'] === 'deduction-of-earnings'){
@@ -433,12 +433,12 @@ router.post('/datagather/iteration4/payments/how-you-make-collect-and-pay-paymen
   } else {
     res.redirect('how-you-make-collect-and-pay-payments');
   }
-   });
+   }); */
 
 
    // service-type-preference
 
-   router.post('/datagather/iteration4/payments/service-type-preference', function(req, res) {
+   /* router.post('/datagather/iteration4/payments/service-type-preference', function(req, res) {
     if (req.body['service-type'] === 'direct-pay') {
       res.redirect('/datagather/iteration4/payments/how-often-would-you-like-to-make-payments');
     } else if (req.body['service-type'] === 'collect-and-pay'){
@@ -446,7 +446,7 @@ router.post('/datagather/iteration4/payments/how-you-make-collect-and-pay-paymen
     } else {
       res.redirect('service-type-preference');
     }
-     });
+     }); */
 
 
    // best-number-to-call-you-on
