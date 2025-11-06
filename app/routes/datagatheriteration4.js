@@ -259,7 +259,7 @@ router.post('/datagather/iteration4/income/you-have-told-us-about-employer', fun
 
 // you-have-told-us-self-employment
 
-router.post('/datagather/iteration4/income/you-have-told-us-self-employment', function(req, res) {
+/* router.post('/datagather/iteration4/income/you-have-told-us-self-employment', function(req, res) {
   if (req.body['add-self-employer'] === 'yes') {
     res.redirect('/datagather/iteration4/income/income-self-employed.html');
   } else if (req.body['add-self-employer'] === 'no'){
@@ -267,7 +267,7 @@ router.post('/datagather/iteration4/income/you-have-told-us-self-employment', fu
   } else {
     res.redirect('you-have-told-us-self-employment');
   }
-   });
+   }); */
 
 
 // do-you-pay-into-a-pension

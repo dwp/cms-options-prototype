@@ -9,7 +9,7 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <form action="/datagather/iteration3/benefits-partner-dob" method="post" novalidate>
+          <form action="benefits-partner-dob" method="post" novalidate>
             <div class="govuk-form-group">
               <h1 class="govuk-label-wrapper">
                 <label class="govuk-label govuk-label--xl" for="benefits-partner">
@@ -43,11 +43,13 @@
               <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-            </form>
-          </div>
-          {% include "exit-button.html" %}
+          
+            </div>
+          </form>
         </div>
-      </main>
-    </div>
+        {% include "exit-button.html" %}
+      </div>
+    </main>
+  </div>
 
-  {% endblock %}
+{% endblock %}
