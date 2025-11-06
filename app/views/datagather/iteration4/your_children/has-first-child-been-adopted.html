@@ -31,20 +31,20 @@
 
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="yes">
+                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="yes~section-five-check-your-answers-for-named-child">
                       <label class="govuk-label govuk-radios__label" for="legally-adopted">
                         Yes, I legally adopted {{ data['named-child-first-name'] }}
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="yes-someone">
-                      <label class="govuk-label govuk-radios__label" for="legally-adopted">
+                      <input class="govuk-radios__input" id="legally-adopted-2" name="legally-adopted" type="radio" value="someone else~caseworker-will-call">
+                      <label class="govuk-label govuk-radios__label" for="legally-adopted-2">
                         Yes, someone else has legally adopted {{ data['named-child-first-name'] }}
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="legally-adopted">
+                      <input class="govuk-radios__input" id="legally-adopted-3" name="legally-adopted" type="radio" value="no~were-you-married-to-applicant">
+                      <label class="govuk-label govuk-radios__label" for="legally-adopted-3">
                         No
                       </label>
                     </div>
@@ -52,8 +52,8 @@
                     <div class="govuk-radios__divider">or</div>
 
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="legally-adopted" name="legally-adopted" type="radio" value="do-not-know">
-                      <label class="govuk-label govuk-radios__label" for="legally-adopted">
+                      <input class="govuk-radios__input" id="legally-adopted-4" name="legally-adopted" type="radio" value="do not know~were-you-married-to-applicant">
+                      <label class="govuk-label govuk-radios__label" for="legally-adopted-4">
                         I do not know
                       </label>
                     </div>
@@ -69,6 +69,7 @@
             </button>
           </form>
         </div>
+        {% include "exit-button.html" %}
       </div>
     </main>
   </div>

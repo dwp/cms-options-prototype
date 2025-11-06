@@ -306,7 +306,7 @@ router.post('/datagather/iteration4/income/you-have-told-us-about-employer', fun
 
 // accept-parentage
 
-router.post('/datagather/iteration4/your_children/accept-parentage', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/accept-parentage', function(req, res) {
   if (req.body['parentage'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/section-five-check-your-answers-for-named-child');
   } else if (req.body['parentage'] === 'no'){
@@ -314,12 +314,12 @@ router.post('/datagather/iteration4/your_children/accept-parentage', function(re
   } else {
     res.redirect('accept-parentage');
   }
-   });
+   }); */
 
 
 // are-you-on-the-birth-certificate
 
-router.post('/datagather/iteration4/your_children/are-you-on-the-birth-certificate', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/are-you-on-the-birth-certificate', function(req, res) {
   if (req.body['birth-certificate'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/section-five-check-your-answers-for-named-child');
   } else if (req.body['birth-certificate'] === 'no'){
@@ -327,13 +327,13 @@ router.post('/datagather/iteration4/your_children/are-you-on-the-birth-certifica
   } else {
     res.redirect('are-you-on-the-birth-certificate');
   }
-   });
+   }); */
 
 
 
 // section-five-check-your-answers-for-named-child
 
-router.post('/datagather/iteration4/your_children/section-five-check-your-answers-for-named-child', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/section-five-check-your-answers-for-named-child', function(req, res) {
   if (req.body['add-another-named-child'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/what-is-your-childs-name');
   } else if (req.body['add-another-named-child'] === 'no'){
@@ -342,11 +342,11 @@ router.post('/datagather/iteration4/your_children/section-five-check-your-answer
     res.redirect('section-five-check-your-answers-for-named-child');
   }
    });
-
+ */
 
 // section-five-check-your-answers-for-other-child
 
-router.post('/datagather/iteration4/your_children/section-five-check-your-answers-for-other-child', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/section-five-check-your-answers-for-other-child', function(req, res) {
   if (req.body['add-another-other-child'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/what-is-this-childs-name');
   } else if (req.body['add-another-other-child'] === 'no'){
@@ -355,11 +355,11 @@ router.post('/datagather/iteration4/your_children/section-five-check-your-answer
     res.redirect('section-five-check-your-answers-for-other-child');
   }
    });
-
+ */
 
 // section-five-check-your-answers-for-fba-child
 
-router.post('/datagather/iteration4/your_children/section-five-check-your-answers-for-fba-child', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/section-five-check-your-answers-for-fba-child', function(req, res) {
   if (req.body['add-another-fba-child'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/what-is-this-childs-name-fba');
   } else if (req.body['add-another-fba-child'] === 'no'){
@@ -368,12 +368,12 @@ router.post('/datagather/iteration4/your_children/section-five-check-your-answer
     res.redirect('section-five-check-your-answers-for-fba-child');
   }
    });
-
+ */
 
 
 // other-children-private-arrangement
 
-router.post('/datagather/iteration4/your_children/other-children-private-arrangement', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/other-children-private-arrangement', function(req, res) {
   if (req.body['other-child-private-arrangement'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/what-is-this-childs-name-fba');
   } else if (req.body['other-child-private-arrangement'] === 'no'){
@@ -382,11 +382,11 @@ router.post('/datagather/iteration4/your_children/other-children-private-arrange
     res.redirect('section-five-check-your-answers-for-named-child');
   }
    });
-
+ */
 
    // do-any-other-children-live-with-you
 
-router.post('/datagather/iteration4/your_children/do-any-other-children-live-with-you', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/do-any-other-children-live-with-you', function(req, res) {
   if (req.body['any-other-child'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/what-is-this-childs-name');
   } else if (req.body['any-other-child'] === 'no'){
@@ -394,7 +394,7 @@ router.post('/datagather/iteration4/your_children/do-any-other-children-live-wit
   } else {
     res.redirect('do-any-other-children-live-with-you');
   }
-   });
+   }); */
 
 
 // payment-types
@@ -568,7 +568,7 @@ router.post('/datagather/iteration4/your_children/do-you-have-evidence', functio
 
 // has-first-child-been-adopted
 
-router.post('/datagather/iteration4/your_children/has-first-child-been-adopted', function(req, res) {
+/* router.post('/datagather/iteration4/your_children/has-first-child-been-adopted', function(req, res) {
   if (req.body['legally-adopted'] === 'yes') {
     res.redirect('/datagather/iteration4/your_children/section-five-check-your-answers-for-named-child');
   } else if (req.body['legally-adopted'] === 'yes-someone'){
@@ -580,7 +580,7 @@ router.post('/datagather/iteration4/your_children/has-first-child-been-adopted',
   } else {
     res.redirect('/has-first-child-been-adopted');
   }
-   });
+   }); */
 
 // Routes end iteration4
 
