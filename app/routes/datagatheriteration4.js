@@ -397,19 +397,6 @@ router.post('/datagather/iteration4/income/you-have-told-us-about-employer', fun
    }); */
 
 
-// payment-types
-
-   router.post('/datagather/iteration4/payments/payment-types', function(req, res) {
-    if (req.body['payment-type'] === 'direct-pay') {
-      res.redirect('/datagather/iteration4/payments/direct-pay');
-    } else if (req.body['payment-type'] === 'collect-and-pay'){
-      res.redirect('/datagather/iteration4/payments/collect-and-pay');
-    } else {
-      res.redirect('payment-types');
-    }
-     });
-
-
 // how-often-would-you-like-to-make-payments
 
 /* router.post('/datagather/iteration4/payments/how-often-would-you-like-to-make-payments', function(req, res) {
