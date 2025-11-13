@@ -7,7 +7,7 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form action="create-an-account" method="post" novalidate>
+        <form action="" method="post" novalidate>
           <h1 class="govuk-heading-xl">Using a child maintenance account
           </h1>
 
@@ -30,24 +30,35 @@ pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
             <li>tell us about changes to your circumstances</li>
           </ul>
 
-          <h2 class="govuk-heading-m">If you have another child maintenance case</h2>
-
-          <p>You may have a child maintenance account if you already pay or receive child maintenance.
-            You can use the same account to manage all your cases and applications in one place.
-          </p>
-
-          <!-- Supporting content stop -->
-
-          <div class="govuk-!-padding-bottom-5"></div>
-
-          <!-- Buttons -->
-
+          <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="onlineAccount-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h1 class="govuk-fieldset__heading">Do you have another child maintenance case?</h1>
+                    </legend>
+                    {# <div id="changedName-hint" class="govuk-body">You may have a child maintenance account if you already pay or receive child maintenance.<br>You can use the same account to manage all your cases and applications in one place.</div> #}
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="onlineAccount-2" name="onlineAccount" type="radio" value="no~create-an-account">
+                        <label class="govuk-label govuk-radios__label" for="onlineAccount-2">No</label>
+                        <div id="onlineAccount" class="govuk-hint govuk-radios__hint">
+          Create an online account to manage your case.
+        </div>
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="onlineAccount" name="onlineAccount" type="radio" value="yes~what-is-your-name.html">
+                        <label class="govuk-label govuk-radios__label" for="onlineAccount">Yes</label>
+                        <div id="onlineAccount" class="govuk-hint govuk-radios__hint">
+          You can use your existing online account to manage all your cases and applications in one place.
+        </div>
+                      </div>
+                  </fieldset>
+                </div>
           <div class="govuk-button-group">
             <button class="govuk-button" data-module="govuk-button">
               Continue
             </button>
-            <a class="govuk-link" href="do-you-know-your-pin-and-password.html">Already
-              have an account?</a>
+            
           </div>
         </form>
 
