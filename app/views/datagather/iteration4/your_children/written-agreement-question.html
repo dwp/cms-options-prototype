@@ -1,0 +1,45 @@
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">Do you have a formal written agreement about overnight stays?</h1>
+                </legend>
+                <div id="writtenAgreement-hint" class="govuk-hint">We can only accept a current court order, formal agreement or other official document.</div>
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="writtenAgreement" name="writtenAgreement" type="radio" 
+                    value="Yes~1-written-agreement.html">
+                    <label class="govuk-label govuk-radios__label" for="writtenAgreement"> Yes</label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="writtenAgreement-2" name="writtenAgreement" type="radio" value="No~1-care-arrangement-type.html">
+                    <label class="govuk-label govuk-radios__label" for="writtenAgreement-2"> No </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+           
+            <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          </form>
+        </div>
+        {% include "exit-button.html" %}
+      </div>
+    </main>
+  </div>
+
+{% endblock %}
