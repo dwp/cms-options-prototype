@@ -8,7 +8,7 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <form method="post" action="accept-parentage" novalidate>
+          <form method="post" action="are-you-on-the-birth-certificate" novalidate>
 
             <h1 class="govuk-heading-xl">Review {% if data['child-1-first-name']%}
                 {{data['child-1-first-name']}}&acute;s
@@ -25,7 +25,7 @@
                   </dd>
                 </div>
 
-                {% if data['arrangementType'] == "My child stays overnight with the other parent" %}
+                {% if data['arrangementType'] == "My child stays overnight with me" %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Regular nights</dt>
                     <dd class="govuk-summary-list__value">{{data['wheredoyoulive']}}
@@ -60,7 +60,7 @@
                   </div>
                 {% endif %}
 
-                {% if data['arrangementType'] == "My child never stays overnight with the other parent" %}
+                {% if data['arrangementType'] == "My child never stays overnight with me" %}
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Local authority stays </dt>
                     <dd class="govuk-summary-list__value">{{data['laNightsFrequency']}}
