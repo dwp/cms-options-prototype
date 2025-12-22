@@ -1,0 +1,50 @@
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <form method="" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">Does {% if data['child-1-first-name']%}
+                  {{data['child-1-first-name']}}
+                {% else %}
+                                    [Child's name]
+                                    {% endif %}stay overnight in Local Authority Care?</h1>
+                </legend>
+                <div id="localAuthority-hint" class="govuk-hint">This is when your child or children are subject to a care order and they stay overnight elsewhere, for example with a foster parent or in a care home</div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="childLaNights" name="childLaNights" type="radio" 
+                    value="No~overnight-summary.html">
+                    <label class="govuk-label govuk-radios__label" for="childLaNights">No</label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="childLaNights-2" name="childLaNights" type="radio" value="Yes~overnight-local-authority.html">
+                    <label class="govuk-label govuk-radios__label" for="childLaNights-2">Yes</label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+
+          </form>
+
+        </div>
+        {% include "exit-button.html" %}
+      </div>
+    </main>
+  </div>
+
+{% endblock %}
