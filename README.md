@@ -1,44 +1,33 @@
-# cms-options
-Design prototypes for Child Maintenance Service 'Options' service, AKA: Get help arranging child maintenance.
 
+Use this template to create new prototypes in DWP. This template is updated with every major version release of the GOVUK prototype kit. 
 
-# Hierarchy
-  Maintain good folder hierarchy to ensure future iterations are easily navigable. As follows:
+Best practice:<br>
+<br>
+Before making any changes to your code, open your prototype folder in terminal and Run: <br>npm audit <br>
+Use ther information provided in terminal to fix any vulnerabilities before pushing your changes<br>
+Keep package-lock.json under version control<br>
+Do not blindly update packages without review<br>
+Never connect to internal APIs or production systems<br>
+Never store or process real user data<br>
+Remove old or unused prototypes promptly<br>
+Document the purpose and owner of each prototype clearly<br>
+Avoid turning prototypes into live services<br>
+Do not allow open write access to external collaborators<br>
+<br>
+Support
 
-    - /app/views/prototype(number)/iteration(number)
+If you've got a question, idea or suggestion about the GOVUK protoype kit, get in touch with the GOV.UK Prototype team.
 
-  Dynamic text for an iteration is stored under app/view/prototype(number)/iteration(number)/includes
+The GOV.UK Prototype team provides support to people who use the Prototype Kit and work in government.
 
-  All prototypes with more than a single iteration should have an index under app/view/prototype(number) called index.html
+We cannot give general advice to the public. We do not have access to information about you held by government departments.
 
+For other enquiries, use the contact form on GOV.UK.
 
-# Routing
-  Separate routes files are maintained for each iteration for the prototype.
+Slack
 
-    1. Add new routes files to app/routes using consistent naming principles, eg - prototype(number)iteration(number).js
+Use the #govuk-prototype-kit channel on cross-government Slack.
 
-    2. Update the master routes file at app/routes.js with the const name, filepath and router use (see the file, it's pretty self-explanatory)
+Email
 
-
-# Versioning
-  For each new iteration complete the following steps:
-
-    1. It is recommended this is done under a branch in case of a breaking change
-
-    2. Create new prototype and/or iteration in folder structure as described under # Hierarchy
-
-    3. Create new routes file as described under # Routing
-
-    4. Update master routes file as described under # Routing
-
-    5. Update views/index.html with:
-
-      a) a new or amended accordion_section, if appropriate
-
-      b) an updated 'Latest version' link
-
-    6. Add new or amended version index file as described under # Hierarchy
-
-
-# Merging
-  I recommend (although it's not enforced) that work is undertaken in feature branches with regular commits rather than direct commits to Master.
+Email the GOV.UK Prototype team at govuk-prototype-kit-support@digital.cabinet-office.gov.uk.
