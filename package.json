@@ -5,13 +5,14 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "govuk-prototype-kit": "npm:@dwp-govuk/govuk-prototype-kit@13.20.1",
     "@dwp/dwp-frontend": "4.1.0",
     "@govuk-prototype-kit/common-templates": "3.0.0",
     "body-parser": "2.2.2",
     "express": "5.2.1",
     "govuk-frontend": "6.2.0",
-    "qs": "6.15.2"
+    "govuk-prototype-kit": "npm:@dwp-govuk/govuk-prototype-kit@13.20.1",
+    "qs": "6.15.2",
+    "radio-button-redirect": "^1.2.0"
   },
   "overrides": {
     "qs": "6.15.2",
