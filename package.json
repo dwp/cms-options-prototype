@@ -7,17 +7,17 @@
   "dependencies": {
     "@dwp/dwp-frontend": "4.1.0",
     "@govuk-prototype-kit/common-templates": "3.0.0",
-    "body-parser": "2.2.2",
+    "body-parser": "2.3.0",
     "express": "5.2.1",
-    "govuk-frontend": "6.2.0",
-    "govuk-prototype-kit": "npm:@dwp-govuk/govuk-prototype-kit@13.20.1",
-    "qs": "6.15.2",
+    "govuk-frontend": "6.5.0",
+    "govuk-prototype-kit": "13.20.4",
+    "qs": "6.16.0",
     "radio-button-redirect": "^1.2.0"
   },
   "overrides": {
-    "qs": "6.15.2",
+    "qs": "6.16.0",
     "express": {
-      "qs": "6.15.2"
+      "qs": "6.16.0"
     },
     "body-parser": {
       "qs": "6.15.1"
