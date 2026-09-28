@@ -163,6 +163,16 @@ router.post('/prototype4/iteration1/start-your-application', function(req, res) 
   }
 });
 
+// corroborating-overnight-stays
+
+router.post('/prototype4/iteration1/outside-uk', function(req, res) {
+  if (req.body['work-for-uk-organisation'] === 'no-uk-organisation') {
+    res.redirect('cannot-use-child-maintenance-service');
+  } else {
+    res.redirect('where-does-the-other-parent-live');
+  }
+});
+
 
 // Routes end
 

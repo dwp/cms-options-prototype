@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form  action="ask-other-parent-for-bank-details" method="post" novalidate>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                  What day of the week would you like to make payments?
+                </h1>
+                </legend>
+
+                <div id="passport-issued-hint" class="govuk-hint">
+                If your payment date falls on a weekend or a bank holiday you’ll pay either on
+                the working day before or the working day after, depending on your bank.
+              </div>
+
+                <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="payment-frequency-day" name="payment-frequency-day" type="radio" value="monday">
+                    <label class="govuk-label govuk-radios__label" for="payment-frequency-day">
+                    Monday
+                  </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="payment-frequency-day-2" name="payment-frequency-day" type="radio" value="tuesday">
+                    <label class="govuk-label govuk-radios__label" for="payment-frequency-day-2">
+                    Tuesday
+                  </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="payment-frequency-day-3" name="payment-frequency-day" type="radio" value="wednesday">
+                    <label class="govuk-label govuk-radios__label" for="payment-frequency-day-3">
+                  Wednesday
+                </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="payment-frequency-day-4" name="payment-frequency-day" type="radio" value="thursday">
+                    <label class="govuk-label govuk-radios__label" for="payment-frequency-day-4">
+                Thursday
+              </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="payment-frequency-day-5" name="payment-frequency-day" type="radio" value="friday">
+                    <label class="govuk-label govuk-radios__label" for="payment-frequency-day-5">
+              Friday
+            </label>
+                  </div>
+
+                </fieldset>
+              </div>
+              <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+            </form>
+          </div>
+          {% include "exit-button.html" %}
+        </div>
+      </main>
+    </div>
+
+  {% endblock %}

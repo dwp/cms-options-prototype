@@ -1,0 +1,112 @@
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+  <div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="local-authority-question" method="get" novalidate>
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+              Tell us about {% if data['named-child-first-name']%}'s
+              {{data['named-child-first-name']}}
+               {% else %}
+              [Child's name]
+               {% endif %}
+              overnight stays with you
+            </h1>
+              <p class="govuk-body">If overnight stays are different every other week, tell us the total for a fortnight.</p>
+              <p class="govuk-body">If you have not yet worked out how often 
+                                    {% if data['named-child-first-name']%}
+                                    {{data['named-child-first-name']}}
+                                     {% else %}
+                                    [Child's name]
+                                     {% endif %}
+                                    will stay overnight with you, tell us what they have been doing.</p>
+
+            <div class="govuk-inset-text">
+            You can change your arrangement in your online account later
+            </div>
+
+              <br>
+              <div class="govuk-form-group">
+                <h2 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--m" for="howManyNights">
+                    How many nights does {% if data['named-child-first-name']%}
+                     {{data['named-child-first-name']}}
+                      {% else %}
+                     [Child's name]
+                      {% endif %}
+                     stay?</label>
+                </h2>
+                <input class="govuk-input govuk-input--width-3" id="howManyNights" name="howManyNights" type="text">
+              </div>
+              
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                      How often does {% if data['named-child-first-name']%}
+                       {{data['named-child-first-name']}}
+                        {% else %}
+                       [Child's name]
+                        {% endif %} 
+                       stay?</h2>
+                  </legend>
+
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="howOften" name="howOften" type="radio" value="Weekly">
+                      <label class="govuk-label govuk-radios__label" for="howOften">Weekly</label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="howOften-2" name="howOften" type="radio" value="Fortnightly">
+                      <label class="govuk-label govuk-radios__label" for="howOften-2">Fortnightly</label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="howOften-3" name="howOften" type="radio" value="Monthly">
+                      <label class="govuk-label govuk-radios__label" for="howOften-3">Monthly</label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="howOften-4" name="howOften" type="radio" value="Yearly">
+                      <label class="govuk-label govuk-radios__label" for="howOften-4">Yearly</label>
+                    </div>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                  <h2 class="govuk-fieldset__heading">
+                  How many extra nights each year does {% if data['named-child-first-name']%}
+                    {{data['named-child-first-name']}}
+                     {% else %}
+                    [Child's name]
+                     {% endif %} stay?
+                </h2>
+                  <span class="govuk-hint">For example, special occasions like school holidays or birthdays</span>
+                </legend>
+                <div class="govuk-form-group">
+                  <input class="govuk-input govuk-input--width-3" id="extraNights" name="extraNights" type="text">
+                </div>
+                </div>
+              </fieldset>
+          </div>
+        </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

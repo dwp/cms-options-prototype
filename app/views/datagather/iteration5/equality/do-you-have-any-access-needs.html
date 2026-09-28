@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Do you have any access needs?
+                </h1>
+              </legend>
+
+              <div class="govuk-inset-text">
+                For example, if you need wheelchair access or support for appointments or services in person.
+              </div>
+
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="access-needs" name="access-needs" type="radio" value="yes~select-access-needs.html">
+                  <label class="govuk-label govuk-radios__label" for="access-needs">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="access-needs-2" name="access-needs" type="radio" value="no~section-three-check-your-answers">
+                    <label class="govuk-label govuk-radios__label" for="access-needs-2">
+                      No
+                    </label>
+                  </div>
+
+
+
+                  <div class="govuk-radios__divider">or</div>
+
+
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="access-needs-3" name="access-needs" type="radio"
+                        value="prefer~section-three-check-your-answers">
+                      <label class="govuk-label govuk-radios__label" for="access-needs-3">
+                        Prefer not to say
+                      </label>
+                    </div>
+                  </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+      {% include "exit-button.html" %}
+    </div>
+  </main>
+</div>
+
+<!-- Radio buttons end  -->
+
+
+{% endblock %}

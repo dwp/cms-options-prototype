@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %} {% set serviceName %} Respond to a child maintenance application {% endset%} {% block
+pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <div class="govuk-form-group">
+
+                        <!--Checkboxes-->
+                        <h1 class="govuk-heading-xl">Get help if you or your children have experienced domestic abuse
+                        </h1>
+                        </legend>
+                        <div class="govuk-inset-text">
+                            We're asking you this so we can show you where to get support if you need it. We will not
+                            share your answers with the other parent or anyone else.
+                        </div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m ">
+                                <h1 class="govuk-fieldset__heading">
+                                    You may have been in an abusive relationship if you or your children have
+                                    experienced any of the following behaviours:
+                                </h1>
+                            </legend>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>Psychological or emotional abuse
+                                </li>
+                                <li>Physical or sexual abuse
+                                </li>
+                                <li>Financial or economic abuse
+                                </li>
+                                <li>Coercive control (an act or pattern of acts of assault, threats, humiliation,
+                                    intimidation,
+                                    degradation, isolation and control)
+                                </li>
+                                <li>Harassment and stalking
+                                </li>
+                                <li>Online or digital abuse
+                                </li>
+                            </ul>
+                            <br>
+                            <h1 class="govuk-heading-m">Would you like more information about where you can get support
+                                if you need it?<br /> <br />
+                                <div class="govuk-radios--inline" data-module="radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="da-yes" name="da-yes" type="radio"
+                                            value="yes~tell-someone" aria-controls="conditional-other-parent-dob-1"
+                                            aria-expanded="true">
+                                        <label class="govuk-label govuk-radios__label" for="da-yes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="da-no" name="da-yes" type="radio"
+                                            value="no~will-you-answer-equality-questions">
+                                        <label class="govuk-label govuk-radios__label" for="da-no">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+             {% include "exit-button.html" %}
+        </div>
+    </main>
+</div>
+{% endblock %}

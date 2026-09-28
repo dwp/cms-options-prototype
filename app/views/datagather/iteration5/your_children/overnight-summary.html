@@ -1,0 +1,203 @@
+{% extends "layouts/main.html.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%}
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+  <form method="post" action="biological-or-legal-parent" novalidate>
+            
+  <h1 class="govuk-heading-xl">
+    Review                                     
+    {% if data['named-child-first-name']%}
+    {{data['named-child-first-name']}}
+    {% else %}
+    [Child's name]
+    {% endif %}'s overnight shared care</h1>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+  {# Only show if DOB is 15/07/2007 #}
+  {% if data['dob-day'] == '15'
+    and data['dob-month'] == '7'
+    and data['dob-year'] == '2007' %}
+
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Is what the other parent told us correct?
+  </dt>
+  <dd class="govuk-summary-list__value">
+  {% if data['overnightCorrect'] == 'Yes' %}
+    Yes
+  {% elif data['overnightCorrect'] == 'No' %}
+    No
+  {% endif %}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="overnight-stays-with-you">Change</a>
+  </dd>  
+  </div>
+
+  {% endif %}
+
+  {# Only show if user sees this question #}
+  {% if data['arrangementType'] == 'My child stays overnight with me on a regular schedule or on unplanned nights'
+    or data['arrangementType'] == 'My child never stays overnight with me' %}
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Type of arrangement
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['arrangementType'] }}
+      </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="care-arrangement-type">Change</a>
+      </dd>      
+    </div>
+
+  {% endif %}
+
+
+  {# Only show overnight rows if child stays overnight #}
+  {% if data['arrangementType'] == 'My child stays overnight with me on a regular schedule or on unplanned nights' %}
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Regular nights
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['howOften'] }}
+        <br>
+        {{ data['howManyNights'] }} night{% if data['howManyNights'] != '1' %}s{% endif %}
+      </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="about-overnight-stays">Change</a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Extra nights
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Yearly
+        <br>
+        {{ data['extraNights'] }} night{% if data['extraNights'] != '1' %}s{% endif %}
+      </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="about-overnight-stays">Change</a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Total overnight stays with you
+      </dt>
+      <dd class="govuk-summary-list__value">
+        175-182 nights a year
+        <br>
+        (average of more than 3 nights a week)
+      </dd>
+    </div>
+  {% endif %}
+
+  {# Only show if user has agreed with overnight stays reported #}
+  {% if data['overnightCorrect'] == 'Yes' %}
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Regular nights
+      </dt>
+      <dd class="govuk-summary-list__value">
+        175-182 nights a year
+        <br>
+        (average of more than 3 nights a week)
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Extra nights
+      </dt>
+      <dd class="govuk-summary-list__value">
+        2 nights a year
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Total overnight stays with you
+      </dt>
+      <dd class="govuk-summary-list__value">
+        175-182 nights a year
+        <br>
+        (average of more than 3 nights a week)
+      </dd>
+    </div>
+  {% endif %}
+
+
+  {# Always show local authority answer if provided #}
+  {% if data['childLaNights'] %}
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Local authority care
+      </dt>
+        <dd class="govuk-summary-list__value">
+  {% if data['childLaNights'] == 'Yes' %}
+    Yes
+  {% elif data['childLaNights'] == 'No' %}
+    No
+  {% endif %}
+      </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="local-authority-question">Change</a>
+  </dd>
+    </div>
+
+  {% endif %}
+
+
+  {# Only show nights if local authority care = yes #}
+  {% if data['childLaNights'] == 'Yes' %}
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Local authority nights
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Weekly
+        <br>
+        {{ data['laNights'] }} night{% if data['laNights'] != '1' %}s{% endif %}
+      </dd>
+  <dd class="govuk-summary-list__actions">
+    <a class="govuk-link" href="overnight-local-authority">Change</a>
+  </dd>
+    </div>
+
+  {% endif %}
+    </dl>
+    <br>
+    <div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </div>
+    </form>
+    </div>
+      {% include "exit-button.html" %}
+    </div>
+    </main>
+    </div>
+
+  {% endblock %}
+
+
+  
+
+
+  

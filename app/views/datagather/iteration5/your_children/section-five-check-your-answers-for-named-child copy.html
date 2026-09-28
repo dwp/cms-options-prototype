@@ -1,0 +1,165 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %} Respond to a child maintenance application {% endset%} 
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %} 
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+    <form method="post" action="biological-or-legal-parent" novalidate>
+
+      <h1 class="govuk-heading-xl">Check your answers for {{ data['named-child-first-name'] }} {{ data['named-child-middle-name'] }} {{ data['named-child-last-name'] }}</h1>
+          
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+           <dd class="govuk-summary-list__value">
+            {{ data['named-child-first-name'] }} {{ data['named-child-middle-name'] }} {{ data['named-child-last-name'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="tell-us-about-your-child">
+              Change<span class="govuk-visually-hidden"> childs name</span>
+            </a>
+           </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date of birth
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['dob-day'] }}
+                {% if data['dob-month'] == '1' %}January{% endif %}
+                {% if data['dob-month'] == '2' %}February{% endif %}
+                {% if data['dob-month'] == '3' %}March{% endif %}
+                {% if data['dob-month'] == '4' %}April{% endif %}
+                {% if data['dob-month'] == '5' %}May{% endif %}
+                {% if data['dob-month'] == '6' %}June{% endif %}
+                {% if data['dob-month'] == '7' %}July{% endif %}
+                {% if data['dob-month'] == '8' %}August{% endif %}
+                {% if data['dob-month'] == '9' %}September{% endif %}
+                {% if data['dob-month'] == '10' %}October{% endif %}
+                {% if data['dob-month'] == '11' %}November{% endif %}
+                {% if data['dob-month'] == '12' %}December{% endif %}
+                {{ data['dob-year'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="child-dob">
+                  Change<span class="govuk-visually-hidden"> childs date of birth</span>
+                </a>
+              </dd>
+            </div>
+
+              {# Only show if DOB is 15/7/2007 #}
+              {% if data['dob-day'] == '15'
+                and data['dob-month'] == '7'
+                and data['dob-year'] == '2007' %}
+
+              <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Is what the other parent told us about overnight stays correct?
+              </dt>
+              <dd class="govuk-summary-list__value">
+              {% if data['overnightCorrect'] == 'Yes' %}
+                Yes
+              {% elif data['overnightCorrect'] == 'No' %}
+                No
+               {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="overnight-stays-with-you">Change</a>
+              </dd>  
+              </div>
+             {% endif %} 
+
+            {# Only show if user sees this question #}
+            {% if data['arrangementType'] == 'My child stays overnight with me on a regular schedule or on unplanned nights'
+              or data['arrangementType'] == 'My child never stays overnight with me' %}
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Overnight care arrangement
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['arrangementType'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="care-arrangement-type">Change</a>
+                </dd>      
+              </div>
+            {% endif %}
+
+            {# Only show overnight rows if child stays overnight #}
+            {% if data['arrangementType'] == 'My child stays overnight with me on a regular schedule or on unplanned nights' %}
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total overnight stays with you
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  175-182 nights a year
+                  <br>
+                  (average of more than 3 nights a week)
+                </dd>
+              </div>
+            {% endif %}
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Are you {{ data['named-child-first-name'] }}'s biological or legal parent?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="biological-or-legal-parent">
+                  Change<span class="govuk-visually-hidden"> biological parent</span>
+                </a>
+              </dd>
+            </div>
+      </dl>
+      
+<form method="post" novalidate>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h1 class="govuk-fieldset__heading">
+          Do you need to add another child to this arrangement?
+        </h1>
+      </legend>
+       <div id="changed-name-hint" class="govuk-hint">
+        Only add the children named on the letter you received from the Child Maintenance Service. We’ll ask about other children in the next steps.
+       </div>
+       <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child" type="radio" value="yes~what-is-your-childs-name">
+        <label class="govuk-label govuk-radios__label" for="add-another-named-child">
+         Yes
+        </label>
+       </div>
+       <div class="govuk-radios__item">
+         <input class="govuk-radios__input" id="add-another-named-child" name="add-another-named-child" type="radio" value="no~other-children-private-arrangement">
+           <label class="govuk-label govuk-radios__label" for="add-another-named-child">
+             No
+           </label>
+       </div>
+  
+    <br>
+    <div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </div>
+    </form>
+    </div>
+      {% include "exit-button.html" %}
+    </div>
+    </main>
+    </div>
+
+{% endblock %}
+
