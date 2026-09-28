@@ -105,8 +105,11 @@
     </div>
   {% endif %}
 
-  {# Only show if user has agreed with overnight stays reported #}
-  {% if data['overnightCorrect'] == 'Yes' %}
+  {# Only show if user agreed with reported nights AND DOB is 15/07/2007 #}
+  {% if data['overnightCorrect'] == 'Yes'
+  and data['dob-day'] == '15'
+  and data['dob-month'] == '7'
+  and data['dob-year'] == '2007' %}
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
         Regular nights
